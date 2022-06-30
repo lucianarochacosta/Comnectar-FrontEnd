@@ -1,6 +1,6 @@
 import React from "react";
 
-function Footer(){
+function SobreNos(){
     return (
         <>
         </>
@@ -8,4 +8,4 @@ function Footer(){
 }
 
 
-export default Footer;
+export default SobreNos;
