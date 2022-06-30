@@ -6,7 +6,7 @@ import Navbar from './components/estaticos/navbar/Navbar';
 import Login from './paginas/login/Login';
 import Home from './paginas/home/Home';
 import Footer from './components/estaticos/footer/Footer';
-import SobreNos from './paginas/sobre-nos/SobreNos';
+import SobreNos from './paginas/sobreNos/SobreNos';
 
 function App() {
   return (
