@@ -1,0 +1,31 @@
+.box1 {
+    background-color: #ADBF24;
+    height: 125px;
+}
+
+.box2 {
+    background-color: #96A621;
+    height: 50px;    
+}
+
+.social {
+    font-size: 50px !important;
+    color: #40352C;
+    transition: transform 0.4s;
+}
+
+.social:hover {
+    transform: scale(1.1);
+}
+
+.textos {
+    color: white;
+}
+
+.link-hover {
+    transition: color 0.4s;
+}
+
+.link-hover:hover{
+    color: #40352C;
+}
