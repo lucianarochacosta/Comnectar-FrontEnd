@@ -12,8 +12,7 @@
 
 .MenuPagesFont{
     font-family: 'Roboto' !important;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 20px !important;
 }
 
 .MenuPagesComnectar{
@@ -24,11 +23,6 @@
     transition: all .5s;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-}
-
-.MenuPagesComnectar:hover{
-    background-color: #3E733C;
-    color: white;
 }
 
 .imglogo {
