@@ -62,7 +62,7 @@ function Login (){
                                 Não tem uma conta?
                             </Typography>
                         </Box>
-                        <Link to='/cadastrousuario'>
+                        <Link to='/cadastrousuario' style={{textDecoration: 'none', color:'#40352C'}}>
                         <Typography variant="subtitle1" gutterBottom align="center"  className="cursor">
                             Cadastre-se
                         </Typography>
