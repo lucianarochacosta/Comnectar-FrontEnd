@@ -1,5 +1,5 @@
 import React, {useState, useEffect, ChangeEvent} from 'react';
-import { Grid, Typography, Button, TextField } from '@material-ui/core';
+import { Grid, Typography, Button, TextField, Paper } from '@material-ui/core';
 import { Box } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import User from '../../models/User';
@@ -61,29 +61,23 @@ function CadastroUsuario() {
     }
 
     return (
-        <Grid container direction='row' justifyContent='center' alignItems='center'>
-            <Grid item xs={6} className='imagem2'></Grid>
-            <Grid item xs={6} alignItems='center'>
-                <Box paddingX={10}>
+        <Grid container justifyContent='center' alignItems='center' className="bgCadastroFoto">
+                <Paper className="paperCadastro">
+                <Box className="boxCadastro">
                     <form onSubmit={onSubmit}>
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>Cadastrar</Typography>
-                        <TextField value={user.nomeUsuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='nome' variant='outlined' name='nomeUsuario' margin='normal' fullWidth />
-                        <TextField value={user.loginUsuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='usuario' variant='outlined' name='loginUsuario' margin='normal'fullWidth />
-                        <TextField value={user.senhaUsuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senhaUsuario' margin='normal' type='password' fullWidth />
-                        <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' label='confirmarSenha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth />
+                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='paperCadastroTitulo'>Cadastrar</Typography>
+                        <TextField value={user.nomeUsuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='Insira o seu nome completo' variant='outlined' name='nomeUsuario' margin='normal' fullWidth className="tfCadastro"/>
+                        <TextField value={user.loginUsuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Informe o seu melhor e-mail' variant='outlined' name='loginUsuario' margin='normal'fullWidth className="tfCadastro"/>
+                        <TextField value={user.senhaUsuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Insira uma senha ' variant='outlined' name='senhaUsuario' margin='normal' type='password' fullWidth className="tfCadastro"/>
+                        <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' label='Confirme a sua senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth className="tfCadastro"/>
                         <Box marginTop={2} textAlign='center'>
-                            <Link to='/login' className='text-decorator-none'>
-                                <Button variant='contained' color='secondary' className='btnCancelar'>
-                                    Cancelar
-                                </Button>
-                            </Link>
-                            <Button type='submit' variant='contained' color='primary'>
+                            <Button type='submit' variant='contained' color='primary' className='btnCadastrar'>
                                     Cadastrar
                             </Button>
                         </Box>
                     </form>
                 </Box>
-            </Grid>
+                </Paper>
 
 
 

@@ -41,7 +41,7 @@ function Navbar() {
                                 </Typography>
                             </Box>
                         </Link>
-                        <Link to='/cadastrar' className='text-decorator-none'>
+                        <Link to='/cadastrousuario' className='text-decorator-none'>
                             <Box className="MenuPagesRightBox">
                                 <Typography variant="h5" color="inherit" className="MenuPagesFont">
                                     CADASTRAR
