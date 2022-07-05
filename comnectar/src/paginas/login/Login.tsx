@@ -1,5 +1,5 @@
 import React, {useState,useEffect,ChangeEvent} from "react";
-import { Grid, TextField, Typography, Button } from "@material-ui/core";
+import { Grid, TextField, Typography, Button, Paper } from "@material-ui/core";
 import { Box } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import useLocalStorage from 'react-use-localstorage';
@@ -39,15 +39,17 @@ function Login (){
             }
         }
     return (
-        <Grid container direction="row" justifyContent="center" alignItems="center" className="background">
-            <Grid alignItems="center" xs={7}>
-                <Box paddingX={20}>
+        <Grid container direction="row" justifyContent="center" alignItems="center">
+            <Grid alignItems="center" xs={12} >
+                <Box width='100%' height='100vh' className='backgroundImg' display={'flex'} alignItems='center' paddingLeft={'10%'} >
+                    <Paper style={{padding:'32px 48px', borderRadius:'16px'}} elevation={12}>
+                    <Box maxWidth={'420px'}>
                     <form onSubmit={onSubmit}>
                         <Typography variant="h3" gutterBottom color="textPrimary" align="center" component="h3" className="texto">
                             Entrar
                         </Typography>
                         <TextField  value={userLogin.loginUsuario} onChange={(e:ChangeEvent<HTMLInputElement>)=> updatedModel(e)} id="usuario" label="usuario" variant="outlined" name="loginUsuario" margin="normal" fullWidth />
-                        <TextField  value={userLogin.senhaUsuario} onChange={(e:ChangeEvent<HTMLInputElement>)=> updatedModel(e)} id="senha" label="senha" variant="outlined" name="senhaUsuario" margin="normal" type="password" fullWidth />
+                        <TextField  value={userLogin.senhaUsuario} onChange={(e:ChangeEvent<HTMLInputElement>)=> updatedModel(e)} id="senha" label="senha" variant="outlined" name="senhaUsuario" margin="normal" type="password" fullWidth/>
                         <Box marginTop={2} textAlign="center">
                                 <Button type='submit' className="botao">
                                     Logar
@@ -67,9 +69,8 @@ function Login (){
                         </Link>
                     </Box>
                 </Box>
-            </Grid>
-            <Grid xs={5} className='imagem'>
-
+                </Paper>
+                </Box>
             </Grid>
         </Grid>
     );
