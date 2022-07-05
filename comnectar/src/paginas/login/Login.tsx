@@ -29,9 +29,11 @@ function Login (){
                                 Não tem uma conta?
                             </Typography>
                         </Box>
+                        <Link to='/cadastrousuario'>
                         <Typography variant="subtitle1" gutterBottom align="center"  className="cursor">
                             Cadastre-se
                         </Typography>
+                        </Link>
                     </Box>
                 </Box>
             </Grid>
