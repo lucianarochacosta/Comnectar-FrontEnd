@@ -25,6 +25,7 @@
     border-radius: 30px !important;
     background-color: #838383;
     opacity: .40;
+    border:none
 }
 
 .paperCadastroTitulo{
@@ -32,6 +33,15 @@
     font-family: 'Roboto', sans-serif;
 }
 
+
 .btnCadastrar{
+    background: #BF8969 !important;
+    border-color: #40352C !important;
+    font-weight: bold !important;
+}
+
+.btnCadastrar:hover {
     background-color: #96A621 !important;
+    color: white;
+    transform: scale(1.1);
 }
