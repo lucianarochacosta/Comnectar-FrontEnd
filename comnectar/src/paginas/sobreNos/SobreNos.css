@@ -11,6 +11,8 @@
     padding: 5px;
     margin: 5px;
     border: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .cont-direita{
@@ -21,20 +23,40 @@
     padding: 5px;
     margin: 5px;
     border: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .titulo1{
     color: #3E733C !important;
     font-weight: bold !important;
+    font-family: 'Bebas Neue' !important;
+    font-size: 50px !important;
 }
 .titulo2{
     color: #96A621 !important;
+    font-family: 'Bebas Neue' !important;
+    font-size: 40px !important;
+}
+.titulo3{
+    color: #3E733C !important;
+    font-weight: bold !important;
+    font-family: 'Bebas Neue' !important;
+    font-size: 40px !important;
+}
+.titulo4{
+    color: #96A621 !important;
+    font-family: 'Bebas Neue' !important;
+    font-size: 30px !important;
 }
 .subtitulo2{
     color: #40352C !important;
+    font-family: sans-serif;
 }
 
 .subtitulo1{
     color: #3E733C !important;
+    font-family: 'Bebas Neue' !important;
+    padding-left: 1cm;
 }
 
 .background{
@@ -58,67 +80,88 @@
     height: 200px;
     background-image: url("https://i.imgur.com/5O6FxsO.jpg") !important;
     background-size: cover;
+    background-position: center;
 }
 .cardC {
     width: 350px;
     height: 200px;
     background-image: url("https://i.imgur.com/7ze7kIC.jpg") !important;
     background-size: cover;
+    background-position: center;
 }
 .cardD {
     width: 350px;
     height: 200px;
     background-image: url("https://i.imgur.com/5jpq9MP.jpg") !important;
     background-size: cover;
+    background-position: center;
 }
 
 .cardLuciana {
-    width: 200px;
-    height: 350px;
+    width: 188px;
+    height: 253px;
     background-image: url("https://i.imgur.com/InFAkD1.png") !important;
     background-size: cover;
     background-position: center;
 }
 
 .cardAndrei {
-    width: 200px;
-    height: 350px;
+    width: 188px;
+    height: 253px;
     background-image: url("https://i.imgur.com/jxAQMQs.png") !important;
     background-size: cover;
     background-position: center;
 }
 
 .cardLuan {
-    width: 200px;
-    height: 350px;
+    width: 188px;
+    height: 253px;
     background-image: url("https://i.imgur.com/8aynZXf.png")!important;
     background-size: cover;
     background-position: center;
 }
 .cardLairton{
-    width: 200px;
-    height: 350px;
+    width: 188px;
+    height: 253px;
     background-image: url("https://i.imgur.com/WHTmRiG.png")!important;
     background-size: cover;
     background-position: center;
 }
 .cardTacio{
-    width: 200px;
-    height: 350px;
+    width: 188px;
+    height: 253px;
     background-image: url("https://i.imgur.com/1SGmiR5.png")!important;
     background-size: cover;
     background-position: center;
 }
 .cardIsabela{
-    width: 200px;
-    height: 350px;
+    width: 188px;
+    height: 253px;
     background-image: url("https://i.imgur.com/RAhoAzY.png")!important;
     background-size: cover;
     background-position: center;
-    
 }
-.caixacard {
-    margin-top: 100px !important;
-    margin-bottom: 200px !important;
+.cardEquipe {
+    margin-top: 50px !important;
+    margin-bottom: 10px !important;
 }
+.iconeSocial{
+    font-size: 50px !important;
+    transition: transform 0.5s;
+    color: #3E733C;
+}
+.iconeSocial:hover{
+    transform: scale(1.4);
+    color: #96A621;
+}
+.intro{
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+.textos{
+    font-family: Roboto;
 
+}
