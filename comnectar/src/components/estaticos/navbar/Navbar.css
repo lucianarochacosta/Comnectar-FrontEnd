@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 .Menu{
-    background-color: #96A621;
+    background-color: #3E733C;
 }
 
 .BlogTitle{
@@ -10,49 +11,69 @@
 }
 
 .MenuPagesFont{
-    font-family: 'Bebas Neue' !important;
-
+    font-family: 'Roboto' !important;
+    font-size: 20px !important;
 }
 
 .MenuPagesComnectar{
-    margin-left:24px;
+    margin-left:0px;
     margin-right:24px;
     cursor: pointer;
     color: #40352C;
     transition: all .5s;
-    border: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
 }
 
-.MenuPagesComnectar:hover{
-    background-color: #3E733C;
-    color: white;
+.imglogo {
+    width: 220px;
 }
 
-.MenuPagesLeftBox{
+.MenuPagesCenterBox{
     margin-left:24px;
     margin-right:24px;
     cursor: pointer;
     color: white;
 }
 
-.MenuPagesLeftBox:hover{
+.MenuPagesCenterBox:hover{
     color: #40352C;
     transform: scale(1.3);
 }
 
-.MenuPagesRightBox{
-    margin-left:24px;
-    margin-right:24px;
+.MenuPagesEntrar {
+    margin-right:6px;
     cursor: pointer;
     color: white;
 }
 
-.MenuPagesRightBox:hover{
-    color: #40352C;
-    transform: scale(1.3);
+.botaoentrar {
+    background-color: #ADBF24 !important;
+    color: white !important;
+    font-weight: bold !important;
 }
 
+.botaoentrar:hover {
+    background-color: #40352C !important;
+    color: white !important;
+}
 
+.MenuPagesCadastrar {
+    margin-left:6px;
+    cursor: pointer;
+    color: white;
+}
+
+.botaocadastrar {
+    color: white !important;
+    border-color: white !important;
+    font-weight: bold !important;
+}
+
+.botaocadastrar:hover {
+    background-color: white !important;
+    color: #40352C !important;
+}
 
 .text-decorator-none{
     text-decoration: none;

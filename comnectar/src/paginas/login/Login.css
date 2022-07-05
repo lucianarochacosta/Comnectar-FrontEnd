@@ -1,5 +1,6 @@
-.background{
-    background-color: #adbf244b;
+.backgroundImg{
+    background: url('https://i.imgur.com/sv7n9il.jpg');
+    background-size: cover;
 }
 .botao{
     background-color: #96A621
