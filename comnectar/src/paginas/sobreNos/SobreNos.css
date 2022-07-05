@@ -140,9 +140,18 @@
     background-image: url("https://i.imgur.com/RAhoAzY.png")!important;
     background-size: cover;
     background-position: center;
+    
 }
 .cardEquipe {
     margin-top: 50px !important;
+    margin-bottom: 10px !important;
+}
+.redesSociais{
+    margin-top: 10px !important;
+    margin-bottom: 30px !important;
+}
+.nomesRedesSociais{
+    margin-top: 10px !important;
     margin-bottom: 10px !important;
 }
 .iconeSocial{
@@ -161,7 +170,5 @@
     margin-top: 50px !important;
     margin-bottom: 50px !important;
 }
-.textos{
-    font-family: Roboto;
 
-}
+
