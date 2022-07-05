@@ -2,9 +2,9 @@
 
 .boxfoto {
     height: 450px;
-    margin-bottom: 100px !important;
-    padding-bottom: 100px !important;
-    gap: 12px;
+    margin-bottom: 50px !important;
+    padding-bottom: 50px !important;
+    gap: 8px;
 }
 
 .caixatop {
@@ -20,8 +20,6 @@
 
 .botaoh {
     background-color: #ADBF24 !important;
-    margin-top: 20px;
-    margin-bottom: 50px;
     color: white;
     font-weight: bold;
 }

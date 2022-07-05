@@ -1,0 +1,38 @@
+.background{
+    background-color: #adbf244b;
+}
+.botao{
+    background-color: #96A621
+    !important;
+    color: white !important;
+    font-weight: bold !important;
+    font-size: 24px !important;
+    border-color: #3E733C !important;
+    width: 150px;
+    height: 48px;
+    transition: transform 0.4s;
+}
+
+.botao:hover{
+    transform: scale(1.1);
+}
+
+.text-decorator-none{
+    text-decoration: none;
+}
+.texto{
+    font-weight: bold !important;
+    color: #3E733C !important;
+}
+.imagem{
+    background-image: url(https://i.imgur.com/0NrinUr.png);
+    background-repeat: no-repeat;
+    width: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.cursor{
+    cursor: pointer;
+    font-weight: bold !important;
+}

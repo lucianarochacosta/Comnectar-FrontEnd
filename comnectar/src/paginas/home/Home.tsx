@@ -17,7 +17,7 @@ function Home() {
                             e ajude o meio ambiente
                         </Typography>
                     </Box>
-                    <Box display="flex" justifyContent="center" marginBottom="36px">
+                    <Box display="flex" justifyContent="center" marginBottom="24px">
                         <Button variant="outlined" className="botaoh">
                             Comprar
                         </Button>
@@ -27,7 +27,7 @@ function Home() {
             </Grid>
             <Grid alignItems="center" item xs={12}>
                 <Box className="beneficios">
-                    <Typography variant="h3" align="center">Nosso Benefícios</Typography>
+                    <Typography variant="h3" align="center">Nossos Benefícios</Typography>
                 </Box>
             </Grid>
             <Grid alignItems="center" item xs={12} className="caixacard">
