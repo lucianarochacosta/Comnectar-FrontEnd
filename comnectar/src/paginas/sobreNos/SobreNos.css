@@ -11,6 +11,8 @@
     padding: 5px;
     margin: 5px;
     border: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .cont-direita{
@@ -21,11 +23,42 @@
     padding: 5px;
     margin: 5px;
     border: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
+.titulo1{
+    color: #3E733C !important;
+    font-weight: bold !important;
+    font-family: 'Bebas Neue' !important;
+    font-size: 50px !important;
+}
+.titulo2{
+    color: #96A621 !important;
+    font-family: 'Bebas Neue' !important;
+    font-size: 40px !important;
+}
+.titulo3{
+    color: #3E733C !important;
+    font-weight: bold !important;
+    font-family: 'Bebas Neue' !important;
+    font-size: 40px !important;
+}
+.titulo4{
+    color: #96A621 !important;
+    font-family: 'Bebas Neue' !important;
+    font-size: 30px !important;
+}
+.subtitulo2{
+    color: #40352C !important;
+    font-family: sans-serif;
+}
+
 .subtitulo1{
-    color: #3E733C;
-    font-weight: bold;
+    color: #3E733C !important;
+    font-family: 'Bebas Neue' !important;
+    padding-left: 1cm;
 }
+
 .background{
     background-color: #adbf244b;
 }
@@ -35,35 +68,100 @@
     border-radius: 50% !important;
    
 }
-.cardLuciana {
+.cardA {
     width: 350px;
     height: 200px;
-    background-image: url("https://media-exp2.licdn.com/dms/image/C4D03AQEoAAQp33vwTA/profile-displayphoto-shrink_800_800/0/1653526998614?e=1661990400&v=beta&t=LNCw_qIeZBr-L3qdixnsNWvgCVn4JetdMhKimesk8mU") #3E733C !important;
+    background-image: url("https://i.imgur.com/mjsnlwj.jpg") !important;
+    background-size: cover;
+    background-position: center;
+}
+.cardB {
+    width: 350px;
+    height: 200px;
+    background-image: url("https://i.imgur.com/5O6FxsO.jpg") !important;
+    background-size: cover;
+    background-position: center;
+}
+.cardC {
+    width: 350px;
+    height: 200px;
+    background-image: url("https://i.imgur.com/7ze7kIC.jpg") !important;
+    background-size: cover;
+    background-position: center;
+}
+.cardD {
+    width: 350px;
+    height: 200px;
+    background-image: url("https://i.imgur.com/5jpq9MP.jpg") !important;
+    background-size: cover;
+    background-position: center;
+}
+
+.cardLuciana {
+    width: 188px;
+    height: 253px;
+    background-image: url("https://i.imgur.com/InFAkD1.png") !important;
+    background-size: cover;
+    background-position: center;
 }
 
 .cardAndrei {
-    width: 350px;
-    height: 200px;
-    background-image: url("https://media-exp2.licdn.com/dms/image/C4D03AQGjJbZc-UArzA/profile-displayphoto-shrink_800_800/0/1653397405173?e=1661990400&v=beta&t=nyilrwL2yW29yYbWH4cUw-3w7KPhU0MacFOdOGsdrbA") !important;
+    width: 188px;
+    height: 253px;
+    background-image: url("https://i.imgur.com/jxAQMQs.png") !important;
+    background-size: cover;
+    background-position: center;
 }
 
 .cardLuan {
-    width: 350px;
-    height: 200px;
-    background-image: url("https://media-exp2.licdn.com/dms/image/D5635AQECo64tJba7ow/profile-framedphoto-shrink_800_800/0/1655403103665?e=1657220400&v=beta&t=DtffLYU0sVgFqINkN2IIepaQz_12tT1czQI26B82Tkw")!important;
+    width: 188px;
+    height: 253px;
+    background-image: url("https://i.imgur.com/8aynZXf.png")!important;
+    background-size: cover;
+    background-position: center;
 }
 .cardLairton{
-    width: 350px;
-    height: 200px;
-    background-image: url("https://media-exp2.licdn.com/dms/image/D4D35AQEm0MjA9a9p_g/profile-framedphoto-shrink_800_800/0/1653397151221?e=1657220400&v=beta&t=Y6yYk-_Exv2lH4CT7lJjtVZ2SsOOzdEoQGT7hOWTU7U")!important;
+    width: 188px;
+    height: 253px;
+    background-image: url("https://i.imgur.com/WHTmRiG.png")!important;
+    background-size: cover;
+    background-position: center;
 }
 .cardTacio{
-    width: 350px;
-    height: 200px;
-    background-image: url("https://media-exp2.licdn.com/dms/image/C5603AQHJ-YG1JlJYAQ/profile-displayphoto-shrink_800_800/0/1637690438296?e=1661990400&v=beta&t=BKEmLaBJ_4BLLpYtSWPuLY50CLgphrzwI5LoBTH7xjE")!important;
+    width: 188px;
+    height: 253px;
+    background-image: url("https://i.imgur.com/1SGmiR5.png")!important;
+    background-size: cover;
+    background-position: center;
 }
 .cardIsabela{
-    width: 350px;
-    height: 200px;
-    background-image: url("https://i.imgur.com/kvgzbn7.jpg")!important;
+    width: 188px;
+    height: 253px;
+    background-image: url("https://i.imgur.com/RAhoAzY.png")!important;
+    background-size: cover;
+    background-position: center;
+}
+.cardEquipe {
+    margin-top: 50px !important;
+    margin-bottom: 10px !important;
+}
+.iconeSocial{
+    font-size: 50px !important;
+    transition: transform 0.5s;
+    color: #3E733C;
+}
+.iconeSocial:hover{
+    transform: scale(1.4);
+    color: #96A621;
+}
+.intro{
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+.textos{
+    font-family: Roboto;
+
 }
