@@ -46,26 +46,26 @@
     border-radius: 50% !important;
    
 }
-.card1 {
+.cardA {
     width: 350px;
     height: 200px;
     background-image: url("https://i.imgur.com/mjsnlwj.jpg") !important;
     background-size: cover;
     background-position: center;
 }
-.card2 {
+.cardB {
     width: 350px;
     height: 200px;
     background-image: url("https://i.imgur.com/5O6FxsO.jpg") !important;
     background-size: cover;
 }
-.card3 {
+.cardC {
     width: 350px;
     height: 200px;
     background-image: url("https://i.imgur.com/7ze7kIC.jpg") !important;
     background-size: cover;
 }
-.card4 {
+.cardD {
     width: 350px;
     height: 200px;
     background-image: url("https://i.imgur.com/5jpq9MP.jpg") !important;
@@ -121,3 +121,4 @@
     margin-top: 100px !important;
     margin-bottom: 200px !important;
 }
+

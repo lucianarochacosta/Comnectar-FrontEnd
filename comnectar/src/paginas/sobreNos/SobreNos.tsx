@@ -24,7 +24,7 @@ function SobreNos() {
                     </Grid>
                     <Grid xs={4}>
                         <Box paddingX={10}>
-                            <Card className="card1"></Card>
+                            <Card className="cardA"></Card>
                         </Box>
 
                     </Grid>
@@ -40,7 +40,7 @@ function SobreNos() {
                     </Grid>
                     <Grid alignItems="center" xs={4}>
                         <Box paddingX={10}>
-                            <Card className="card2"></Card>
+                            <Card className="cardB"></Card>
                         </Box>
                     </Grid>
                 </Grid>
@@ -54,7 +54,7 @@ function SobreNos() {
                     </Grid>
                     <Grid xs={4}>
                         <Box paddingX={10}>
-                            <Card className="card3"></Card>
+                            <Card className="cardC"></Card>
                         </Box>
                     </Grid>
                 </Grid>
@@ -68,7 +68,7 @@ function SobreNos() {
                     </Grid>
                     <Grid xs={4}>
                         <Box paddingX={10}>
-                            <Card className="card4"></Card>
+                            <Card className="cardD"></Card>
                         </Box>
                     </Grid>
                 </Grid>
@@ -94,8 +94,6 @@ function SobreNos() {
                         <Card className="cardTacio"></Card>
                     </Box>
                 </Grid>
-
-                
 
             </Grid>
         </>
