@@ -49,7 +49,7 @@ function Login (){
                             Entrar
                         </Typography>
                         <TextField  value={userLogin.loginUsuario} onChange={(e:ChangeEvent<HTMLInputElement>)=> updatedModel(e)} id="usuario" label="usuario" variant="outlined" name="loginUsuario" margin="normal" fullWidth />
-                        <TextField  value={userLogin.senhaUsuario} onChange={(e:ChangeEvent<HTMLInputElement>)=> updatedModel(e)} id="senha" label="senha" variant="outlined" name="senhaUsuario" margin="normal" type="password" fullWidth />
+                        <TextField  value={userLogin.senhaUsuario} onChange={(e:ChangeEvent<HTMLInputElement>)=> updatedModel(e)} id="senha" label="senha" variant="outlined" name="senhaUsuario" margin="normal" type="password" fullWidth/>
                         <Box marginTop={2} textAlign="center">
                                 <Button type='submit' className="botao">
                                     Logar
