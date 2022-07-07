@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.cont-esquerda{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 5px;
+    border: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.cont-direita{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 5px;
+    border: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.titulo1{
+    color: #3E733C !important;
+    font-weight: bold !important;
+    font-family: 'Bebas Neue' !important;
+    font-size: 50px !important;
+}
+.titulo2{
+    color: #96A621 !important;
+    font-family: 'Bebas Neue' !important;
+    font-size: 40px !important;
+}
+.titulo3{
+    color: #3E733C !important;
+    font-weight: bold !important;
+    font-family: 'Bebas Neue' !important;
+    font-size: 40px !important;
+}
+.titulo4{
+    color: #96A621 !important;
+    font-family: 'Bebas Neue' !important;
+    font-size: 30px !important;
+}
+.subtitulo2{
+    color: #40352C !important;
+    font-family: sans-serif;
+}
+
+.subtitulo1{
+    color: #3E733C !important;
+    font-family: 'Bebas Neue' !important;
+    padding-left: 1cm;
+}
+
+.background{
+    background-color: #adbf244b;
+}
+.imagem1{
+    width: 170px !important;
+    height: 170px !important;
+    border-radius: 50% !important;
+   
+}
+.cardA {
+    width: 350px;
+    height: 200px;
+    background-image: url("https://i.imgur.com/mjsnlwj.jpg") !important;
+    background-size: cover;
+    background-position: center;
+}
+.cardB {
+    width: 350px;
+    height: 200px;
+    background-image: url("https://i.imgur.com/5O6FxsO.jpg") !important;
+    background-size: cover;
+    background-position: center;
+}
+.cardC {
+    width: 350px;
+    height: 200px;
+    background-image: url("https://i.imgur.com/7ze7kIC.jpg") !important;
+    background-size: cover;
+    background-position: center;
+}
+.cardD {
+    width: 350px;
+    height: 200px;
+    background-image: url("https://i.imgur.com/5jpq9MP.jpg") !important;
+    background-size: cover;
+    background-position: center;
+}
+
+.cardLuciana {
+    width: 188px;
+    height: 253px;
+    background-image: url("https://i.imgur.com/InFAkD1.png") !important;
+    background-size: cover;
+    background-position: center;
+}
+
+.cardAndrei {
+    width: 188px;
+    height: 253px;
+    background-image: url("https://i.imgur.com/jxAQMQs.png") !important;
+    background-size: cover;
+    background-position: center;
+}
+
+.cardLuan {
+    width: 188px;
+    height: 253px;
+    background-image: url("https://i.imgur.com/8aynZXf.png")!important;
+    background-size: cover;
+    background-position: center;
+}
+.cardLairton{
+    width: 188px;
+    height: 253px;
+    background-image: url("https://i.imgur.com/WHTmRiG.png")!important;
+    background-size: cover;
+    background-position: center;
+}
+.cardTacio{
+    width: 188px;
+    height: 253px;
+    background-image: url("https://i.imgur.com/1SGmiR5.png")!important;
+    background-size: cover;
+    background-position: center;
+}
+.cardIsabela{
+    width: 188px;
+    height: 253px;
+    background-image: url("https://i.imgur.com/RAhoAzY.png")!important;
+    background-size: cover;
+    background-position: center;
+    
+}
+.cardEquipe {
+    margin-top: 50px !important;
+    margin-bottom: 10px !important;
+}
+.redesSociais{
+    margin-top: 10px !important;
+    margin-bottom: 30px !important;
+}
+.nomesRedesSociais{
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+.iconeSocial{
+    font-size: 50px !important;
+    transition: transform 0.5s;
+    color: #3E733C;
+}
+.iconeSocial:hover{
+    transform: scale(1.4);
+    color: #96A621;
+}
+.intro{
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+
+

@@ -1,0 +1,52 @@
+.box1 {
+    display: flex;
+    flex-direction:row;
+    background-color: #3E733C;
+    height: 125px;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.box1 img{
+    height: 60px;
+}
+
+.box2 {
+    background-color: #396A37;
+    height: 50px;    
+}
+
+.caixa1{
+    display: flex;
+    flex-direction: column;
+}
+
+.caixa2{
+    display: flex;
+    flex-direction: column;
+}
+
+.social {
+    font-size: 50px !important;
+    margin: 10px;
+    color: white;
+    transition: transform 0.5s;
+}
+
+.social:hover {
+    transform: scale(1.4);
+    color: #ABDF24;
+}
+
+.textos {
+    color: white;
+    margin-top: 8px !important;
+}
+
+.link-hover {
+    transition: color 0.4s;
+}
+
+.link-hover:hover{
+    color: #ABDF24;
+}

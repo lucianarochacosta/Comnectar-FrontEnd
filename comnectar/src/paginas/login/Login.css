@@ -1,12 +1,23 @@
-.background{
-    background-color: #adbf244b;
+.backgroundImg{
+    background: url('https://i.imgur.com/sv7n9il.jpg');
+    background-size: cover;
 }
 .botao{
-    background-color: #96A621
+    background-color: #ADBF24 
     !important;
     color: white !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
     border-color: #3E733C !important;
+    width: 100%;
+    height: 48px;
+    transition: 0.4s;
 }
+
+.botao:hover{
+    background-color: #96A621!important;
+}
+
 .text-decorator-none{
     text-decoration: none;
 }

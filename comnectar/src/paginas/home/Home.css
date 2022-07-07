@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.boxfoto {
+    height: 450px;
+    margin-bottom: 50px !important;
+    padding-bottom: 50px !important;
+    gap: 8px;
+}
+
+.caixatop {
+    background-image: url(https://img.freepik.com/free-photo/colorful-veggies-frame-with-copy-space_23-2148290738.jpg?w=740&t=st=1656612338~exp=1656612938~hmac=0ab7d6082d24e911e9682a0c07698af7e93e257112963e964494a74844980580);
+    background-size: cover;
+    height: 450px;
+}
+
+.tituloh {
+    font-family: 'Bebas Neue' !important;
+    color: black;
+}
+
+.botaoh {
+    background-color: #ADBF24 !important;
+    color: white;
+    font-weight: bold;
+}
+
+.beneficios {
+    margin-top: 40px;
+    height: 20px;
+}
+
+.caixacard {
+    margin-top: 100px !important;
+    margin-bottom: 200px !important;
+}
+
+.card1 {
+    width: 350px;
+    height: 200px;
+    background-color: #3E733C !important;
+}
+
+.card2 {
+    width: 350px;
+    height: 200px;
+    background-color: #ADBF24 !important;
+}
+
+.card3 {
+    width: 350px;
+    height: 200px;
+    background-color: #d3d3d3 !important;
+}
