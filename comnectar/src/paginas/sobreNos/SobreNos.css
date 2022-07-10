@@ -142,26 +142,68 @@
     background-position: center;
     
 }
+.flip-container{
+    width: 188px;
+    height: 253px;
+    perspective: 1000px;
+}
+.flipper{
+    width: 100%;
+    height: 100%;
+	transition: transform 0.8s;
+    position: relative;
+    transform-style: preserve-3d;
+}
+.flip-container:hover .flipper{
+	transform: rotateY(180deg);
+}
+.back{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+.backgroundBack{
+    background-image: url(https://i.imgur.com/LYl0Z2o.png) !important;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+.fonteCardBack{
+    font-family: sans-serif !important;
+    color: #3E733C;
+    font-weight: bold !important;
+    font-size: 20px !important;
+}
+.fonteCardBack2{
+    font-family: sans-serif !important;
+    color: #3E733C;
+    font-size: 16px !important;
+}
+.alinhamentoBack{
+    margin-top: 15px;
+}
+.front{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+    backface-visibility: hidden;
+}
 .cardEquipe {
     margin-top: 50px !important;
-    margin-bottom: 10px !important;
+    margin-bottom: 50px !important;
 }
-.redesSociais{
-    margin-top: 10px !important;
-    margin-bottom: 30px !important;
-}
-.nomesRedesSociais{
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
-}
+
 .iconeSocial{
-    font-size: 50px !important;
+    font-size: 60px !important;
     transition: transform 0.5s;
     color: #3E733C;
 }
 .iconeSocial:hover{
     transform: scale(1.4);
-    color: #96A621;
+    color: #3e733c72;
 }
 .intro{
     align-items: center;
