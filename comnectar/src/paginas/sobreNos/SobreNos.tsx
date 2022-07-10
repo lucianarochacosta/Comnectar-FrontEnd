@@ -77,8 +77,8 @@ function SobreNos() {
 
                 <Grid className="intro" xs={12}>
                     <Box>
-                        <Typography variant="h3" align="center" className="titulo3">Quem somos nós</Typography>
-                        <Typography variant="h5" align="center" className="titulo4">Nossa equipe de desenvolvedores</Typography>
+                        <Typography variant="h3" align="center" className="titulo1">Quem somos nós</Typography>
+                        <Typography variant="h5" align="center" className="titulo2">Nossa equipe de desenvolvedores</Typography>
                         <Box marginTop={3} paddingX={10}><ListItem divider></ListItem></Box>
                     </Box>
                 </Grid>
