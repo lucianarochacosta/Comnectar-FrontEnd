@@ -9,7 +9,7 @@ import { TokenState } from "../../../store/tokens/tokensReducer";
 
 function ListaCategoria() {
 
-    const [categorias, setCategorias] = useState<Categoria[]>([])
+    const [categoria, setCategoria] = useState<Categoria[]>([])
     let navigate = useNavigate();
     const token = useSelector<TokenState, TokenState["tokens"]>(
       (state) => state.tokens
@@ -23,8 +23,8 @@ function ListaCategoria() {
     }, [token])
   
   
-    async function getCategorias(){
-      await busca("/categorias", setCategorias, {
+    async function getCategoria(){
+      await busca("/categorias", setCategoria, {
         headers: {
           'Authorization': token
         }
@@ -33,14 +33,14 @@ function ListaCategoria() {
   
   
     useEffect(()=>{
-      getCategorias()
-    }, [categorias.length])
+      getCategoria()
+    }, [categoria.length])
   
   
     return (
         <>
         {
-          categorias.map(categorias =>(
+          categoria.map(categoria =>(
           <Box m={2} >
             <Card variant="outlined">
               <CardContent>
@@ -48,19 +48,19 @@ function ListaCategoria() {
                   Categorias
                 </Typography>
                 <Typography variant="h5" component="h2">
-                 {categorias.classeCategoria}
+                 {categoria.classeCategoria}
                 </Typography>
                 <Typography variant="h5" component="h2">
-                 {categorias.modProdCategoria}
+                 {categoria.modProdCategoria}
                 </Typography>
                 <Typography variant="h5" component="h2">
-                 {categorias.frescorCategoria}
+                 {categoria.frescorCategoria}
                 </Typography>
               </CardContent>
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5} >
     
-                  <Link to={`/formulariocategoria/${categorias.id}`} className="text-decorator-none">
+                  <Link to={`/formulariocategoria/${categoria.id}`} className="text-decorator-none">
                     <Box mx={1}>
                       <Button variant="contained" className="marginLeft" size='small' color="primary" >
                         atualizar
@@ -68,14 +68,14 @@ function ListaCategoria() {
                     </Box>
                   </Link>
 
-                  <Link to={`/deletarcategoria/${categorias.id}`} className="text-decorator-none">
+                  <Link to={`/deletacategoria/${categoria.id}`} className="text-decorator-none">
                     <Box mx={1}>
                       <Button variant="contained" size='small' color="secondary">
                         deletar
                       </Button>
                     </Box>
                   </Link>
-                  
+
                 </Box>
               </CardActions>
             </Card>

@@ -9,6 +9,7 @@ import Footer from './components/estaticos/footer/Footer';
 import SobreNos from './paginas/sobreNos/SobreNos';
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 import ListaCategoria from './components/categorias/listaCategoria/ListaCategoria';
+import DeletaCategoria from './components/categorias/deletaCategoria/DeletaCategoria';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/sobre-nos" element={<SobreNos />} />
           <Route path="/cadastrousuario" element={<CadastroUsuario/>} />
           <Route path="/listacategoria" element={<ListaCategoria/>} />
+          <Route path="/deletacategoria" element={<DeletaCategoria/>} />
         </Routes>
       </div>
       <Footer />
