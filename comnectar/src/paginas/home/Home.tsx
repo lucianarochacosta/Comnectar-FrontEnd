@@ -1,9 +1,26 @@
 import { Button, Card, CardContent, Grid, Typography } from "@material-ui/core";
 import { Box } from "@mui/material";
 import './Home.css';
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from 'react-redux';
+import { TokenState } from "../../store/tokens/tokensReducer";
+import ModalProduto from "../../components/produtos/modalProduto/ModalProduto";
 
 function Home() {
+    let navigate = useNavigate();
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
+
+    useEffect(() => {
+        if (token == "") {
+            alert("Você precisa estar logado")
+            navigate("/login")
+
+        }
+    }, [token])
+
     return (
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center" className="caixatop">
@@ -19,7 +36,7 @@ function Home() {
                     </Box>
                     <Box display="flex" justifyContent="center" marginBottom="24px">
                         <Button variant="outlined" className="botaoh">
-                            Comprar
+                            <ModalProduto />
                         </Button>
                     </Box>
                     </Box>

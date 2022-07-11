@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-import React from 'react'
-
-function TabProduto() {
-  return (
-    <div>TabProduto</div>
-  )
-}
-
-export default TabProduto
-=======
 import React, {useState} from 'react'
 import { AppBar, Tab, Tabs, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
 import { TabContext, TabPanel } from '@material-ui/lab';
 import './TabProduto.css';
+import ListaProduto from '../listaProduto/ListaProduto';
 
 function TabProduto() {
     const [value, setValue] = useState('1')
@@ -43,4 +33,3 @@ function TabProduto() {
   );
 }
 export default TabProduto;
->>>>>>> b022a71ecfa1e79b432a307bfb8bed95128d3a56
