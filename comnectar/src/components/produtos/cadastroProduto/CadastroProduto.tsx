@@ -116,14 +116,14 @@ function CadastroProduto() {
     <Container maxWidth="sm" className="topo">    
         <form onSubmit={onSubmit}>
             <Typography variant="h3" color="textSecondary" component="h2" align="center" >Formulário de cadastro postagem</Typography>
-            <TextField value={produto.nomeProduto} id="nomeProduto" label="Nome do produto" variant="outlined" name="nomeProduto" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
-            <TextField  value={produto.fotoProduto} id="fotoProduto" label="foto do Produto" name="fotoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
+            <TextField value={produto.nomeProduto} id="nomeProduto" label="Nome" variant="outlined" name="nomeProduto" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
+            <TextField  value={produto.fotoProduto} id="fotoProduto" label="foto" name="fotoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
             <TextField  value={produto.infoProduto} id="infoProduto" label="descrição" name="infoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
-            <TextField  value={produto.precoProduto} id="precoProduto" label="descrição" name="precoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
-            <TextField  value={produto.unidadeProduto} id="unidadeProduto" label="descrição" name="unidadeProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
-            <TextField  value={produto.estoqueProduto} id="estoqueProduto" label="descrição" name="estoqueProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
-            <TextField  value={produto.chegadaProduto} id="chegadaProduto" label="descrição" name="chegadaProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
-            <TextField  value={produto.shelfProduto} id="shelfProduto" label="descrição" name="shelfProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
+            <TextField  value={produto.precoProduto} id="precoProduto" label="preço" name="precoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
+            <TextField  value={produto.unidadeProduto} id="unidadeProduto" label="unidade" name="unidadeProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
+            <TextField  value={produto.estoqueProduto} id="estoqueProduto" label="estoque" name="estoqueProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
+            <TextField  value={produto.chegadaProduto} id="chegadaProduto" label="chegada" name="chegadaProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
+            <TextField  value={produto.shelfProduto} id="shelfProduto" label="shelf" name="shelfProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
         
             <FormControl fullWidth variant='filled'>
                 <InputLabel id="demo-simple-select-helper-label">categoria </InputLabel>
