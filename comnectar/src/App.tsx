@@ -8,8 +8,12 @@ import Home from './paginas/home/Home';
 import Footer from './components/estaticos/footer/Footer';
 import SobreNos from './paginas/sobreNos/SobreNos';
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
+<<<<<<< HEAD
 import ListaCategoria from './components/categorias/listaCategoria/ListaCategoria';
 import DeletaCategoria from './components/categorias/deletaCategoria/DeletaCategoria';
+=======
+import CadastroCategoria from './paginas/cadastroCategoria/CadastroCategoria';
+>>>>>>> d4772f49a3f7380a949254fbdb14bdec9b7f98ef
 
 function App() {
   return (
@@ -22,8 +26,12 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/sobre-nos" element={<SobreNos />} />
           <Route path="/cadastrousuario" element={<CadastroUsuario/>} />
+<<<<<<< HEAD
           <Route path="/listacategoria" element={<ListaCategoria/>} />
           <Route path="/deletacategoria" element={<DeletaCategoria/>} />
+=======
+          <Route path="/cadastrocategoria" element={<CadastroCategoria/>} />
+>>>>>>> d4772f49a3f7380a949254fbdb14bdec9b7f98ef
         </Routes>
       </div>
       <Footer />
