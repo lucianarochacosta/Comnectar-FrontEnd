@@ -3,7 +3,7 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import { Button } from "@material-ui/core";
 import { Box } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import Modal from '@material-ui/core/Modal';
+import Modal from '@mui/material/Modal';
 import './ModalProduto.css';
 
 
