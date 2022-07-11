@@ -60,7 +60,7 @@ function ListaCategoria() {
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5} >
     
-                  <Link to={`/formulariocategoria/${categoria.id}`} className="text-decorator-none">
+                  <Link to={`/cadastrocategoria/${categoria.id}`} className="text-decorator-none">
                     <Box mx={1}>
                       <Button variant="contained" className="marginLeft" size='small' color="primary" >
                         atualizar
