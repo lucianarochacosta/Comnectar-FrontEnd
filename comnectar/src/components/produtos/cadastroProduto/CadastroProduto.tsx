@@ -10,7 +10,6 @@ import Categoria from "../../../models/Categoria";
 
 function CadastroProduto() {  
   const navigation = useNavigate();
-    //para pegar o id da rota
     const { id } = useParams<{ id: string }>();
     const [categorias, setCategorias] = useState<Categoria[]>([])
 
@@ -53,12 +52,12 @@ function CadastroProduto() {
             ...produto,
             categoria: categoria
         })
-    }, [categoria, produto])
+    }, [categoria])
 
     useEffect(() => {
         getCategorias()
         if (id !== undefined) {
-            findByIdPostagem(id)
+            findByIdProduto(id)
         }
     }, [id])
 
@@ -70,7 +69,7 @@ function CadastroProduto() {
         })
     }
 
-    async function findByIdPostagem(id: string) {
+    async function findByIdProduto(id: string) {
         await buscaId(`produtos/${id}`, setProduto, {
             headers: {
                 'Authorization': token
@@ -79,7 +78,6 @@ function CadastroProduto() {
     }
 
     function updatedProduto(e: ChangeEvent<HTMLInputElement>) {
-
         setProduto({
             ...produto,
             [e.target.name]: e.target.value,
@@ -115,13 +113,13 @@ function CadastroProduto() {
   return (
     <Container maxWidth="sm" className="topo">    
         <form onSubmit={onSubmit}>
-            <Typography variant="h3" color="textSecondary" component="h2" align="center" >Formulário de cadastro postagem</Typography>
+            <Typography variant="h3" color="textSecondary" component="h2" align="center" >Formulário de cadastro produto</Typography>
             <TextField value={produto.nomeProduto} id="nomeProduto" label="Nome" variant="outlined" name="nomeProduto" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
             <TextField  value={produto.fotoProduto} id="fotoProduto" label="foto" name="fotoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
             <TextField  value={produto.infoProduto} id="infoProduto" label="descrição" name="infoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
-            <TextField  value={produto.precoProduto} id="precoProduto" label="preço" name="precoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
+            <TextField type='number' value={produto.precoProduto} id="precoProduto" label="preço" name="precoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
             <TextField  value={produto.unidadeProduto} id="unidadeProduto" label="unidade" name="unidadeProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
-            <TextField  value={produto.estoqueProduto} id="estoqueProduto" label="estoque" name="estoqueProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
+            <TextField type='number'  value={produto.estoqueProduto} id="estoqueProduto" label="estoque" name="estoqueProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
             <TextField  value={produto.chegadaProduto} id="chegadaProduto" label="chegada" name="chegadaProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
             <TextField  value={produto.shelfProduto} id="shelfProduto" label="shelf" name="shelfProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
         
@@ -130,18 +128,19 @@ function CadastroProduto() {
                 <Select
                     labelId="demo-simple-select-helper-label"
                     id="demo-simple-select-helper"
-                    onChange={(e:any)=>buscaId(`/categorias/${e.target.value}`, setCategoria, {
-                        headers: {
-                            "Authorization": token
-                        }
-                    })}
+                     onChange={(e:any)=>buscaId(`/categorias/${e.target.value}`, setCategoria, {
+                         headers: {
+                             "Authorization": token
+                         }
+                     })}
+                     value={null}
                     > 
                     {categorias.map(categoria=>
                         <MenuItem value={categoria.id}>{categoria.classeCategoria+' | '+categoria.modProdCategoria +' | '+categoria.frescorCategoria}</MenuItem>
-                        )}
-                </Select>
-                <FormHelperText variant='standard'>Escolha um categoria para a postagem</FormHelperText>
-                <Button type="submit" variant="contained" color="primary">
+                        )} 
+               </Select>
+                <FormHelperText variant='standard'>Escolha um categoria para a produto</FormHelperText> 
+                 <Button type="submit" variant="contained" color="primary">
                     Finalizar
                 </Button>
             </FormControl>
