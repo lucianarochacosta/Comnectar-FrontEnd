@@ -1,6 +1,6 @@
-import {configureStore} from 'react-redux';
+import {createStore} from 'redux';
 import { tokenReducer } from "./tokens/tokensReducer";
 
-const store = configureeStore(tokenReducer);
+const store = createStore(tokenReducer);
 
 export default store;
