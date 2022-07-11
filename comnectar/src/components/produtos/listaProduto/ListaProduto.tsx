@@ -15,15 +15,6 @@ function ListaProduto(){
       (state) => state.tokens
       );
 
-    let navigate = useNavigate();
-  
-    useEffect(() =>{
-      if(token ===''){
-        alert("Você precisa estar logado!")
-        navigate("/login")
-      }
-    },[token])
-
     async function getProdutos() {
         await busca("/produtos", setProdutos, {
           headers: {

@@ -8,18 +8,6 @@ import { TokenState } from "../../store/tokens/tokensReducer";
 import ModalProduto from "../../components/produtos/modalProduto/ModalProduto";
 
 function Home() {
-    let navigate = useNavigate();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
-        (state) => state.tokens
-    );
-
-    useEffect(() => {
-        if (token == "") {
-            alert("Você precisa estar logado")
-            navigate("/login")
-
-        }
-    }, [token])
 
     return (
         <>
