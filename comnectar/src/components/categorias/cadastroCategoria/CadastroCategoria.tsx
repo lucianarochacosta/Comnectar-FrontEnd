@@ -12,11 +12,11 @@ function CadastroCategoria() {
     const token= useSelector<TokenState,TokenState["tokens"]>(
         (state) => state.tokens
         );
-    const [categoria, setCategoria] = useState<Categoria>( {
+    const [categorias, setCategorias] = useState<Categoria>( {
         id: 0,
         classeCategoria: '',
         modProdCategoria: '',
-        frescorCategoria: true||false
+        frescorCategoria: false
     })
 
     useEffect(() => {
@@ -33,7 +33,7 @@ function CadastroCategoria() {
     }, [id])
 
     async function findById(id: string) {
-        buscaId(`/categorias/${id}`,setCategoria, {
+        buscaId(`/categorias/${id}`,setCategorias, {
             headers: {
                 'Authorization': token
             }
@@ -41,26 +41,26 @@ function CadastroCategoria() {
     }
 
     function atualizaCategoria(e: ChangeEvent<HTMLInputElement>) {
-        setCategoria({
-            ...categoria,
+        setCategorias({
+            ...categorias,
             [e.target.name]: e.target.value,
         })
     }
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
-        console.log("categoria " + JSON.stringify(categoria))
+        console.log("categoria " + JSON.stringify(categorias))
 
         if (id !== undefined) {
-            console.log(categoria)
-            put(`/categorias`, categoria, setCategoria, {
+            console.log(categorias)
+            put(`/categorias`, categorias, setCategorias, {
                 headers: {
                     'Authorization': token
                 }
             })
             alert('Categoria atualizada com sucesso!');
         } else {
-            post(`/categorias`, categoria, setCategoria, {
+            post(`/categorias`, categorias, setCategorias, {
                 headers: {
                     'Authorization': token
                 }
@@ -71,32 +71,21 @@ function CadastroCategoria() {
     }
 
     function back() {
-        navigate('/listacategoria')
+        navigate('/categorias')
     }
 
     return(
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center">Cadastrar Classe</Typography>
-                <TextField value={categoria.classeCategoria} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizaCategoria(e)} id="classeCategoria" label="classeCategoria" variant="outlined" name="classeCategoria" margin="normal" fullWidth/>
+                <TextField value={categorias.classeCategoria} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizaCategoria(e)} id="classeCategoria" label="Classe" variant="outlined" name="classeCategoria" margin="normal" fullWidth/>
+                <TextField value={categorias.modProdCategoria} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizaCategoria(e)} id="modProdCategoria" label="Modo de produção" variant="outlined" name="modProdCategoria" margin="normal" fullWidth/>
+                <TextField value={categorias.frescorCategoria} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizaCategoria(e)} id="frescorCategoria" label="Frescor" variant="outlined" name="frescorCategoria" margin="normal" fullWidth/>
                 <Button type="submit" variant="contained" color="primary">
                     Cadastrar
                 </Button>
             </form>
-            <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center">Cadastrar Modo de Produção</Typography>
-                <TextField value={categoria.modProdCategoria} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizaCategoria(e)} id="modProdCategoria" label="modProdCategoria" variant="outlined" name="modProdCategoria" margin="normal" fullWidth/>
-                <Button type="submit" variant="contained" color="primary">
-                    Cadastrar
-                </Button>
-            </form>
-            <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center">Cadastrar Frescor</Typography>
-                <TextField value={categoria.frescorCategoria} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizaCategoria(e)} id="frescorCategoria" label="frescorCategoria" variant="outlined" name="frescorCategoria" margin="normal" fullWidth/>
-                <Button type="submit" variant="contained" color="primary">
-                    Cadastrar
-                </Button>
-            </form>
+        
 
         </Container>
     )

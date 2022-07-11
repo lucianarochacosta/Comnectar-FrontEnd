@@ -16,9 +16,22 @@ function Home() {
     if (token !== "") {
         homeComponent =
             <Grid container justifyContent="center" alignItems="center" className="caixatop">
+                <Box>
                 <Link to="/produtos" className="text-decorator-none">
-                    <Button variant="outlined" className="botao">Listar Produtos</Button>
+                    <Button variant="outlined" className="botao" >Listar Produtos</Button>
                 </Link>
+                <Link to="/categorias" className="text-decorator-none">
+                    <Button variant="outlined" className="botao">Listar Categorias</Button>
+                </Link>                    
+                </Box>
+                <Box>
+                <Link to="/registroProduto" className="text-decorator-none">
+                    <Button variant="outlined" className="botao">Cadastrar Produtos</Button>
+                </Link>
+                <Link to="/cadastrocategoria" className="text-decorator-none">
+                    <Button variant="outlined" className="botao">Cadastrar Categorias</Button>
+                </Link>                    
+                </Box>
             </Grid>
     }
 
