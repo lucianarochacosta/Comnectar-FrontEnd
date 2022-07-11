@@ -10,7 +10,13 @@ import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import CadastroCategoria from './components/categorias/cadastroCategoria/CadastroCategoria';
-import CadastroProduto from './paginas/registroProduto/RegistroProduto';
+import RegistroProduto from './paginas/registroProduto/RegistroProduto';
+import CadastroProduto from './components/produtos/cadastroProduto/CadastroProduto';
+
+
+import ListaCategoria from './components/categorias/listaCategoria/ListaCategoria';
+import DeletaCategoria from './components/categorias/deletaCategoria/DeletaCategoria';
+
 
 function App() {
   return (
@@ -23,10 +29,12 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/home" element={<Home />} />
             <Route path="/sobre-nos" element={<SobreNos />} />
-            <Route path="/cadastrousuario" element={<CadastroUsuario/>} />
-            <Route path="/cadastroProduto" element={<CadastroProduto/>} />
-            <Route path="/cadastrocategoria" element={<CadastroCategoria/>} />
-            <Route path="/atualizarProduto/:id" element={<CadastroProduto/>} />
+            <Route path="/cadastrousuario" element={<CadastroUsuario />} />
+            <Route path="/listacategoria" element={<ListaCategoria />} />
+            <Route path="/deletacategoria" element={<DeletaCategoria />} />
+            <Route path="/cadastrocategoria" element={<CadastroCategoria />} />
+            <Route path="/registroProduto" element={<RegistroProduto />} />
+            <Route path="/atualizarProduto/:id" element={<RegistroProduto />} />
           </Routes>
         </div>
         <Footer />
