@@ -10,7 +10,7 @@ import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import CadastroCategoria from './components/categorias/cadastroCategoria/CadastroCategoria';
-import CadastroProduto from './paginas/cadastroProduto/CadastroProduto';
+import CadastroProduto from './paginas/registroProduto/RegistroProduto';
 
 function App() {
   return (
