@@ -5,6 +5,7 @@ import { Box } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import Modal from '@mui/material/Modal';
 import './ModalProduto.css';
+import CadastroProduto from '../cadastroProduto/CadastroProduto';
 
 
 function getModalStyle() {
