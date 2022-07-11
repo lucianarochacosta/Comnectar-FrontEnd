@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Button, Card, CardActions, CardContent, Typography } from "@material-ui/core";
 import { Box } from "@mui/material";
 import { useEffect, useState } from "react";
@@ -86,14 +85,3 @@ function DeletarProduto() {
   );
 }
 export default DeletarProduto;
-=======
-import React from 'react'
-
-function DeletarProduto() {
-  return (
-    <div>DeletarProduto</div>
-  )
-}
-
-export default DeletarProduto
->>>>>>> 242b498e370338a54e8de9b47383879124166476

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Box, Button } from "@mui/material";
 import {Card, CardActions, CardContent, Typography} from "@material-ui/core"
 import { useEffect, useState } from "react";
@@ -93,14 +92,3 @@ function ListaProduto(){
 }
 
 export default ListaProduto;
-=======
-import React from 'react'
-
-function ListaProduto() {
-  return (
-    <div>ListaProduto</div>
-  )
-}
-
-export default ListaProduto
->>>>>>> 094bb997e96c86bf72f44be4fb656f1e670bcbd4
