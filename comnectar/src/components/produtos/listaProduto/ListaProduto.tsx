@@ -17,10 +17,9 @@ function ListaProduto(){
 
     async function getProdutos() {
         await busca("/produtos", setProdutos, {
-          auth:{
-            username: "root",
-            password: "root"
-          }
+            headers: {
+                'Authorization': token
+            }
         })
       };
 
