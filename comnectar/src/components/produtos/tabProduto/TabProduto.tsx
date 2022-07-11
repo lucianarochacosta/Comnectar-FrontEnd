@@ -3,6 +3,7 @@ import { AppBar, Tab, Tabs, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
 import { TabContext, TabPanel } from '@material-ui/lab';
 import './TabProduto.css';
+import ListaProduto from '../listaProduto/ListaProduto';
 
 function TabProduto() {
     const [value, setValue] = useState('1')
