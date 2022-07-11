@@ -21,7 +21,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/sobre-nos" element={<SobreNos />} />
           <Route path="/cadastrousuario" element={<CadastroUsuario/>} />
-          <Route path="/listacadastro" element={<ListaCategoria/>} />
+          <Route path="/listacategoria" element={<ListaCategoria/>} />
         </Routes>
       </div>
       <Footer />
