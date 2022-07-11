@@ -17,11 +17,12 @@ function ListaProduto(){
 
     async function getProdutos() {
         await busca("/produtos", setProdutos, {
-          headers: {
-            'Authorization': token
+          auth:{
+            username: "root",
+            password: "root"
           }
         })
-      }
+      };
 
       useEffect(() => {
 
@@ -37,7 +38,7 @@ function ListaProduto(){
             <Card variant="outlined">
               <CardContent>
                 <Typography color="textSecondary" gutterBottom>
-                  Postagens
+                  Produtos
                 </Typography>
                 <Typography variant="h5" component="h2">
                   {produto.nomeProduto}
@@ -58,14 +59,14 @@ function ListaProduto(){
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>
 
-                  <Link to={`/formularioPostagem/${produto.id}`} className="text-decorator-none" >
+                  <Link to={`/atualizarProduto/${produto.id}`} className="text-decorator-none" >
                     <Box mx={1}>
                       <Button variant="contained" className="marginLeft" size='small' color="primary" >
                         Alterar
                       </Button>
                     </Box>
                   </Link>
-                  <Link to={`/deletarPostagem/${produto.id}`} className="text-decorator-none">
+                  <Link to={`/deletaproduto/${produto.id}`} className="text-decorator-none">
                     <Box mx={1}>
                       <Button variant="contained" size='small' color="secondary">
                         Deletar

@@ -63,17 +63,19 @@ function CadastroProduto() {
 
     async function getCategorias() {
         await busca("/categorias", setCategorias, {
-            headers: {
-                'Authorization': token
-            }
+            auth:{
+                username: "root",
+                password: "root"
+              }
         })
     }
 
     async function findByIdProduto(id: string) {
         await buscaId(`produtos/${id}`, setProduto, {
-            headers: {
-                'Authorization': token
-            }
+            auth:{
+                username: "root",
+                password: "root"
+              }
         })
     }
 
@@ -91,16 +93,18 @@ function CadastroProduto() {
 
         if (id !== undefined) {
             put(`/produtos/${id}`, produto, setProduto, {
-                headers: {
-                    'Authorization': token
-                }
+                auth:{
+                    username: "root",
+                    password: "root"
+                  }
             })
             alert('Produto atualizado com sucesso');
         } else {
             post(`/produtos`, produto, setProduto, {
-                headers: {
-                    'Authorization': token
-                }
+                auth:{
+                    username: "root",
+                    password: "root"
+                  }
             })
             alert('Produto cadastrado com sucesso');
         }
@@ -129,9 +133,10 @@ function CadastroProduto() {
                     labelId="demo-simple-select-helper-label"
                     id="demo-simple-select-helper"
                      onChange={(e:any)=>buscaId(`/categorias/${e.target.value}`, setCategoria, {
-                         headers: {
-                             "Authorization": token
-                         }
+                        auth:{
+                            username: "root",
+                            password: "root"
+                          }
                      })}
                      value={null}
                     > 
