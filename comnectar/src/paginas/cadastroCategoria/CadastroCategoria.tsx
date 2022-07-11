@@ -1,4 +1,4 @@
-import React, { useState, useEffect, ChangeEvent }from 'react';
+import React, { useState, useEffect, ChangeEvent } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 import { Container, Typography, TextField, Button } from "@material-ui/core";
@@ -31,7 +31,7 @@ function CadastroCategoria() {
     }, [id])
 
     async function findById(id: string) {
-        buscaId(`/cadastrocategoria/${id}`,setCategoria, {
+        buscaId(`/categorias/${id}`,setCategoria, {
             headers: {
                 'Authorization': token
             }
@@ -51,14 +51,14 @@ function CadastroCategoria() {
 
         if (id !== undefined) {
             console.log(categoria)
-            put(`/cadastrocategoria`, categoria, setCategoria, {
+            put(`/categorias`, categoria, setCategoria, {
                 headers: {
                     'Authorization': token
                 }
             })
             alert('Categoria atualizada com sucesso!');
         } else {
-            post(`/cadastrocategoria`, categoria, setCategoria, {
+            post(`/categorias`, categoria, setCategoria, {
                 headers: {
                     'Authorization': token
                 }
@@ -69,18 +69,33 @@ function CadastroCategoria() {
     }
 
     function back() {
-        navigate('/cadastrocategoria')
+        navigate('/listacategoria')
     }
 
     return(
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center">Cadastrar Categoria</Typography>
-                <TextField value={categoria.classeCategoria} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCadastroCategoria(e)} id="classeCategoria" label="classeCategoria" variant="outlined" name="classeCategoria" margin="normal" fullWidth/>
+                <Typography variant="h3" color="textSecondary" component="h1" align="center">Cadastrar Classe</Typography>
+                <TextField value={categoria.classeCategoria} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizaCategoria(e)} id="classeCategoria" label="classeCategoria" variant="outlined" name="classeCategoria" margin="normal" fullWidth/>
                 <Button type="submit" variant="contained" color="primary">
                     Cadastrar
                 </Button>
             </form>
+            <form onSubmit={onSubmit}>
+                <Typography variant="h3" color="textSecondary" component="h1" align="center">Cadastrar Modo de Produção</Typography>
+                <TextField value={categoria.modProdCategoria} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizaCategoria(e)} id="modProdCategoria" label="modProdCategoria" variant="outlined" name="modProdCategoria" margin="normal" fullWidth/>
+                <Button type="submit" variant="contained" color="primary">
+                    Cadastrar
+                </Button>
+            </form>
+            <form onSubmit={onSubmit}>
+                <Typography variant="h3" color="textSecondary" component="h1" align="center">Cadastrar Frescor</Typography>
+                <TextField value={categoria.frescorCategoria} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizaCategoria(e)} id="frescorCategoria" label="frescorCategoria" variant="outlined" name="frescorCategoria" margin="normal" fullWidth/>
+                <Button type="submit" variant="contained" color="primary">
+                    Cadastrar
+                </Button>
+            </form>
+
         </Container>
     )
 }
