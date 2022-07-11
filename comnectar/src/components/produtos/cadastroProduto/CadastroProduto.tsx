@@ -110,7 +110,7 @@ function CadastroProduto() {
     }
 
     function back() {
-        navigation('/pr')
+        navigation('/home')
     }
   return (
     <Container maxWidth="sm" className="topo">    
