@@ -101,10 +101,9 @@ function CadastroProduto() {
             alert('Produto atualizado com sucesso');
         } else {
             post(`/produtos`, produto, setProduto, {
-                auth:{
-                    username: "root",
-                    password: "root"
-                  }
+                headers: {
+                    'Authorization': token
+                }
             })
             alert('Produto cadastrado com sucesso');
         }
@@ -133,10 +132,9 @@ function CadastroProduto() {
                     labelId="demo-simple-select-helper-label"
                     id="demo-simple-select-helper"
                      onChange={(e:any)=>buscaId(`/categorias/${e.target.value}`, setCategoria, {
-                        auth:{
-                            username: "root",
-                            password: "root"
-                          }
+                        headers: {
+                            'Authorization': token
+                        }
                      })}
                      value={null}
                     > 

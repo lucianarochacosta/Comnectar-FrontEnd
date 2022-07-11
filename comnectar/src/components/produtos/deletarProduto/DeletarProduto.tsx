@@ -23,20 +23,18 @@ function DeletarProduto() {
 
     async function findById(id: string) {
         buscaId(`/produtos/${id}`, setProduto, {
-          auth:{
-            username: "root",
-            password: "root"
-          }
+          headers: {
+            'Authorization': token
+        }
           })
         }
 
         function sim() {
           navigate('/produtos')
             deleteId(`/produtos/${id}`, {
-              auth:{
-                username: "root",
-                password: "root"
-              }
+              headers: {
+                'Authorization': token
+            }
             });
             alert('Produto deletado com sucesso');
           }
