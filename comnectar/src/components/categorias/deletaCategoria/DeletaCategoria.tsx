@@ -8,86 +8,72 @@ import { buscaId, deleteId } from "../../../service/Service";
 import { TokenState } from "../../../store/tokens/tokensReducer";
 
 function DeletaCategoria() {
-    let navigate = useNavigate();
-    const { id } = useParams<{id: string}>();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
-      (state) => state.tokens
-    );
-    const [categoria, setCategoria] = useState<Categoria>()
+  let navigate = useNavigate();
+  const { id } = useParams<{id: string}>();
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
+  const [categorias, setCategorias] = useState<Categoria>()
 
-    useEffect(() => {
-        if (token == "") {
-            alert("Você precisa estar logado")
-            navigate("/login")
-    
-        }
-    }, [token])
+  useEffect(() =>{
+      if(id !== undefined){
+          findById(id)
+      }
+  }, [id])
 
-    useEffect(() =>{
-        if(id !== undefined){
-            findById(id)
-        }
-    }, [id])
+  async function findById(id: string) {
+      buscaId(`/categorias/${id}`, setCategorias, {
+        headers: {
+          'Authorization': token
+      }
+        })
+      }
 
-    async function findById(id: string) {
-        buscaId(`/categorias/${id}`, setCategoria, {
+      function sim() {
+        navigate('/categorias')
+          deleteId(`/categorias/${id}`, {
             headers: {
               'Authorization': token
-            }
-          })
+          }
+          });
+          alert('Produto deletado com sucesso');
         }
+      
+        function nao() {
+          navigate('/produtos')
+        }
+return (
+  <>
+    <Box m={2}>
+      <Card variant="outlined" >
+        <CardContent>
+          <Box justifyContent="center">
+            <Typography color="textSecondary" gutterBottom>
+              Deseja deletar a categoria:
+            </Typography>
+            <Typography color="textSecondary" >
+              Categoria
+            </Typography>
+          </Box>
 
-        function sim() {
-          navigate('/listacategoria')
-            deleteId(`/categorias/${id}`, {
-              headers: {
-                'Authorization': token
-              }
-            });
-            alert('Tema deletado com sucesso');
-          }
-        
-          function nao() {
-            navigate('/listacategorias')
-          }
-          
-  return (
-    <>
-      <Box m={2}>
-        <Card variant="outlined">
-          <CardContent>
-            <Box justifyContent="center">
-              <Typography color="textSecondary" gutterBottom>
-                Deseja deletar a Categoria:
-              </Typography>
-              <Typography color="textSecondary">
-                {categoria?.classeCategoria}
-              </Typography>
-              <Typography color="textSecondary">
-                {categoria?.modProdCategoria}
-              </Typography>
-              <Typography color="textSecondary">
-                {categoria?.frescorCategoria}
-              </Typography>
+        </CardContent>
+        <CardActions>
+          <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
+            <Box mx={2}>
+            <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
+              Sim
+            </Button>
             </Box>
-          </CardContent>
-          <CardActions>
-            <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
-              <Box mx={2}>
-                <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
-                  Sim
-                </Button>
-              </Box>
-              <Box mx={2}>
-                <Button  onClick={nao} variant="contained" size='large' color="secondary">
-                  Não
-                </Button>
-              </Box>
+            <Box>
+            <Button  onClick={nao} variant="contained" size='large' color="secondary">
+              Não
+            </Button>
             </Box>
-          </CardActions>
-        </Card>
-      </Box>
-    </>
-  );
+          </Box>
+        </CardActions>
+      </Card>
+    </Box>
+  </>
+);
 }
 export default DeletaCategoria;
