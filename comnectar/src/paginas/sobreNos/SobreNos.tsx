@@ -77,78 +77,140 @@ function SobreNos() {
 
                 <Grid className="intro" xs={12}>
                     <Box>
-                        <Typography variant="h3" align="center" className="titulo3">Quem somos nós</Typography>
-                        <Typography variant="h5" align="center" className="titulo4">Nossa equipe de desenvolvedores</Typography>
+                        <Typography variant="h3" align="center" className="titulo1">Quem somos nós</Typography>
+                        <Typography variant="h5" align="center" className="titulo2">Nossa equipe de desenvolvedores</Typography>
                         <Box marginTop={3} paddingX={10}><ListItem divider></ListItem></Box>
                     </Box>
                 </Grid>
 
                 <Grid alignItems="center" item xs={12} className="cardEquipe">
                     <Box display="flex" justifyContent="space-evenly">
-                        <Card className="cardAndrei"></Card>
-                        <Card className="cardLairton"></Card>
-                        <Card className="cardLuciana"></Card>
-                        <Card className="cardLuan"></Card>
-                        <Card className="cardIsabela"></Card>
-                        <Card className="cardTacio"></Card>
-                    </Box>
-                </Grid>
-
-                <Grid alignItems="center" item xs={12} className="redesSociais">
-                    <Box display="flex" justifyContent="space-evenly">
-                        <Box justifyContent="center" paddingX={6}>
-                            <a href="https://www.linkedin.com/in/andreifl/" target="_blank">
-                                <LinkedInIcon className='iconeSocial' />
-                            </a>
-                            <a href="https://github.com/andreiflancanova" target="_blank">
-                                <GitHub className='iconeSocial' />
-                            </a>
-                        </Box>
-
-                        <Box justifyContent="center" paddingX={6}>
-                            <a href="https://www.linkedin.com/in/lairton-da-silva-382688224/" target="_blank">
-                                <LinkedInIcon className='iconeSocial' />
-                            </a>
-                            <a href="https://github.com/Lairtondasilva" target="_blank">
-                                <GitHub className='iconeSocial' />
-                            </a>
-                        </Box>
-          
-                        <Box justifyContent="center" paddingX={6}>
-                            <a href="https://www.linkedin.com/in/lucianarochacosta/" target="_blank">
-                                <LinkedInIcon className='iconeSocial' />
-                            </a>
-                            <a href="https://github.com/lucianarochacosta/Comnectar-FrontEnd" target="_blank">
-                                <GitHub className='iconeSocial' />
-                            </a>
-                        </Box>
-
-                        <Box justifyContent="center" paddingX={6}>
-                            <a href="https://www.linkedin.com/in/luan-saramago/" target="_blank">
-                                <LinkedInIcon className='iconeSocial' />
-                            </a>
-                            <a href="https://github.com/luantss" target="_blank">
-                                <GitHub className='iconeSocial' />
-                            </a>
-                        </Box>
-     
-                        <Box justifyContent="center" paddingX={6}>
-                            <a href="https://www.linkedin.com/in/taciosfer/" target="_blank">
-                                <LinkedInIcon className='iconeSocial' />
-                            </a>
-                            <a href="https://github.com/taciosfer" target="_blank">
-                                <GitHub className='iconeSocial' />
-                            </a>
-                        </Box>
-         
-                        <Box justifyContent="center" paddingX={6}>
-                            <a href="https://www.linkedin.com/in/isabela-piana/" target="_blank">
-                                <LinkedInIcon className='iconeSocial' />
-                            </a>
-                            <a href="https://github.com/isabelapiana" target="_blank">
-                                <GitHub className='iconeSocial' />
-                            </a>
-                        </Box>
+                        <Card className="flip-container">
+                            <div className="flipper">
+                                <div className="front">
+                                    <Card className="cardAndrei"></Card>
+                                </div>
+                                <div className="back">
+                                    <Card className="backgroundBack">
+                                        <Box justifyContent="center" alignItems="center" display="-moz-initial" paddingX={3} className="alinhamentoBack">
+                                            <Typography className="fonteCardBack">Andrei Lançanova</Typography>
+                                            <Typography className="fonteCardBack2">Desenvolvedor Web Java Fullstack</Typography>
+                                            <a href="https://www.linkedin.com/in/andreifl/" target="_blank">
+                                                <LinkedInIcon className='iconeSocial' />
+                                            </a>
+                                            <a href="https://github.com/andreiflancanova" target="_blank">
+                                                <GitHub className='iconeSocial' />
+                                            </a>
+                                        </Box>
+                                    </Card>
+                                </div>
+                            </div>
+                        </Card>
+                        <Card className="flip-container">
+                            <div className="flipper">
+                                <div className="front">
+                                    <Card className="cardIsabela"></Card>
+                                </div>
+                                <div className="back">
+                                    <Card className="backgroundBack">
+                                        <Box justifyContent="center" alignItems="center" display="-moz-initial" paddingX={3} className="alinhamentoBack">
+                                            <Typography className="fonteCardBack">Isabela Piana</Typography>
+                                            <Typography className="fonteCardBack2">Desenvolvedora Web Java Fullstack</Typography>
+                                            <a href="https://www.linkedin.com/in/isabela-piana/" target="_blank">
+                                                <LinkedInIcon className='iconeSocial' />
+                                            </a>
+                                            <a href="https://github.com/isabelapiana" target="_blank">
+                                                <GitHub className='iconeSocial' />
+                                            </a>
+                                        </Box>
+                                    </Card>
+                                </div>
+                            </div>
+                        </Card>
+                        <Card className="flip-container">
+                            <div className="flipper">
+                                <div className="front">
+                                    <Card className="cardLairton"></Card>
+                                </div>
+                                <div className="back">
+                                    <Card className="backgroundBack">
+                                        <Box justifyContent="center" alignItems="center" display="-moz-initial" paddingX={3} className="alinhamentoBack">
+                                            <Typography className="fonteCardBack">Lairton da Silva</Typography>
+                                            <Typography className="fonteCardBack2">Desenvolvedor Web Java Fullstack</Typography>
+                                            <a href="https://www.linkedin.com/in/lairton-da-silva-382688224/" target="_blank">
+                                                <LinkedInIcon className='iconeSocial' />
+                                            </a>
+                                            <a href="https://github.com/Lairtondasilva" target="_blank">
+                                                <GitHub className='iconeSocial' />
+                                            </a>
+                                        </Box>
+                                    </Card>
+                                </div>
+                            </div>
+                        </Card>
+                        <Card className="flip-container">
+                            <div className="flipper">
+                                <div className="front">
+                                    <Card className="cardLuan"></Card>
+                                </div>
+                                <div className="back">
+                                    <Card className="backgroundBack">
+                                        <Box justifyContent="center" alignItems="center" display="-moz-initial" paddingX={3} className="alinhamentoBack">
+                                            <Typography className="fonteCardBack">Luan Saramago</Typography>
+                                            <Typography className="fonteCardBack2">Desenvolvedor Web Java Fullstack</Typography>
+                                            <a href="https://www.linkedin.com/in/luan-saramago/" target="_blank">
+                                                <LinkedInIcon className='iconeSocial' />
+                                            </a>
+                                            <a href="https://github.com/luantss" target="_blank">
+                                                <GitHub className='iconeSocial' />
+                                            </a>
+                                        </Box>
+                                    </Card>
+                                </div>
+                            </div>
+                        </Card>
+                        <Card className="flip-container">
+                            <div className="flipper">
+                                <div className="front">
+                                    <Card className="cardLuciana"></Card>
+                                </div>
+                                <div className="back">
+                                    <Card className="backgroundBack">
+                                        <Box justifyContent="center" alignItems="center" display="-moz-initial" paddingX={3} className="alinhamentoBack">
+                                            <Typography className="fonteCardBack">Luciana Rocha Costa</Typography>
+                                            <Typography className="fonteCardBack2">Desenvolvedora Web Java Fullstack</Typography>
+                                            <a href="https://www.linkedin.com/in/lucianarochacosta/" target="_blank">
+                                                <LinkedInIcon className='iconeSocial' />
+                                            </a>
+                                            <a href="https://github.com/lucianarochacosta" target="_blank">
+                                                <GitHub className='iconeSocial' />
+                                            </a>
+                                        </Box>
+                                    </Card>
+                                </div>
+                            </div>
+                        </Card>
+                        <Card className="flip-container">
+                            <div className="flipper">
+                                <div className="front">
+                                    <Card className="cardTacio"></Card>
+                                </div>
+                                <div className="back">
+                                    <Card className="backgroundBack">
+                                        <Box justifyContent="center" alignItems="center" display="-moz-initial" paddingX={3} className="alinhamentoBack">
+                                            <Typography className="fonteCardBack">Tácio Ferreira</Typography>
+                                            <Typography className="fonteCardBack2">Desenvolvedor Web Java Fullstack</Typography>
+                                            <a href="https://www.linkedin.com/in/taciosfer/" target="_blank">
+                                                <LinkedInIcon className='iconeSocial' />
+                                            </a>
+                                            <a href="https://github.com/taciosfer" target="_blank">
+                                                <GitHub className='iconeSocial' />
+                                            </a>
+                                        </Box>
+                                    </Card>
+                                </div>
+                            </div>
+                        </Card>
                     </Box>
                 </Grid>
 
