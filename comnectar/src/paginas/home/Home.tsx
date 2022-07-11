@@ -36,7 +36,7 @@ function Home() {
                     </Box>
                     <Box display="flex" justifyContent="center" marginBottom="24px">
                         <Button variant="outlined" className="botaoh">
-                            <ModalProduto />
+                            Comprar
                         </Button>
                     </Box>
                     </Box>
