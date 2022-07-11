@@ -1,6 +1,6 @@
-import {configureStore} from '@reduxjs/toolkit';
+import {createStore} from 'redux';
 import { tokenReducer } from "./tokens/tokensReducer";
 
-//const store = configureStore(tokenReducer);
+const store = createStore(tokenReducer);
 
 export default store;
