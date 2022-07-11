@@ -136,7 +136,7 @@ function CadastroProduto() {
                             'Authorization': token
                         }
                      })}
-                     value={null}
+                     value={produto.categoria?.id}
                     > 
                     {categorias.map(categoria=>
                         <MenuItem value={categoria.id}>{categoria.classeCategoria+' | '+categoria.modProdCategoria +' | '+categoria.frescorCategoria}</MenuItem>
