@@ -24,7 +24,7 @@ function ListaCategoria() {
   
   
     async function getCategoria(){
-      await busca("/categorias", setCategoria, {
+      await busca("/listacategorias", setCategoria, {
         headers: {
           'Authorization': token
         }
