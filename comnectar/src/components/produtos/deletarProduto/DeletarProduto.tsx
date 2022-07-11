@@ -15,14 +15,6 @@ function DeletarProduto() {
     );
     const [post, setProduto] = useState<Produto>()
 
-    useEffect(() => {
-        if (token == "") {
-            alert("Você precisa estar logado")
-            navigate("/login")
-    
-        }
-    }, [token])
-
     useEffect(() =>{
         if(id !== undefined){
             findById(id)
@@ -31,17 +23,19 @@ function DeletarProduto() {
 
     async function findById(id: string) {
         buscaId(`/produtos/${id}`, setProduto, {
-            headers: {
-              'Authorization': token
-            }
+          auth:{
+            username: "root",
+            password: "root"
+          }
           })
         }
 
         function sim() {
           navigate('/produtos')
             deleteId(`/produtos/${id}`, {
-              headers: {
-                'Authorization': token
+              auth:{
+                username: "root",
+                password: "root"
               }
             });
             alert('Produto deletado com sucesso');
