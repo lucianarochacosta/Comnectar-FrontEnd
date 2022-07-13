@@ -1,0 +1,46 @@
+.topoCompra {
+    background-image: url(https://i.imgur.com/adcMsOq.jpg);
+    background-size: cover;
+    height: 320px;
+}
+
+.boxTopoCompra {
+    height: 320px;
+}
+
+.blurCompra {
+    width: 771px;
+    height: 192px;
+    left: 339px;
+    top: 140px;
+    background: rgba(217, 217, 217, 0.15);
+    backdrop-filter: blur(2px);
+    border-radius: 75px;
+}
+
+.tituloCompra {
+    color: white;
+    font-weight: 800 !important;
+    font-size: 64px !important;
+}
+
+.boxBusca {
+    width: 736px;
+    height: 53px;
+}
+
+.caixaBusca {
+    height: 53px;
+    width: 624px;
+    height: 53px;
+    top: 430px !important;
+    background: rgba(173, 191, 36, 0.3);
+    border-radius: 5px;
+}
+
+.botaoBusca {
+    background-color: #ADBF24 !important;
+    color: white;
+    width: 120px;
+    height: 53px;
+}
