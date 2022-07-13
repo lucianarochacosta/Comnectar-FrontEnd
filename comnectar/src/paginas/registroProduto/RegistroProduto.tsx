@@ -1,9 +1,10 @@
 import React from 'react'
+import CadastroProduto from '../../components/produtos/cadastroProduto/CadastroProduto'
 
-function CadastroProduto() {
+function RegistroProduto() {
   return (
-    <div>CadastroProduto</div>
+    <CadastroProduto/>
   )
 }
 
-export default CadastroProduto
+export default RegistroProduto

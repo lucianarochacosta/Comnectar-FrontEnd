@@ -1,11 +1,13 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
-import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText } from "@material-ui/core"
+import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText, Paper, Grid } from "@material-ui/core"
 import { useNavigate, useParams } from 'react-router-dom';
 import { busca, buscaId, post, put } from '../../../service/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import Produto from '../../../models/Produto'
 import Categoria from "../../../models/Categoria";
+import { Box, inputBaseClasses } from '@mui/material'
+import './CadastroProduto.css'
 
 
 function CadastroProduto() {  
@@ -114,41 +116,53 @@ function CadastroProduto() {
         navigation('/home')
     }
   return (
-    <Container maxWidth="sm" className="topo">    
-        <form onSubmit={onSubmit}>
-            <Typography variant="h3" color="textSecondary" component="h2" align="center" >Formulário de cadastro produto</Typography>
-            <TextField value={produto.nomeProduto} id="nomeProduto" label="Nome" variant="outlined" name="nomeProduto" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
-            <TextField  value={produto.fotoProduto} id="fotoProduto" label="foto" name="fotoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
-            <TextField  value={produto.infoProduto} id="infoProduto" label="descrição" name="infoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
-            <TextField type='number' value={produto.precoProduto} id="precoProduto" label="preço" name="precoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
-            <TextField  value={produto.unidadeProduto} id="unidadeProduto" label="unidade" name="unidadeProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
-            <TextField type='number'  value={produto.estoqueProduto} id="estoqueProduto" label="estoque" name="estoqueProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
-            <TextField  value={produto.chegadaProduto} id="chegadaProduto" label="chegada" name="chegadaProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
-            <TextField  value={produto.shelfProduto} id="shelfProduto" label="shelf" name="shelfProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
+    <Grid container >
+        <Box style={{width:"1018px",margin:"64px auto"}}>
+        <Paper elevation={24}>
+        <Box display="flex" style={{margin:"0 auto", padding:"70px 130px"}}>
+            <form onSubmit={onSubmit} style={{display:'flex', flexDirection:"column", gap:"8px"}}>
+                <Typography variant="h3" color="textSecondary" component="h2" align="center" >Formulário de cadastro produto</Typography>
+                <Box display='flex' className='gap-1' >
+                    <TextField value={produto.nomeProduto} id="nomeProduto" label="Nome" variant="outlined" name="nomeProduto" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)} className='input-m' />
+                    <TextField  value={produto.fotoProduto} id="fotoProduto" label="foto" name="fotoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)} className='input-g'/>
+                </Box>
+                <Box display='flex' className='gap-2'>
+                    <TextField className="input-m" type='number' value={produto.precoProduto} id="precoProduto" label="preço" name="precoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
+                    <TextField className="input-p" value={produto.unidadeProduto} id="unidadeProduto" label="unidade" name="unidadeProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
+                    <TextField className="input-p" type='number'  value={produto.estoqueProduto} id="estoqueProduto" label="estoque" name="estoqueProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
+                </Box>
+                <Box display='flex' className='gap-2'>
+                    <FormControl className='input-m' variant='filled'>
+                        <InputLabel id="demo-simple-select-helper-label">categoria </InputLabel>
+                        <Select
+                            labelId="demo-simple-select-helper-label"
+                            id="demo-simple-select-helper"
+                            onChange={(e:any)=>buscaId(`/categorias/${e.target.value}`, setCategoria, {
+                                headers: {
+                                    'Authorization': token
+                                }
+                            })}
+                            value={produto.categoria?.id !== undefined ? produto.categoria.id : " " }
+                            > 
+                            {categorias.map(categoria=>
+                                <MenuItem value={categoria.id}>{categoria.classeCategoria+' | '+categoria.modProdCategoria +' | '+(categoria.frescorCategoria === true && categoria.classeCategoria !== "Legumes" ? "Fresca" : "Não fresca")}</MenuItem>
+                                )} 
+                        </Select>
+                    </FormControl>
+                    <TextField className="input-p" value={produto.shelfProduto} id="shelfProduto" label="shelf" name="shelfProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
+                    <TextField  className="input-p" value={produto.chegadaProduto} id="chegadaProduto" label="chegada" name="chegadaProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
+                </Box>
+                    <TextField classes={{root:".MuiOutlinedInput-input"}} value={produto.infoProduto} id="infoProduto" label="descrição" name="infoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)} className="description" />
+                        <Button type="submit" variant="contained" color="primary">
+                            Finalizar
+                        </Button>
+                </form>   
+             </Box> 
+        </Paper>  
+        </Box>
         
-            <FormControl fullWidth variant='filled'>
-                <InputLabel id="demo-simple-select-helper-label">categoria </InputLabel>
-                <Select
-                    labelId="demo-simple-select-helper-label"
-                    id="demo-simple-select-helper"
-                     onChange={(e:any)=>buscaId(`/categorias/${e.target.value}`, setCategoria, {
-                        headers: {
-                            'Authorization': token
-                        }
-                     })}
-                     value={produto.categoria?.id}
-                    > 
-                    {categorias.map(categoria=>
-                        <MenuItem value={categoria.id}>{categoria.classeCategoria+' | '+categoria.modProdCategoria +' | '+categoria.frescorCategoria}</MenuItem>
-                        )} 
-               </Select>
-                <FormHelperText variant='standard'>Escolha um categoria para a produto</FormHelperText> 
-                 <Button type="submit" variant="contained" color="primary">
-                    Finalizar
-                </Button>
-            </FormControl>
-        </form>
-    </Container>
+       
+    </Grid>
 )
 }
 

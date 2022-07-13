@@ -18,13 +18,16 @@ import ListaCategoria from './components/categorias/listaCategoria/ListaCategori
 import DeletaCategoria from './components/categorias/deletaCategoria/DeletaCategoria';
 import ListaProduto from './components/produtos/listaProduto/ListaProduto';
 import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto';
-import Contato from './paginas/contato/Contato';
+import { ThemeProvider } from '@material-ui/core';
+import Theme from './theme/Theme';
 import CompraProduto from './paginas/compraProduto/CompraProduto';
+import Contato from './paginas/contato/Contato';
 
 
 function App() {
   return (
     <Provider store={store}>
+       <ThemeProvider theme={Theme}>
       <Router>
         <Navbar />
         <div style={{ minHeight: '100vh' }}>
@@ -32,13 +35,13 @@ function App() {
             <Route path="/" element={<Login />} />
             <Route path="/login" element={<Login />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/sobre-nos" element={<SobreNos />} />
+            <Route path="/sobre-nos" element={<SobreNos/>} />
             <Route path="/produtos" element={<CompraProduto />} />
             <Route path="/cadastrousuario" element={<CadastroUsuario />} />
             <Route path="/categorias" element={<ListaCategoria />} />
             <Route path="/deletarcategoria/:id" element={<DeletaCategoria />} />
             <Route path="/cadastrocategoria" element={<CadastroCategoria />} />
-            <Route path="/registroProduto" element={<CadastroProduto />} />
+            <Route path="/registroProduto" element={<RegistroProduto />} />
             <Route path="/atualizarProduto/:id" element={<CadastroProduto />} />
             <Route path="/deletaproduto/:id" element={<DeletarProduto />} />
             <Route path="/contato" element={<Contato />} />
@@ -46,6 +49,7 @@ function App() {
         </div>
         <Footer />
       </Router>
+    </ThemeProvider>
     </Provider>
   );
 }

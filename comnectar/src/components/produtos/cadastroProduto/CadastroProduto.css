@@ -1,0 +1,19 @@
+.input-g{
+  width: 400px !important;
+}
+.input-m{
+  width: 300px !important;
+}
+.input-p{
+  width: 200px !important;
+}
+.gap-1{
+  gap:50px
+}
+.gap-2{
+  gap:25px
+}
+
+.description .MuiOutlinedInput-input {
+  height: 128px !important;
+}
