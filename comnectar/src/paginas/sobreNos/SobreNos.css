@@ -28,24 +28,24 @@
 }
 .titulo1{
     color: #3E733C !important;
-    font-weight: bold !important;
-    font-family: 'Bebas Neue' !important;
+    font-weight: 'bold' !important;
+    font-family: 'Roboto', sans-serif !important;
     font-size: 50px !important;
 }
 .titulo2{
     color: #96A621 !important;
-    font-family: 'Bebas Neue' !important;
+    font-family: 'Roboto', sans-serif  !important;
     font-size: 40px !important;
 }
 
 .subtitulo2{
     color: #40352C !important;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif ;
 }
 
 .subtitulo1{
     color: #3E733C !important;
-    font-family: 'Bebas Neue' !important;
+    font-family: 'Roboto', sans-serif  !important;
     padding-left: 1cm;
 }
 
@@ -199,7 +199,7 @@
     justify-content: center;
     gap: 8px;
     margin-top: 50px !important;
-    margin-bottom: 50px !important;
+    margin-bottom: 30px !important;
 }
 
 

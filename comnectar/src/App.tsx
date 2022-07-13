@@ -21,6 +21,7 @@ import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto'
 import { ThemeProvider } from '@material-ui/core';
 import Theme from './theme/Theme';
 import CompraProduto from './paginas/compraProduto/CompraProduto';
+import Contato from './paginas/contato/Contato';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
             <Route path="/registroProduto" element={<RegistroProduto />} />
             <Route path="/atualizarProduto/:id" element={<CadastroProduto />} />
             <Route path="/deletaproduto/:id" element={<DeletarProduto />} />
+            <Route path="/contato" element={<Contato />} />
           </Routes>
         </div>
         <Footer />
