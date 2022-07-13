@@ -7,9 +7,15 @@
     background-color: #adbf244b;
 }
 .tituloC{
-    font-weight: bold !important;
+    color: #3E733C !important;
+    font-weight: 'bold' !important;
     font-family: 'Roboto', sans-serif !important;
     font-size: 50px !important;
+}
+.tituloC2{
+    color: #96A621 !important;
+    font-family: 'Roboto', sans-serif  !important;
+    font-size: 40px !important;
 }
 .intro{
     align-items: center;
