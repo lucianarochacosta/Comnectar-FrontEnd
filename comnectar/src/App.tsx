@@ -20,6 +20,7 @@ import ListaProduto from './components/produtos/listaProduto/ListaProduto';
 import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto';
 import { ThemeProvider } from '@material-ui/core';
 import Theme from './theme/Theme';
+import CompraProduto from './paginas/compraProduto/CompraProduto';
 
 
 function App() {
@@ -33,8 +34,8 @@ function App() {
             <Route path="/" element={<Login />} />
             <Route path="/login" element={<Login />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/sobre-nos" element={<SobreNos />} />
-            <Route path="/produtos" element={<ListaProduto />} />
+            <Route path="/sobre-nos" element={<SobreNos/>} />
+            <Route path="/produtos" element={<CompraProduto />} />
             <Route path="/cadastrousuario" element={<CadastroUsuario />} />
             <Route path="/categorias" element={<ListaCategoria />} />
             <Route path="/deletarcategoria/:id" element={<DeletaCategoria />} />
