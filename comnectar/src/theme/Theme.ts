@@ -27,7 +27,8 @@ const Theme = createTheme({
      MuiOutlinedInput:{
       root:{
         '& fieldSet':{
-        }
+        },
+        color: "#000000",
       }
      }
   },

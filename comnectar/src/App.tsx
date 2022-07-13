@@ -18,11 +18,14 @@ import ListaCategoria from './components/categorias/listaCategoria/ListaCategori
 import DeletaCategoria from './components/categorias/deletaCategoria/DeletaCategoria';
 import ListaProduto from './components/produtos/listaProduto/ListaProduto';
 import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto';
+import { ThemeProvider } from '@material-ui/core';
+import Theme from './theme/Theme';
 
 
 function App() {
   return (
     <Provider store={store}>
+       <ThemeProvider theme={Theme}>
       <Router>
         <Navbar />
         <div style={{ minHeight: '100vh' }}>
@@ -36,14 +39,14 @@ function App() {
             <Route path="/categorias" element={<ListaCategoria />} />
             <Route path="/deletarcategoria/:id" element={<DeletaCategoria />} />
             <Route path="/cadastrocategoria" element={<CadastroCategoria />} />
-            <Route path="/registroProduto" element={<CadastroProduto />} />
+            <Route path="/registroProduto" element={<RegistroProduto />} />
             <Route path="/atualizarProduto/:id" element={<CadastroProduto />} />
             <Route path="/deletaproduto/:id" element={<DeletarProduto />} />
-
           </Routes>
         </div>
         <Footer />
       </Router>
+    </ThemeProvider>
     </Provider>
   );
 }
