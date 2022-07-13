@@ -11,21 +11,14 @@
 .boxCadastro{
     display:flex;
     justify-content: center;
-    padding: 5% 15%;
+    padding: 5% 10%;
 }
 
 .paperCadastro{
-    border-radius: 50px !important;
+    border-radius: 30px !important;
     opacity: .75;
     width: 40vw;
     box-shadow:96px;
-}
-
-.tfCadastro{
-    border-radius: 30px !important;
-    background-color: #838383;
-    opacity: .40;
-    border:none
 }
 
 .paperCadastroTitulo{
@@ -46,7 +39,3 @@
     transform: scale(1.1);
 }
 
-.MuiOutlinedInput-root {
-    position: relative;
-    border-radius: 30px !important;
-}

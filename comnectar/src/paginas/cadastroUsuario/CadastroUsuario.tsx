@@ -65,7 +65,7 @@ function CadastroUsuario() {
                 <Paper className="paperCadastro">
                 <Box className="boxCadastro">
                     <form onSubmit={onSubmit}>
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='paperCadastroTitulo'>Cadastrar</Typography>
+                        <Typography variant='h3' gutterBottom color='primary' component='h3' align='center' className='paperCadastroTitulo'>Cadastrar</Typography>
                         <TextField value={user.nomeUsuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='Insira o seu nome completo' variant='outlined' name='nomeUsuario' margin='normal' fullWidth  className="tfCadastro" />
                         <TextField value={user.loginUsuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Informe o seu melhor e-mail' variant='outlined' name='loginUsuario' margin='normal'fullWidth className="tfCadastro"/>
                         <TextField value={user.senhaUsuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Insira uma senha ' variant='outlined' name='senhaUsuario' margin='normal' type='password' fullWidth className="tfCadastro"/>
