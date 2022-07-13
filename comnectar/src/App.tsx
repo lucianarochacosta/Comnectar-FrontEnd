@@ -19,6 +19,7 @@ import DeletaCategoria from './components/categorias/deletaCategoria/DeletaCateg
 import ListaProduto from './components/produtos/listaProduto/ListaProduto';
 import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto';
 import Contato from './paginas/contato/Contato';
+import CompraProduto from './paginas/compraProduto/CompraProduto';
 
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/home" element={<Home />} />
             <Route path="/sobre-nos" element={<SobreNos />} />
-            <Route path="/produtos" element={<ListaProduto />} />
+            <Route path="/produtos" element={<CompraProduto />} />
             <Route path="/cadastrousuario" element={<CadastroUsuario />} />
             <Route path="/categorias" element={<ListaCategoria />} />
             <Route path="/deletarcategoria/:id" element={<DeletaCategoria />} />
