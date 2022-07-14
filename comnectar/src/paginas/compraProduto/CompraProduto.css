@@ -5,15 +5,8 @@
 
 .boxTopoCompra {
     height: 320px;
-    background-image: url(https://i.imgur.com/adcMsOq.jpg);
+    background: linear-gradient(93.59deg, rgba(0, 0, 0, 0.6) 13.61%, rgba(0, 0, 0, 0) 87.41%), url(https://i.imgur.com/5HQKREc.png) fixed center center;
     background-size: cover;
-}
-
-.blurCompra {
-    height: 192px;
-    background: rgba(217, 217, 217, 0.15);
-    backdrop-filter: blur(2px);
-    border-radius: 75px;
 }
 
 .tituloCompra {
@@ -23,8 +16,8 @@
 }
 
 .boxBusca {
-
-    height: 53px;
+    font-weight: bold;
+    gap: 24px;
 }
 
 .caixaBusca {
@@ -32,13 +25,15 @@
     width: 624px;
     height: 53px;
     top: 430px !important;
-    background: rgba(173, 191, 36, 0.3);
     border-radius: 5px;
 }
 
 .botaoBusca {
-    background-color: #ADBF24 !important;
     color: white;
     width: 120px;
     height: 53px;
+}
+.title{
+    font-size: 42px !important;
+    font-weight: bold !important;
 }
