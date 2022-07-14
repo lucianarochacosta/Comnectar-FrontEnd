@@ -12,64 +12,120 @@ function SobreNos() {
 
                 <Grid xs={12} className="intro">
                     <Box>
-                        <Typography variant="h3" align="center" className="titulo1">Sobre nós</Typography>
-                        <Typography variant="h5" align="center" className="titulo2">Conheça a nossa história!</Typography>
-                        <Box marginTop={3} paddingX={10}><ListItem divider></ListItem></Box>
+                        <Typography variant="h5" align="center" className="titulo2">O que nos move</Typography>
+                        <Box display="flex" flexDirection="column">
+                            <Typography variant="h5" align="center">
+                                Nos últimos anos, quantidades cada vez maiores de fenômenos da natureza têm ocorrido.
+                            </Typography>
+                            <Typography variant="h5" align="center">
+                                E também já há algum tempo, é possível observar que eles vêm se intensificando de forma acelerada.
+                            </Typography>
+                        </Box>
                     </Box>
                 </Grid>
 
-                <Grid container direction="row" className="cont-direita" xs={12}>
-                    <Grid alignItems="center" xs={8}>
-                        <Box paddingLeft={10}>
-                            <Typography variant="h4" align="justify" className="subtitulo1">Quem somos?</Typography>
-                            <Typography variant="h6" align="justify" className="subtitulo2">Somos um e-commerce inspirado na ODS 13. Nossos objetivos consistem em incentivar a agricultura sustentável e promover a conexão entre o pequeno produtor e o consumidor interessado em uma vida mais saudável.</Typography>
+                <Grid container direction="row" alignItems="center" className="cont-esquerda" xs={12}>
+                    <Grid alignItems="center" xs={6}>
+                        <Box paddingRight={5}>
+                            <Typography variant="h6" align="left" className="subtitulo2">
+                                Grandes incêndios na Sibéria, tradicionalmente
+                                referenciada por seus recordes de baixas
+                                temperaturas no passado sinalizam a
+                                magnitude desse desequilíbrio.
+                            </Typography> <br/>
+                            <Typography variant="h6" align="left" className="subtitulo2">
+                                A emissão em quantidades astronômicas dos
+                                GEE’s - Gases do Efeito Estufa - tem provocado a
+                                elevação das temperaturas médias globais em
+                                velocidade e níveis nunca antes experienciados.
+                            </Typography>
                         </Box>
                     </Grid>
-                    <Grid xs={4}>
-                        <Box paddingX={10}>
+                    <Grid xs={6}>
+                        <Box paddingLeft={5}>
                             <Card className="cardA"></Card>
                         </Box>
-
                     </Grid>
                 </Grid>
 
-                <Grid container direction="row-reverse" justifyContent="center" alignContent="center" className="cont-esquerda" xs={12}>
-                    <Grid xs={8}>
-                        <Box paddingRight={10}>
-                            <Typography variant="h4" align="justify" className="subtitulo1">Por que utilizar a nossa plataforma?</Typography>
-                            <Typography variant="h6" align="justify" className="subtitulo2">Ao utilizar a nossa plataforma, você contribui para que comerciantes responsáveis ganhem visibilidade. Desta forma, é possível promover uma vida mais saudável, incentivar o pequeno produtor e promover a agricultura sustentável.</Typography>
+                <Grid container direction="row" className="cont-direita" alignItems="center" xs={12}>
+                    <Grid alignItems="center" xs={6}>
+                        <Box paddingLeft={5}>
+                            <Typography variant="h6" align="right" className="subtitulo2">
+                                O conhecido Permafrost, o ‘gelo permanente’
+                                concentrado em poucas localidades do nosso
+                                planeta está se comprometendo em ritmo
+                                acelerado.
+                            </Typography> <br/>
+                            <Typography variant="h6" align="right" className="subtitulo2">
+                                Com o derretimento, imensuráveis depósitos de
+                                Metano, gás de enorme potencial estufa poderão
+                                ser libertados na atmosfera, o que poderá causar
+                                impactos catastróficos para a vida no planeta.
+                            </Typography>
                         </Box>
                     </Grid>
-                    <Grid alignItems="center" xs={4}>
-                        <Box paddingLeft={10}>
+                    <Grid xs={6}>
+                        <Box paddingLeft={5}>
                             <Card className="cardB"></Card>
                         </Box>
                     </Grid>
                 </Grid>
 
-                <Grid container direction="row" className="cont-direita" xs={12}>
-                    <Grid alignItems="center" xs={8}>
-                        <Box paddingLeft={10}>
-                            <Typography variant="h4" align="justify" className="subtitulo1">Como surgiu a ideia?</Typography>
-                            <Typography variant="h6" align="justify" className="subtitulo2">A ideia surgiu durante o desenvolvimento do projeto integrador da turma 52 da Generation Brasil (Desenvolvedor Web Java Fullstack JR). Momento no qual os integrantes sentiram-se alinhados com os princípios da ODS 13.</Typography>
+                <Grid container direction="row-reverse" justifyContent="center" alignContent="center" className="cont-esquerda1" xs={12}>
+                    <Grid alignItems="center" xs={6}>
+                        <Box paddingRight={5}>
+                            <Typography variant="h6" align="left" className="subtitulo2">
+                                Em grande parte devido à esse contexto que, em 2015,
+                                foram estabelecidas os 17 Objetivos de Desenvolvimento
+                                Sustentável pela Organização das Nações Unidas, a ONU:
+                                uma lista de medidas centrais a serem tomadas antes de
+                                2030, visando frear um colapso ambiental com a adoção
+                                de posturas sustentáveis, replicáveis globalmente.
+                            </Typography>
+                            <Box paddingRight={5}>
+                                <Card className="cardC1"></Card>
+                            </Box>
                         </Box>
                     </Grid>
-                    <Grid xs={4}>
-                        <Box paddingX={10}>
+                    <Grid xs={6}>
+                        <Box paddingLeft={5}>
                             <Card className="cardC"></Card>
                         </Box>
                     </Grid>
                 </Grid>
 
-                <Grid container direction="row-reverse" justifyContent="center" alignContent="center" className="cont-esquerda" xs={12}>
-                    <Grid alignItems="center" xs={8}>
-                        <Box paddingRight={10}>
-                            <Typography variant="h4" align="justify" className="subtitulo1">ODS 13</Typography>
-                            <Typography variant="h6" align="justify" className="subtitulo2">Os Objetivos de desenvolvimento sustentável são um apelo global com o intuito de erradicar a pobreza, proteger o clima e o meio ambiente, garantindo paz e prosperidade à população. A ODS 13 propõe a adoção de medidas para combater as alterações climáticas e seus impactos.</Typography>
+                <Grid xs={10}>
+                    <Box>
+                        <Typography variant="h6" align="center" className="subtitulo2">
+                            Dentre os 17, optamos pela ODS 13, pela compreensão de que o Desenvolvimento Sustentável
+                            possui como prerrogativa um clima habitável para a nossa - e demais - espécies.
+                        </Typography>
+                    </Box>
+                </Grid>
+
+                <Grid container direction="row" className="cont-direita1" xs={12} alignItems="center">
+                    <Grid alignItems="center" xs={6}>
+                        <Box paddingLeft={5}>
+                            <Typography variant="h5" align="center" className="subtitulo1">
+                                A resposta é simples:
+                            </Typography>
+                            <Typography variant="h5" align="center" className="subtitulo1">
+                                plantando!
+                            </Typography> <br/>
+                            <Typography variant="h6" align="right" className="subtitulo2">
+                                Entendemos que muito do que foi destruído precisa ser recuperado
+                                em se tratando de uma Ação Climática concreta.
+                            </Typography> <br/> 
+                            <Typography variant="h6" align="right" className="subtitulo2">
+                                Dessa forma, nossa proposta é conectar
+                                consumidores que compreendem esse cenário
+                                a produtores que o combatem
+                            </Typography>
                         </Box>
                     </Grid>
-                    <Grid xs={4}>
-                        <Box paddingLeft={10}>
+                    <Grid xs={6}>
+                        <Box paddingLeft={5}>
                             <Card className="cardD"></Card>
                         </Box>
                     </Grid>

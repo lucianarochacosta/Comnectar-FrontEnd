@@ -8,6 +8,7 @@ import Produto from '../../../models/Produto'
 import Categoria from "../../../models/Categoria";
 import { Box, inputBaseClasses } from '@mui/material'
 import './CadastroProduto.css'
+import { toast } from 'react-toastify';
 
 
 function CadastroProduto() {  
@@ -21,7 +22,16 @@ function CadastroProduto() {
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado")
+            toast.info('Você precisa estar logado', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+                });
             navigation("/login")
 
         }
@@ -100,14 +110,32 @@ function CadastroProduto() {
                     password: "root"
                   }
             })
-            alert('Produto atualizado com sucesso');
+            toast.success('Produto atualizado com sucesso', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+                });
         } else {
             post(`/produtos`, produto, setProduto, {
                 headers: {
                     'Authorization': token
                 }
             })
-            alert('Produto cadastrado com sucesso');
+            toast.success('Produto cadastrado com sucesso', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+                });
         }
         back()
     }

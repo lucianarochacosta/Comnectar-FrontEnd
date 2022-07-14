@@ -27,7 +27,7 @@ function CompraProduto() {
           </Button>
         </Box>
           </Box>
-        <Box display="flex" alignItems="center" flexDirection="row" className="boxProdutos">          
+        <Box display="flex" alignItems="center" flexDirection="row" className="boxProdutos" justifyContent="center">          
             <ListaProduto />        
         </Box>
         </Box> 
