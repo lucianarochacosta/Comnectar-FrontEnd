@@ -26,7 +26,7 @@
 }
 
 .imglogo {
-    width: 220px;
+    width: 250px;
 }
 
 .MenuPagesCenterBox{
@@ -38,7 +38,7 @@
 
 .MenuPagesCenterBox:hover{
     color: #40352C;
-    transform: scale(1.3);
+    transform: scale(1.1);
 }
 
 .MenuPagesEntrar {
@@ -66,16 +66,72 @@
 
 .botaocadastrar {
     color: white !important;
-    border-color: white !important;
     font-weight: bold !important;
+    background-color: #ADBF24 !important;
 }
 
 .botaocadastrar:hover {
-    background-color: white !important;
-    color: #40352C !important;
+    background-color: #96A621 !important;
+    color: white !important;
+}
+
+.botoesportal{
+    display: flex;
+    flex-direction: row;
+    margin-left:24px;
+    margin-right:24px;
+    margin-bottom: 10px;
+}
+
+.botoesportal2{
+    margin: auto;
+}
+
+.textoportal{
+    text-align: center;
+}
+
+.textoportal2{
+    margin: 10px !important;
+    text-align: center;
+}
+
+.menuportal{
+    margin: 5px;
+    padding: 0;
+    border-radius: 10px;
+    background-color: #40352c9f;
+}
+
+.menuportal2{
+    display: flex;
+    margin: 5px;
+    padding: 0;
+    border-radius: 10px;
+    background-color: #40352c9f;
 }
 
 .text-decorator-none{
     text-decoration: none;
 }
 
+.btn-carrinho{
+    background-color: #ADBF24 !important;
+    color: white !important;
+    width: 64px !important;
+    height: 64px !important;
+    border-radius: 100% !important;
+}
+
+.btn-carrinho:hover{
+    background-color: #96A621 !important;
+    color: #40352C !important;
+}
+
+.MuiSvgIcon-root {
+    fill: white !important;
+}
+
+.boxcarrinho{
+    margin-left: 20px;
+}
