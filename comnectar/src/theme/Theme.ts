@@ -22,7 +22,6 @@ const Theme = createTheme({
     MuiButton: {
       root: {
         borderRadius: '8px',
-        fillOpacity:1
       },
     },
     MuiOutlinedInput: {
