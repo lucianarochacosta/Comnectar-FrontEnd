@@ -7,7 +7,7 @@ import "./Navbar.css";
 function Navbar() {
     return (
         <>
-            <AppBar position="static" >
+            <AppBar position="fixed" >
                 <Toolbar variant="dense" className="Menu">
                     <Grid container justifyContent="space-between">
                         <Box display="flex" justifyContent="flex-start" alignItems="center">

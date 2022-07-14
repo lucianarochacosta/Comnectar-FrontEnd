@@ -8,11 +8,11 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 function CardProduto(props:Produto) {
   return (
-    <Paper elevation={4} style={{borderRadius:"8px", position:"relative"}}>
-      <FavoriteBorderIcon style={{position:"absolute", right:"16px", top:"16px", fontSize:"32px", color:"#7C6F64"}}/>
-      <Box display="flex" gap="24px" flexDirection="column" padding="24px 0 12px 12px">
-        <Box width="194px" height="135px">
-          <img src="https://i.imgur.com/8ajl3MK.png" alt="Banana" style={{width: "100%", height:"auto"}} />
+    <Paper elevation={4} style={{borderRadius:"8px", position:"relative", height:"296px"}}>
+      <FavoriteBorderIcon style={{position:"absolute", right:"12px", top:"12px", fontSize:"32px", color:"#7C6F64", background:"#fff" , padding:"2px", borderRadius:"4px"}}/>
+      <Box display="flex" gap="24px" flexDirection="column" width="228px" paddingBottom="12px" >
+        <Box  height="135px" style={{height:"140px", backgroundImage:`url(${props.fotoProduto!==null ? props.fotoProduto : ""})`, backgroundSize:"cover", borderRadius:"8px 8px 0px 0px"}}>
+    
         </Box>
         <Box style={{paddingLeft:"12px"}}>
           <Typography variant='h2' style={{fontSize: "22px", fontWeight:"bold", color:"40352C"}}>
@@ -24,8 +24,8 @@ function CardProduto(props:Produto) {
         </Box>
         <Box style={{paddingLeft:"12px"}} display="flex" >
           <Box style={{flex: 1}} display="flex" alignItems="center">
-           <Typography variant='h2' style={{fontSize: "20px", fontWeight:"bold", color:"#5FA974" }}>
-              R$ 4,50
+           <Typography variant='h2' style={{fontSize: "20px", fontWeight:"bold", color:"#5FA974"}}>
+              R$ {props.precoProduto.toFixed(2)}
           </Typography>
             </Box>
           <Button className="btn" color="secondary" variant="contained" style={{flex: 1, fontSize:"16px", color:"white", height:"48px"}}  classes={{root:".MuiButton-root"}}> 
