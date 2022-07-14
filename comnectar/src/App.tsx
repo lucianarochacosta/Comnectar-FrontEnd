@@ -22,6 +22,7 @@ import { ThemeProvider } from '@material-ui/core';
 import Theme from './theme/Theme';
 import CompraProduto from './paginas/compraProduto/CompraProduto';
 import Contato from './paginas/contato/Contato';
+import ComnecteSe from './paginas/comnecte-se/Comnecte-se';
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
             <Route path="/atualizarProduto/:id" element={<CadastroProduto />} />
             <Route path="/deletaproduto/:id" element={<DeletarProduto />} />
             <Route path="/contato" element={<Contato />} />
+            <Route path="/comnectese" element={<ComnecteSe />} />
           </Routes>
         </div>
         <Footer />
