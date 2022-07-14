@@ -22,12 +22,9 @@ import { ThemeProvider } from '@material-ui/core';
 import Theme from './theme/Theme';
 import CompraProduto from './paginas/compraProduto/CompraProduto';
 import Contato from './paginas/contato/Contato';
-<<<<<<< HEAD
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-=======
 import ComnecteSe from './paginas/comnecte-se/Comnecte-se';
->>>>>>> 894f7b6417a0d231efbad26d6973fadb206a1834
 
 
 function App() {
