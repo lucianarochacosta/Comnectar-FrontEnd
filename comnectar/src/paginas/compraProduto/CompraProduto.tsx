@@ -41,9 +41,9 @@ function CompraProduto() {
           <Typography variant="h2" className="title">
             Encontre o que você deseja:
           </Typography>
-            <Box display="flex" >
+            <Box display="flex" gap="8px">
               <Box display="flex" className="caixaBusca">
-                <TextField label="O que você precisa?" type="search" fullWidth />
+                <TextField label="O que você precisa?" type="search" fullWidth variant='outlined'/>
               </Box>
               <Button color="primary" variant="contained" className="botaoBusca">
                 Buscar
@@ -53,8 +53,6 @@ function CompraProduto() {
             <Button variant="outlined">FRUTAS</Button>
             <Button variant="outlined">LEGUMES</Button>
             <Button variant="outlined">VERDURAS</Button>
-            <Button variant="outlined">VEGETAIS</Button>
-            <Button variant="outlined">HORTALIÇAS</Button>
           </Box>
           </Box>
           <Box style={{height:"2px", background:"#D9D9D9"}}>
