@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
-import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText, Paper, Grid } from "@material-ui/core"
+import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText, Paper, Grid, Icon } from "@material-ui/core"
 import { useNavigate, useParams } from 'react-router-dom';
 import { busca, buscaId, post, put } from '../../../service/Service';
 import { useSelector } from 'react-redux';
@@ -75,18 +75,16 @@ function CadastroProduto() {
 
     async function getCategorias() {
         await busca("/categorias", setCategorias, {
-            auth:{
-                username: "root",
-                password: "root"
+            headers:{
+                "Authorization": token
               }
         })
     }
 
     async function findByIdProduto(id: string) {
         await buscaId(`produtos/${id}`, setProduto, {
-            auth:{
-                username: "root",
-                password: "root"
+            headers:{
+                "Authorization": token
               }
         })
     }
@@ -105,9 +103,8 @@ function CadastroProduto() {
 
         if (id !== undefined) {
             put(`/produtos/${id}`, produto, setProduto, {
-                auth:{
-                    username: "root",
-                    password: "root"
+                headers:{
+                    "Authorization": token
                   }
             })
             toast.success('Produto atualizado com sucesso', {
@@ -182,7 +179,7 @@ function CadastroProduto() {
                 </Box>
                     <TextField classes={{root:".MuiOutlinedInput-input"}} value={produto.infoProduto} id="infoProduto" label="descrição" name="infoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)} className="description" />
                         <Button type="submit" variant="contained" color="primary">
-                            Finalizar
+                             Finalizar
                         </Button>
                 </form>   
              </Box> 

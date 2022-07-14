@@ -22,10 +22,10 @@ import { ThemeProvider } from '@material-ui/core';
 import Theme from './theme/Theme';
 import CompraProduto from './paginas/compraProduto/CompraProduto';
 import Contato from './paginas/contato/Contato';
-import ComnecteSe from './paginas/comnecte-se/Comnecte-se';
+
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import ComnecteSe from './paginas/comnecte-se/Comnecte-se';
 
 function App() {
   return (
