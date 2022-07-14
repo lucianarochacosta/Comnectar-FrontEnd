@@ -1,0 +1,28 @@
+.background{
+    background-color: #adbf244b;
+}
+.img1{
+    border-radius: 50% !important;
+    width: 300px !important;
+    height: 300px !important;
+}
+.introC1{
+    margin-top: 50px !important;
+    margin-bottom: 30px !important;
+}
+.img2{
+    border-radius: 50% !important;
+    width: 50px !important;
+    height: 50px !important; 
+}
+.tituloCC{
+    color: #3E733C !important;
+    font-weight: 'bold' !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 30px !important;
+}
+.tituloCC2{
+    color: #96A621 !important;
+    font-family: 'Roboto', sans-serif  !important;
+    font-size: 20px !important;
+}
