@@ -1,9 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 .cont-esquerda{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 5px;
+    border: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.cont-esquerda1{
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
@@ -23,19 +38,32 @@
     padding: 5px;
     margin: 5px;
     border: 5px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
+
+.cont-direita1{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 5px;
+    border: 5px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
 .titulo1{
-    color: #3E733C !important;
+    color: #40352C !important;
     font-weight: 'bold' !important;
-    font-family: 'Roboto', sans-serif !important;
-    font-size: 50px !important;
+    font-family: 'Bebas Neue' !important;
+    font-size: 75px !important;
 }
 .titulo2{
-    color: #96A621 !important;
-    font-family: 'Roboto', sans-serif  !important;
-    font-size: 40px !important;
+    color: #40352C !important;
+    font-family: 'Bebas Neue' !important;
+    font-size: 100px !important;
 }
 
 .subtitulo2{
@@ -44,9 +72,15 @@
 }
 
 .subtitulo1{
-    color: #3E733C !important;
-    font-family: 'Roboto', sans-serif  !important;
-    padding-left: 1cm;
+    color: #40352C !important;
+    font-family: 'Bebas Neue' !important;
+    font-size: 50px !important;
+    padding-left: 0cm;
+}
+
+.boxtexto {
+    width: 642px !important;
+    height: 144px !important;  
 }
 
 .background{
@@ -59,30 +93,39 @@
    
 }
 .cardA {
-    width: 350px;
-    height: 200px;
-    background-image: url("https://i.imgur.com/mjsnlwj.jpg") !important;
+    width: 95%;
+    height: 350px;
+    background-image: url("https://i.imgur.com/sXN0b0H.png") !important;
     background-size: cover;
     background-position: center;
 }
 .cardB {
-    width: 350px;
-    height: 200px;
-    background-image: url("https://i.imgur.com/5O6FxsO.jpg") !important;
+    width: 95%;
+    height: 350px;
+    background-image: url("https://i.imgur.com/9FzS3go.png") !important;
     background-size: cover;
     background-position: center;
 }
 .cardC {
-    width: 350px;
-    height: 200px;
-    background-image: url("https://i.imgur.com/7ze7kIC.jpg") !important;
+    width: 95%;
+    height: 400px;
+    background-image: url("https://i.imgur.com/RpmbmAO.png") !important;
     background-size: cover;
     background-position: center;
 }
+
+.cardC1 {
+    width: 600px;
+    height: 220px;
+    background-image: url("https://i.imgur.com/Ud3tScH.png") !important;
+    background-size: cover;
+    background-position: center;
+    margin-top: 80px;
+}
 .cardD {
-    width: 350px;
-    height: 200px;
-    background-image: url("https://i.imgur.com/5jpq9MP.jpg") !important;
+    width: 95%;
+    height: 400px;
+    background-image: url("https://i.imgur.com/96eDFz4.png") !important;
     background-size: cover;
     background-position: center;
 }
@@ -198,8 +241,8 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    margin-top: 50px !important;
-    margin-bottom: 30px !important;
+    margin-top: 30px !important;
+    margin-bottom: 40px !important;
 }
 
 

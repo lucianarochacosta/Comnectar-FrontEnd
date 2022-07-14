@@ -27,6 +27,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import ComnecteSe from './paginas/comnecte-se/Comnecte-se';
 
 
+
 function App() {
   return (
     <Provider store={store}>
