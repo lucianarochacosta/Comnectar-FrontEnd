@@ -7,36 +7,21 @@ import './Comnecte-se.css';
 function ComnecteSe() {
     return (
         <>
-            <Grid container justifyContent="center" alignItems="center">
-                <Grid xs={12} container justifyContent="center" alignContent="center" className=" background">
-                    <Grid xs={4}>
-                        <Box paddingLeft={10} className="introC1">
-                            <img src="https://i.imgur.com/dWijvVX.jpg" className="img1" alt="Imagem - plantio" />
+            <Grid container justifyContent="center" alignItems="center" className=" background">
+
+                <Grid xs={12}>
+                    <Box display="flex" alignItems="center" flexDirection="column" justifyContent="center" className="img1" gap="64px">
+                        <Box display="flex" alignItems="center" flexDirection="column" justifyContent="center" >
+                            <Typography variant="h1" align="center" className="tituloCnts">
+                                Como a agricultura sustentável pode mudar o mundo?
+                            </Typography>
                         </Box>
-                    </Grid>
-                    <Grid xs={8}>
-                        <Box paddingRight={10} className="introC1">
-                            <Box>
-                                <Typography variant="h4" align="center" className="tituloC1">Como agriculturas sustentáveis podem mudar o mundo?</Typography>
-                                <Box marginTop={3}><ListItem divider></ListItem></Box>
-                            </Box>
-                        </Box>
-                        <Box paddingRight={5}>
-                            <Box>
-                                <Typography variant="h6" align="justify" className="tituloC2">Produtos mais saudáveis!</Typography>
-                            </Box>
-                        </Box>
-                        <Box paddingRight={5}>
-                            <Box>
-                                <Typography variant="h6" align="justify" className="tituloC2">Combate ao aquecimento global!</Typography>
-                            </Box>
-                        </Box>
-                    </Grid>
+                    </Box>
                 </Grid>
+
                 <Grid xs={12} container justifyContent="center" alignContent="center">
                     <Box paddingLeft={10} className="introC1">
                         <Typography variant="h4" align="center" className="tituloC1">Tipos de Agricultura</Typography>
-                        <Box marginTop={3}><ListItem divider></ListItem></Box>
                     </Box>
                 </Grid>
 
@@ -98,32 +83,36 @@ function ComnecteSe() {
                 </Grid>
 
                 <Grid xs={12} container justifyContent="center" alignContent="center">
-                    <Box paddingLeft={10} className="introC1">
-                        <Typography variant="h4" align="center" className="tituloC1">Quer vender seus produtos com a gente?</Typography>
-                        <Box marginTop={3}><ListItem divider></ListItem></Box>
-                    </Box>
-                    <Grid xs={8} justifyContent="center" alignItems="center">
-                        <Box display="flex" justifyContent="center">
-                            <img src="https://i.imgur.com/01pfQT5.png" className="img2"></img>
+                    <Grid xs={12}>
+                        <Box className="introC3" flexDirection="column" justifyContent="center" alignItems="center">
+                            <Typography variant="h4" align="center" className="tituloC1">Quer vender seus produtos com a gente?</Typography>
                         </Box>
                     </Grid>
-                </Grid>
 
-                <Grid xs={4} justifyContent="center" alignItems="center">
-                    <Box className="introC2" display="flex" justifyContent="flex-start" paddingLeft={5}>
-                        <Link to='/cadastrousuario' className='text-decorator-none'>
-                            <Button variant='contained' color='primary'>
-                                Cadastre-se
-                            </Button>
-                        </Link>
-                    </Box>
-                    <Box className="introC1" display="flex" justifyContent="flex-start" paddingLeft={5}>
-                        <Link to='/contato' className='text-decorator-none'>
-                            <Button variant='contained' color='primary'>
-                                Envie a sua dúvida
-                            </Button>
-                        </Link>
-                    </Box>
+                    <Grid xs={12} justifyContent="center" alignContent="center">
+                        <Box display="flex" alignItems="center" flexDirection="column">
+                            <img src="https://i.imgur.com/WL0MNZN.png" className="img2"></img>
+                        </Box>
+                    </Grid>
+
+                    <Grid xs={12} justifyContent="center" alignContent="center">
+                        <Box display="flex" alignItems="center" flexDirection="column" className="introC2" >
+                            <Box paddingBottom={3}>
+                            <Link to='/cadastrousuario' className='text-decorator-none'>
+                                <Button variant='contained' className="botaoCmnts" color='primary'>
+                                    Cadastre-se
+                                </Button>
+                            </Link>
+                            </Box>
+                            <Box>
+                            <Link to='/contato' className='text-decorator-none'>
+                                <Button variant='contained' className="botaoCmnts" color='primary'>
+                                    Envie a sua dúvida
+                                </Button>
+                            </Link>
+                            </Box>
+                        </Box>
+                    </Grid>
                 </Grid>
 
             </Grid>

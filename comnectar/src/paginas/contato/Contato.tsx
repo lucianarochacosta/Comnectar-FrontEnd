@@ -24,7 +24,7 @@ function Contato() {
                                 <TextField name="email" type="email" id='email' label='Insira o seu e-mail' variant='outlined' margin='normal' fullWidth />
                                 <TextField name="mensagem" type="name" id='mensagem' label='Escreva a mensagem' variant='outlined' margin='normal' fullWidth className="tamanho" />
                                 <Box marginTop={2} textAlign='center'>
-                                    <Button type='submit' variant='contained' color='primary'>
+                                    <Button type='submit' variant='contained'className="botaoCmnts" color='primary'>
                                         Enviar
                                     </Button>
                                 </Box>

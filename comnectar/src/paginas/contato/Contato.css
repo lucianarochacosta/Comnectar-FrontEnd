@@ -7,10 +7,10 @@
     background-color: #adbf244b;
 }
 .tituloC{
-    color: #3E733C !important;
+    color: #40352C !important;
     font-weight: 'bold' !important;
-    font-family: 'Roboto', sans-serif !important;
-    font-size: 50px !important;
+    font-family: 'Bebas Neue' !important;
+    font-size: 75px !important;
 }
 .tituloC2{
     color: #96A621 !important;
@@ -31,4 +31,9 @@
     background-size: cover;
     background-position: center;
     margin-top: 30px;
+}
+.botaoCntt{
+    width: fit-content !important;
+    height: fit-content !important;
+    font-size: 20px !important;
 }
