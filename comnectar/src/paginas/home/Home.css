@@ -8,20 +8,68 @@
 }
 
 .caixatop {
-    background-image: url(https://img.freepik.com/free-photo/colorful-veggies-frame-with-copy-space_23-2148290738.jpg?w=740&t=st=1656612338~exp=1656612938~hmac=0ab7d6082d24e911e9682a0c07698af7e93e257112963e964494a74844980580);
+    background-image: url(https://i.imgur.com/3uidJ7v.png);
     background-size: cover;
-    height: 450px;
+    background-position: center;
+    height: 700px;
+}
+
+.caixatop2 {
+    background-image: url(https://i.imgur.com/7iAKA1A.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+.caixatop3 {
+    background-image: url(https://i.imgur.com/USjHZcC.png);
+    background-size: cover;
+    background-position: center;
+    height: 700px;
 }
 
 .tituloh {
     font-family: 'Bebas Neue' !important;
-    color: black;
+    color: #40352C;
+    mix-blend-mode: color-burn !important;
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 150px;
+}
+.tituloh1{
+    margin-top: 550px;
 }
 
-.botaoh {
+.botaoH1 {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    left: auto;
+    top:300px;
+    background-color: #40352C !important;
+    opacity: 55% !important;
+    color: white !important;
+    font-size: 25px !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+.botaoH1:hover{
+    opacity: 80% !important;
+}
+.botaoH2 {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    left: auto;
+    bottom: 200px;
     background-color: #ADBF24 !important;
-    color: white;
-    font-weight: bold;
+    opacity: 55% !important;
+    color: white !important;
+    font-size: 25px !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+.botaoH2:hover{
+    opacity: 80% !important;
 }
 
 .beneficios {
