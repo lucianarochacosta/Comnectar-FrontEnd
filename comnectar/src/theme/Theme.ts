@@ -1,4 +1,5 @@
 import { createTheme } from "@material-ui/core";
+import { color } from "@mui/system";
 
 const Theme = createTheme({
   palette: {
@@ -12,7 +13,7 @@ const Theme = createTheme({
     },
     text: {
       primary: '#000000',
-      secondary: '#40352C',
+      secondary: '#ffffff',
     },
   },
   typography: {
@@ -22,6 +23,12 @@ const Theme = createTheme({
     MuiButton: {
       root: {
         borderRadius: '8px',
+        fontWeight:"bold",
+      },
+      text:{
+        secondary: {
+          color:'#ffffff'
+        },
       },
     },
     MuiOutlinedInput: {

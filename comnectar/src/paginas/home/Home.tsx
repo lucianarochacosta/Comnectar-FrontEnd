@@ -47,9 +47,9 @@ function Home() {
                         e ajude o meio ambiente
                     </Typography>
                     <Box display="flex" justifyContent="center" marginBottom="24px">
-                        <Button variant="outlined" className="botaoh">
-                            Comprar
-                        </Button>
+                        <Link to="/categorias" className="text-decorator-none">
+                            <Button variant="outlined" className="botao">Listar Categorias</Button>
+                        </Link>    
                     </Box>
                 </Box>
 
