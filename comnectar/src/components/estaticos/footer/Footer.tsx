@@ -4,8 +4,7 @@ import { Box } from '@mui/material';
 import { Typography, Grid } from '@material-ui/core';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHub from '@material-ui/icons/GitHub';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import FacebookIcon from '@material-ui/icons/Facebook';
+
 
 function Footer() {
     return (
@@ -24,14 +23,8 @@ function Footer() {
                                 </a>
                             </Box>
                             <Box>
-                                <a href="https://www.linkedin.com/" target="_blank">
-                                    <LinkedInIcon className='social' />
-                                </a>
-                                <a href="https://www.instagram.com/" target="_blank">
-                                    <InstagramIcon className='social' />
-                                </a>
-                                <a href="https://www.facebook.com/" target="_blank">
-                                    <FacebookIcon className='social' />
+                                <a href="https://github.com/andreiflancanova/Comnectar-BackEnd" target="_blank">
+                                    <GitHub className='social' />
                                 </a>
                             </Box>
                         </Box>
