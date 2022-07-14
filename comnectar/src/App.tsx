@@ -22,12 +22,15 @@ import { ThemeProvider } from '@material-ui/core';
 import Theme from './theme/Theme';
 import CompraProduto from './paginas/compraProduto/CompraProduto';
 import Contato from './paginas/contato/Contato';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
   return (
     <Provider store={store}>
        <ThemeProvider theme={Theme}>
+       <ToastContainer />
       <Router>
         <Navbar />
         <div style={{ minHeight: '100vh' }}>

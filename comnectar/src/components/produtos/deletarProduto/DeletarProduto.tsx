@@ -3,6 +3,7 @@ import { Box } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import Produto from "../../../models/Produto";
 import { buscaId, deleteId } from "../../../service/Service";
 import { TokenState } from "../../../store/tokens/tokensReducer";
@@ -36,7 +37,16 @@ function DeletarProduto() {
                 'Authorization': token
             }
             });
-            alert('Produto deletado com sucesso');
+            toast.success('Produto deletado com sucesso', {
+              position: "top-right",
+              autoClose: 2000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: false,
+              theme: "colored",
+              progress: undefined,
+              });
           }
         
           function nao() {
