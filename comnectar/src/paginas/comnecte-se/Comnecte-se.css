@@ -1,0 +1,71 @@
+
+.img1{
+    border-radius: 50% !important;
+    width: 300px !important;
+    height: 300px !important;
+}
+.introC1{
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+.introC2{
+    margin-top: 100px !important;
+    margin-bottom: 50px !important;
+}
+.img2{
+    width: 400px !important;
+    height: 400px !important; 
+}
+.tituloC1{
+    color: #000000 !important;
+    font-weight: 'bold' !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 40px !important;
+}
+.tituloC2{
+    color: #40352C !important;
+    font-family: 'Roboto', sans-serif  !important;
+    font-size: 30px !important;
+}
+
+.subtituloC2{
+    color: #40352C !important;
+    font-family: 'Roboto', sans-serif ;
+}
+
+.subtituloC1{
+    color: #000000 !important;
+    font-family: 'Roboto', sans-serif  !important;
+    padding-left: 1cm;
+}
+.cardC1 {
+    width: 400px;
+    height: 250px;
+    background-image: url("https://i.imgur.com/xQ8D0T3.jpg") !important;
+    background-size: cover;
+    background-position: center;
+}
+.cardC2 {
+    width: 400px;
+    height: 250px;
+    background-image: url("https://i.imgur.com/ggnKmnF.jpg") !important;
+    background-size: cover;
+    background-position: center;
+}
+.cardC3 {
+    width: 400px;
+    height: 250px;
+    background-image: url("https://i.imgur.com/rolebVM.jpg") !important;
+    background-size: cover;
+    background-position: center;
+}
+.cardC4 {
+    width: 400px;
+    height: 250px;
+    background-image: url("https://i.imgur.com/hREl5nt.png") !important;
+    background-size: cover;
+    background-position: center;
+}
+.text-decorator-none{
+    text-decoration: none;
+}
