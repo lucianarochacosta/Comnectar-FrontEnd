@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 import Categoria from "../../../models/Categoria";
 import { busca } from "../../../service/Service";
 import { TokenState } from "../../../store/tokens/tokensReducer";
+import CardCategoria from "../../Cards/cardCategoria/CardCategoria";
 
 function ListaCategoria() {
 
@@ -30,51 +31,21 @@ function ListaCategoria() {
     getCategorias()
   }, [categorias.length])
 
-  return (
-    <>
-      {
-        categorias.map(categorias => (
-          <Grid container >
-            <Box display="flex" justifyContent="center" alignItems="center"  >
-              <Card variant="outlined" >
-                <CardContent>
-                  <Typography variant="h4">
-                    {categorias.classeCategoria}
-                  </Typography>
-                  <Typography variant="h6">
-                    {categorias.modProdCategoria}
-                  </Typography>
-                  <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    <CardActions>
-                      <Button variant="contained" size="small">{categorias?.frescorCategoria == true ? "Fresco" : ""}</Button>
-                    </CardActions>
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Box display="flex" justifyContent="center" mb={1.5} >
-                    <Link to={`/cadastrocategoria/${categorias.id}`} className="text-decorator-none">
-                      <Box mx={1}>
-                        <Button variant="contained" className="marginLeft, botao1" size='small' >
-                          Atualizar
-                        </Button>
-                      </Box>
-                    </Link>
-                    <Link to={`/deletarcategoria/${categorias.id}`} className="text-decorator-none">
-                      <Box mx={1}>
-                        <Button variant="contained" size='small' color="secondary" className="botao2">
-                          Deletar
-                        </Button>
-                      </Box>
-                    </Link>
-                  </Box>
-                </CardActions>
-              </Card>
-            </Box>
-          </Grid>
-        ))
-      }
-    </>
-  );
+    return (
+      <>
+        <Box display = "flex" gap="48px">
+        {categorias.map(categoria =>{
+            return ( <CardCategoria key={categoria.id}
+              id={categoria.id}
+              classeCategoria={categoria.classeCategoria}
+              modProdCategoria={categoria.modProdCategoria}
+              frescorCategoria={categoria.frescorCategoria}
+            />)
+          })}
+          </Box>
+      </>
+    )
+
 }
 
 
