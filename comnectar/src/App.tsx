@@ -6,14 +6,11 @@ import Home from './paginas/home/Home';
 import Footer from './components/estaticos/footer/Footer';
 import SobreNos from './paginas/sobreNos/SobreNos';
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
-
 import { Provider } from 'react-redux';
 import store from './store/store';
 import CadastroCategoria from './components/categorias/cadastroCategoria/CadastroCategoria';
 import RegistroProduto from './paginas/registroProduto/RegistroProduto';
 import CadastroProduto from './components/produtos/cadastroProduto/CadastroProduto';
-
-
 import ListaCategoria from './components/categorias/listaCategoria/ListaCategoria';
 import DeletaCategoria from './components/categorias/deletaCategoria/DeletaCategoria';
 import ListaProduto from './components/produtos/listaProduto/ListaProduto';
@@ -23,17 +20,23 @@ import Theme from './theme/Theme';
 import CompraProduto from './paginas/compraProduto/CompraProduto';
 import Contato from './paginas/contato/Contato';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ComnecteSe from './paginas/comnecte-se/Comnecte-se';
 =======
+=======
+>>>>>>> d6df87993caf56bad043063f170f436d23473732
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ComnecteSe from './paginas/comnecte-se/Comnecte-se';
 
+<<<<<<< HEAD
 >>>>>>> 4720300ccd4fbc8c7acbe347e25b11fc4c88b6cf
 
+=======
+>>>>>>> d6df87993caf56bad043063f170f436d23473732
 function App() {
   return (
     <Provider store={store}>
@@ -45,7 +48,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/home" element={<Home />} />
             <Route path="/sobre-nos" element={<SobreNos/>} />
             <Route path="/produtos" element={<CompraProduto />} />
             <Route path="/cadastrousuario" element={<CadastroUsuario />} />
