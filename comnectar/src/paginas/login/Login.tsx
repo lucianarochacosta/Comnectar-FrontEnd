@@ -8,11 +8,15 @@ import { login } from "../../service/Service";
 import { useDispatch } from "react-redux";
 import { addToken } from "../../store/tokens/actions";
 import { toast } from "react-toastify";
+import { NoMeals } from "@mui/icons-material";
+import useLocalStorage from "react-use-localstorage";
 
 function Login (){
     let navigate = useNavigate();
     const dispatch = useDispatch();
     const [token, setToken] = useState('');
+    const [nome, setNome] = useLocalStorage('nome');
+
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
             id:0,
@@ -36,9 +40,9 @@ function Login (){
         async function onSubmit(e: ChangeEvent<HTMLFormElement>){
             e.preventDefault();
             try{ 
-                await login(`/usuarios/logar`,userLogin,setToken)
+                await login(`/usuarios/logar`,userLogin,setToken,setNome)
                 toast.success('Usuário logado com sucesso!', {
-                    position: "top-right",
+                    position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: false,
                     closeOnClick: true,
@@ -49,7 +53,7 @@ function Login (){
                     });
             } catch(error){
                 toast.error('Dados incorretos. Erro ao logar!', {
-                    position: "top-right",
+                    position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: false,
                     closeOnClick: true,
