@@ -1,5 +1,5 @@
-import { Button, Card, CardActions, CardContent, Typography } from "@material-ui/core";
-import { Box } from "@mui/material";
+import { Button, Card, CardActions, CardContent } from "@material-ui/core";
+import { Box , Typography} from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
@@ -27,7 +27,7 @@ function DeletaCategoria() {
         headers: {
           'Authorization': token
       }
-        })
+      })
       }
 
       function sim() {
@@ -37,7 +37,7 @@ function DeletaCategoria() {
               'Authorization': token
           }
           });
-          toast.success('Produto deletado com sucesso!', {
+          toast.success('Categoria deletada com sucesso!', {
             position: "top-right",
             autoClose: 2000,
             hideProgressBar: false,
@@ -50,8 +50,9 @@ function DeletaCategoria() {
         }
       
         function nao() {
-          navigate('/produtos')
+          navigate('/categorias')
         }
+
 return (
   <>
     <Box m={2}>
@@ -59,10 +60,10 @@ return (
         <CardContent>
           <Box justifyContent="center">
             <Typography color="textSecondary" gutterBottom>
-              Deseja deletar a categoria:
+              Deseja deletar o item:
             </Typography>
             <Typography color="textSecondary" >
-              Categoria
+            {categorias?.classeCategoria} {categorias?.modProdCategoria} {categorias?.frescorCategoria==true?"Fresco": "Não Fresco"}
             </Typography>
           </Box>
 
