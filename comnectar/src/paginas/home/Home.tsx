@@ -28,41 +28,28 @@ function Home() {
                 </Grid>
 
                 <Grid container xs={12}>
-                    <Grid xs={6}>
-                        <Box paddingTop={10} display="flex" alignItems="center" flexDirection="column" justifyContent="center">
-                            <img src="https://i.imgur.com/0AKEdi9.png" className="imgh2"></img>
-                        </Box>
-                    </Grid>
-                    <Grid xs={6}>
-                        <Box paddingBottom={3} paddingTop={30} display="flex" alignItems="center" flexDirection="column" justifyContent="center">
-                            <Link to="/produtos" className="text-decorator-none">
-                                <Button variant='contained' className="botaoh3" color='primary'>Listar Produtos</Button>
-                            </Link>
-                        </Box>
-                        <Box display="flex" alignItems="center" flexDirection="column" justifyContent="center">
-                            <Link to="/categorias" className="text-decorator-none">
-                                <Button variant='contained' className="botaoh3" color='primary'>Listar Categorias</Button>
-                            </Link>
-                        </Box>
-                    </Grid>
-                </Grid>
-                
-                <Grid container xs={12}>
-                    <Grid xs={6}>
+                <Grid xs={6}>
                         <Box paddingBottom={3} paddingTop={20} display="flex" alignItems="center" flexDirection="column" justifyContent="center">
                             <Link to="/registroProduto" className="text-decorator-none">
                                 <Button variant='contained' className="botaoh3" color='primary'>Cadastrar Produtos</Button>
                             </Link>
                         </Box>
-                        <Box display="flex" alignItems="center" flexDirection="column" justifyContent="center">
+                        <Box paddingBottom={20} display="flex" alignItems="center" flexDirection="column" justifyContent="center">
                             <Link to="/cadastrocategoria" className="text-decorator-none">
                                 <Button variant='contained' className="botaoh3" color='primary'>Cadastrar Categorias</Button>
                             </Link>
                         </Box>
                     </Grid>
                     <Grid xs={6}>
-                        <Box display="flex" alignItems="center" flexDirection="column" justifyContent="center">
-                            <img src="https://i.imgur.com/DIu38tw.png" className="imgh2"></img>
+                        <Box paddingBottom={3} paddingTop={20} display="flex" alignItems="center" flexDirection="column" justifyContent="center">
+                            <Link to="/produtos" className="text-decorator-none">
+                                <Button variant='contained' className="botaoh3" color='primary'>Listar Produtos</Button>
+                            </Link>
+                        </Box>
+                        <Box paddingBottom={20} display="flex" alignItems="center" flexDirection="column" justifyContent="center">
+                            <Link to="/categorias" className="text-decorator-none">
+                                <Button variant='contained' className="botaoh3" color='primary'>Listar Categorias</Button>
+                            </Link>
                         </Box>
                     </Grid>
                 </Grid>
