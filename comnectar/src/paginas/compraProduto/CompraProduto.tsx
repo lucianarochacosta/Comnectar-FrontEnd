@@ -1,11 +1,12 @@
 import { Button, Grid, TextField, Typography } from '@material-ui/core'
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import './CompraProduto.css';
-import { Box } from '@mui/material';
+import { Box, Pagination } from '@mui/material';
 import CardProduto from '../../components/Cards/cardProduto/CardProduto';
 import { busca } from '../../service/Service';
 import Produto from '../../models/Produto';
 import ListaProduto from '../../components/produtos/listaProduto/ListaProduto';
+import SwapVertIcon from '@mui/icons-material/SwapVert';
 
 export interface ListaProd {
   produtos : Produto[];
@@ -14,6 +15,7 @@ function CompraProduto() {
   const [myProdutos, setMyProdutos] = useState<Produto[]>([])
   const [listaProd, setListaProd] = useState<ListaProd>({produtos:myProdutos})
   const [nomeProduto, setNomeProduto] = useState("");
+  const [page, setPage] = useState(1)
   async function getProdutos() {
     await busca("/produtos", setMyProdutos, {
         headers: {
@@ -38,7 +40,12 @@ function CompraProduto() {
 
   useEffect(()=>{
       setListaProd({produtos:myProdutos})
+      setPage(Math.floor(myProdutos.length/8+1))
   },[myProdutos.length])
+
+  useEffect(()=>{
+
+  },[page])
 
   const updateNomeProduto = (e:ChangeEvent<HTMLInputElement>)=>{
     setNomeProduto(e.target.value)
@@ -56,7 +63,7 @@ function CompraProduto() {
           </Box>
         </Box>   
         <Grid item xs={12} style={{margin:"0 auto", width:"100%"}}>
-        <Box width="80%" margin="0 auto" gap="48px" display="flex" flexDirection="column">
+        <Box width="80%" margin="0 auto" gap="24px" display="flex" flexDirection="column">
         <Box display="flex" flexDirection="column" className="boxBusca" gap="48px">
           <Typography variant="h2" className="title">
             Encontre o que você deseja:
@@ -78,10 +85,21 @@ function CompraProduto() {
           <Box style={{height:"2px", background:"#D9D9D9"}}>
 
           </Box>
-          <Box display="flex" flexDirection="row" className="boxProdutos" minHeight="512px"  marginBottom="72px">          
+          <Box display="flex" justifyContent="space-between" alignItems="center">
+            <span style={{fontSize:"24px", marginLeft:"8px"}}>
+              { (myProdutos.length === 1) ? myProdutos.length + " resultado" : (myProdutos.length >1 ? myProdutos.length + " resultados" : "nenhum resultado") }</span>
+            <Box>
+              <Box display="flex" gap="2px" onClick={()=>{}}>
+                <span>ordenar</span>
+                  <SwapVertIcon fontSize="medium" className="order" /> 
+              </Box>
+            </Box>
+          </Box>
+          <Box display="flex" flexDirection="row" className="boxProdutos" minHeight="512px"  marginBottom="72px" position="relative">          
             <ListaProduto
-            produtos={listaProd?.produtos}
+            produtos={listaProd?.produtos.slice((page-1),(page*8-1))}
             />
+          <Pagination count={Math.floor(listaProd.produtos.length/8+1)} page={page} variant="outlined"  shape="rounded" />
           </Box>
         </Box>
         </Grid>

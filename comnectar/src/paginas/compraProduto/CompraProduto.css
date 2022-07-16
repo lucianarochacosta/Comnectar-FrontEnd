@@ -37,3 +37,9 @@
     font-size: 42px !important;
     font-weight: bold !important;
 }
+.order.MuiSvgIcon-root{
+    fill: #000 !important;
+}
+li .MuiSvgIcon-root{
+    fill: #000 !important;
+}

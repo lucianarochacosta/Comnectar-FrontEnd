@@ -18,10 +18,10 @@ function ListaProduto({produtos}:ListaProd){
 
     if(token !== ""){
       return (
-        <>
+        <Box display="flex" gap="48px">
           {
             produtos.map(produto=> (
-              <Box m={2} >
+              <Box m={2}  >
                 <Card variant="outlined">
                   <CardContent>
                     <Typography color="textSecondary" gutterBottom>
@@ -66,7 +66,7 @@ function ListaProduto({produtos}:ListaProd){
               </Box>
             ))
         }
-          </>
+          </Box>
       )
     }else{
       return (
