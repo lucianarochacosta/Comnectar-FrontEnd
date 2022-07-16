@@ -18,7 +18,7 @@ function ListaProduto({produtos}:ListaProd){
 
     if(token !== ""){
       return (
-        <Box display="flex" gap="48px">
+        <Box display="flex" gap="48px" flexWrap="wrap">
           {
             produtos.map(produto=> (
               <Box m={2}  >
@@ -70,7 +70,7 @@ function ListaProduto({produtos}:ListaProd){
       )
     }else{
       return (
-        <Box display="flex" gap="48px">
+        <Box display="flex" gap="48px" flexWrap="wrap">
           {produtos.map(produto=>{
             return <CardProduto key={produto.id}
             id= {produto.id}
