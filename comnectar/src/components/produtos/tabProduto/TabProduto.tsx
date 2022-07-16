@@ -1,15 +1,36 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import { AppBar, Tab, Tabs, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
 import { TabContext, TabPanel } from '@material-ui/lab';
 import './TabProduto.css';
 import ListaProduto from '../listaProduto/ListaProduto';
+import { ListaProd } from '../../../paginas/compraProduto/CompraProduto';
+import Produto from '../../../models/Produto';
+import { busca } from '../../../service/Service';
 
 function TabProduto() {
     const [value, setValue] = useState('1')
     function handleChange(event: React.ChangeEvent<{}>, newValue: string){
         setValue(newValue);
     }
+    const [myProdutos, setMyProdutos] = useState<Produto[]>([])
+    const [listaProd, setListaProd] = useState<ListaProd>({produtos:myProdutos})
+
+    async function getProdutos() {
+      await busca("/produtos", setMyProdutos, {
+          headers: {
+              'Authorization': ""
+          }
+      })
+    };
+
+    useEffect(() => {
+        getProdutos()
+    }, [myProdutos.length])
+  
+    useEffect(()=>{
+        setListaProd({produtos:myProdutos})
+    },[myProdutos.length])
   return (
     <>
       <TabContext value={value}>
@@ -21,7 +42,9 @@ function TabProduto() {
         </AppBar>
         <TabPanel value="1" >
           <Box display="flex" flexWrap="wrap" justifyContent="center">
-            <ListaProduto />
+            <ListaProduto
+            produtos={listaProd.produtos}
+            />
           </Box>
         </TabPanel>
         <TabPanel value="2">

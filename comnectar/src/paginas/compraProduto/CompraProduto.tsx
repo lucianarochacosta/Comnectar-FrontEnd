@@ -1,28 +1,50 @@
 import { Button, Grid, TextField, Typography } from '@material-ui/core'
-import React, { useEffect, useState } from 'react'
+import React, { ChangeEvent, useEffect, useState } from 'react'
 import './CompraProduto.css';
-import ListaProduto from '../../components/produtos/listaProduto/ListaProduto'
 import { Box } from '@mui/material';
 import CardProduto from '../../components/Cards/cardProduto/CardProduto';
 import { busca } from '../../service/Service';
 import Produto from '../../models/Produto';
+import ListaProduto from '../../components/produtos/listaProduto/ListaProduto';
 
+export interface ListaProd {
+  produtos : Produto[];
+}
 function CompraProduto() {
-  const [produtos, setProdutos] = useState<Produto[]>([])
-
+  const [myProdutos, setMyProdutos] = useState<Produto[]>([])
+  const [listaProd, setListaProd] = useState<ListaProd>({produtos:myProdutos})
+  const [nomeProduto, setNomeProduto] = useState("");
   async function getProdutos() {
-    await busca("/produtos", setProdutos, {
+    await busca("/produtos", setMyProdutos, {
         headers: {
             'Authorization': ""
         }
     })
   };
-
+  async function getProdutosByName(){
+    await busca(`/produtos/nome/${nomeProduto}`, setMyProdutos, 
+    {
+      headers: {
+          'Authorization': ""
+      }
+})
+  }
   useEffect(() => {
+    if(nomeProduto == ""){
+      getProdutos()
+    }
+  }, [myProdutos.length,nomeProduto])
 
-    getProdutos()
+  useEffect(()=>{
+    getProdutosByName()
+  }, [nomeProduto])
+  useEffect(()=>{
+      setListaProd({produtos:myProdutos})
+  },[myProdutos.length])
 
-  }, [produtos.length])
+  const updateNomeProduto = (e:ChangeEvent<HTMLInputElement>)=>{
+    setNomeProduto(e.target.value)
+  }
   return (
     <>
       <Grid container className="topoCompra" justifyContent='center' alignItems="center">
@@ -43,7 +65,7 @@ function CompraProduto() {
           </Typography>
             <Box display="flex" gap="8px">
               <Box display="flex" className="caixaBusca">
-                <TextField label="O que você precisa?" type="search" fullWidth variant='outlined'/>
+                <TextField value={nomeProduto} label="O que você precisa?" type="search" fullWidth variant='outlined' onChange={(e:ChangeEvent<HTMLInputElement>)=>updateNomeProduto(e)}/>
               </Box>
               <Button color="primary" variant="contained" className="botaoBusca">
                 Buscar
@@ -59,7 +81,9 @@ function CompraProduto() {
 
           </Box>
           <Box display="flex" flexDirection="row" className="boxProdutos" minHeight="512px"  marginBottom="72px">          
-          <ListaProduto />
+            <ListaProduto
+            produtos={listaProd?.produtos}
+            />
           </Box>
         </Box>
         </Grid>

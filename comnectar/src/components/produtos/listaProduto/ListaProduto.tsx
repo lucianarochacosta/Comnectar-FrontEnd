@@ -7,28 +7,15 @@ import Produto from "../../../models/Produto";
 import { busca } from "../../../service/Service";
 import { TokenState } from "../../../store/tokens/tokensReducer";
 import CardProduto from "../../Cards/cardProduto/CardProduto";
+import { ListaProd } from "../../../paginas/compraProduto/CompraProduto";
 
-function ListaProduto(){
 
-    const [produtos, setProdutos] = useState<Produto[]>([])
+function ListaProduto({produtos}:ListaProd){
 
     const token= useSelector<TokenState,TokenState["tokens"]>(
       (state) => state.tokens
       );
 
-    async function getProdutos() {
-        await busca("/produtos", setProdutos, {
-            headers: {
-                'Authorization': token
-            }
-        })
-      };
-
-      useEffect(() => {
-
-        getProdutos()
-    
-      }, [produtos.length])
     if(token !== ""){
       return (
         <>
