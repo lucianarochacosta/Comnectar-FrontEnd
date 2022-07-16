@@ -1,21 +1,68 @@
 .btn.MuiButton-root{
-  border-radius: 8px 0px 0px 8px;
+  border-radius:  8px 0px 0px 8px;
+}
+
+.btn{
+  flex: 1;
+  fontSize: 16px;
+  color: white !important;
+  height: 48px;
+  marginRight: 2px;  
 }
 
 .heart{
-  position:absolute;
+  position: absolute;
   right: 12px;
-  top: 12px;
-  fontSize: 32px;
-  borderRadius: 4px;
-  color: white;
+  top:  12px;
+  font-size:  32px !important;
+  border-radius:  4px;
+  color:  white;
 }
 
 .heart.MuiSvgIcon-root {
-  fill: #5FA974!important;
+  fill: #d9d9d9 !important;
 }
 
-.PaperContainer{
-  borderRadius:8px;
-  height: 296px;
+.MuiPaper-root.paperContainer{
+  borderRadius:  8px;
+  height:  296px !important;
+  position:  relative !important;
+}
+
+.flex-column{
+  display:  flex;
+  flex-direction:  column;
+}
+.flex-center{
+  display: flex;
+  align-items: center;
+}
+
+.principal-c{
+  gap:  24px;
+  width: 228px;
+  padding-bottom: 12px;
+}
+.image-c{
+  height: 140px;
+  background-size: cover;
+  border-radius: 8px 8px 0px 0px;
+}
+.p-l{
+  padding-left: 12px;
+}
+.nomeProduto{
+  font-size: 22px !important;
+  font-weight: bold !important;
+  color: #40352C;
+}
+
+.categoria{
+font-size:16px !important;
+color:#7C6F64
+}
+.preco{
+  font-size: 20px !important;
+  font-weight:bold !important;
+  color:#5FA974;
 }

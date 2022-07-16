@@ -8,7 +8,7 @@ import { busca } from "../../../service/Service";
 import { TokenState } from "../../../store/tokens/tokensReducer";
 import CardProduto from "../../Cards/cardProduto/CardProduto";
 import { ListaProd } from "../../../paginas/compraProduto/CompraProduto";
-
+import './ListaProduto.css';
 
 function ListaProduto({produtos}:ListaProd){
 
@@ -18,7 +18,7 @@ function ListaProduto({produtos}:ListaProd){
 
     if(token !== ""){
       return (
-        <Box display="flex" gap="48px" flexWrap="wrap">
+        <Box className="card-c">
           {
             produtos.map(produto=> (
               <Box m={2}  >
@@ -70,7 +70,7 @@ function ListaProduto({produtos}:ListaProd){
       )
     }else{
       return (
-        <Box display="flex" gap="48px" flexWrap="wrap">
+        <Box className="card-c">
           {produtos.map(produto=>{
             return <CardProduto key={produto.id}
             id= {produto.id}
