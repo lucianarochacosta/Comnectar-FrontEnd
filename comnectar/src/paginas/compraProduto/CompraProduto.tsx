@@ -22,11 +22,12 @@ function CompraProduto() {
     })
   };
   async function getProdutosByName(){
-    await busca(`/produtos/nome/${nomeProduto}`, setMyProdutos, 
-    {
-      headers: {
-          'Authorization': ""
-      }
+    if(nomeProduto !== "")
+      await busca(`/produtos/nome/${nomeProduto}`, setMyProdutos, 
+      {
+        headers: {
+            'Authorization': ""
+        }
 })
   }
   useEffect(() => {
@@ -35,9 +36,6 @@ function CompraProduto() {
     }
   }, [myProdutos.length,nomeProduto])
 
-  useEffect(()=>{
-    getProdutosByName()
-  }, [nomeProduto])
   useEffect(()=>{
       setListaProd({produtos:myProdutos})
   },[myProdutos.length])
@@ -67,7 +65,7 @@ function CompraProduto() {
               <Box display="flex" className="caixaBusca">
                 <TextField value={nomeProduto} label="O que você precisa?" type="search" fullWidth variant='outlined' onChange={(e:ChangeEvent<HTMLInputElement>)=>updateNomeProduto(e)}/>
               </Box>
-              <Button color="primary" variant="contained" className="botaoBusca">
+              <Button color="primary" variant="contained" className="botaoBusca" onClick={()=>getProdutosByName()}>
                 Buscar
               </Button>
             </Box>
