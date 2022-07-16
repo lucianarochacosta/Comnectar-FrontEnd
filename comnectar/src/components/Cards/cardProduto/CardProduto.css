@@ -2,6 +2,20 @@
   border-radius: 8px 0px 0px 8px;
 }
 
+.heart{
+  position:absolute;
+  right: 12px;
+  top: 12px;
+  fontSize: 32px;
+  borderRadius: 4px;
+  color: white;
+}
+
 .heart.MuiSvgIcon-root {
   fill: #5FA974!important;
+}
+
+.PaperContainer{
+  borderRadius:8px;
+  height: 296px;
 }
