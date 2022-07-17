@@ -55,24 +55,24 @@
 }
 
 .titulo1{
-    color: #40352C !important;
+    color: #ffffff !important;
     font-weight: 'bold' !important;
     font-family: 'Bebas Neue' !important;
     font-size: 75px !important;
 }
 .titulo2{
-    color: #40352C !important;
+    color: #ffffff !important;
     font-family: 'Bebas Neue' !important;
     font-size: 100px !important;
 }
 
 .subtitulo2{
-    color: #40352C !important;
+    color: #ffffff !important;
     font-family: 'Roboto', sans-serif ;
 }
 
 .subtitulo1{
-    color: #40352C !important;
+    color: #ffffff !important;
     font-family: 'Bebas Neue' !important;
     font-size: 50px !important;
     padding-left: 0cm;
@@ -84,8 +84,14 @@
 }
 
 .background{
-    background-color: #adbf244b;
+    background: rgba(0, 0, 0, 0.6) url("https://img.freepik.com/free-photo/beautiful-tree-middle-field-covered-with-grass-with-tree-line-background_181624-29267.jpg?w=2000") !important;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
 }
+
 .imagem1{
     width: 170px !important;
     height: 170px !important;
