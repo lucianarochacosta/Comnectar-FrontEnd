@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { AppBar, Toolbar, Typography, Grid, Button } from '@material-ui/core';
 import { Box } from '@mui/material';
 import { Link, useNavigate, useParams } from 'react-router-dom';
@@ -9,7 +8,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { addToken } from '../../../store/tokens/actions';
 import { toast } from 'react-toastify';
-import User from '../../../models/User';
 import useLocalStorage from 'react-use-localstorage';
 
 function Navbar() {
@@ -60,7 +58,7 @@ function Navbar() {
                                 </Typography>
                             </Box>
                         </Link>
-                        <Link to='/sobre-nos' className='text-decorator-none'>
+                        <Link to='/sobre' className='text-decorator-none'>
                             <Box className="MenuPagesCenterBox">
                                 <Typography variant="h5" color="inherit" className="MenuPagesFont">
                                     Sobre
