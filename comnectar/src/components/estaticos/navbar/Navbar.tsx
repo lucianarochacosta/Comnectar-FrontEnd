@@ -9,7 +9,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { addToken } from '../../../store/tokens/actions';
 import { toast } from 'react-toastify';
-import User from '../../../models/User';
 import useLocalStorage from 'react-use-localstorage';
 import { AnyAction } from 'redux';
 
@@ -80,7 +79,7 @@ const handleRedirect = ()=>{
                                 </Typography>
                             </Box>
                         </Link>
-                        <Link to='/sobre-nos' className='text-decorator-none'>
+                        <Link to='/sobre' className='text-decorator-none'>
                             <Box className="MenuPagesCenterBox">
                                 <Typography variant="h5" color="inherit" className="MenuPagesFont">
                                     Sobre
