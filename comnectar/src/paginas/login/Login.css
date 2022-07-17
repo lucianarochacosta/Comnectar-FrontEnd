@@ -37,3 +37,18 @@
     cursor: pointer;
     font-weight: bold !important;
 }
+.login-c{
+  opacity:0;
+  animation: surgir 1s forwards;  
+}
+
+@Keyframes surgir {
+    0%{
+        opacity:0;
+        transform: translateX(-150px)
+    }
+    100%{
+        opacity:1;
+        transform: translateX(0)
+    }
+}

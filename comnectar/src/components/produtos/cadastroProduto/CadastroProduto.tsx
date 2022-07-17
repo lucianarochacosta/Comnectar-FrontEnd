@@ -1,12 +1,12 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
-import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText, Paper, Grid, Icon } from "@material-ui/core"
+import { Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText, Paper, Grid, Icon } from "@material-ui/core"
 import { useNavigate, useParams } from 'react-router-dom';
 import { busca, buscaId, post, put } from '../../../service/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import Produto from '../../../models/Produto'
 import Categoria from "../../../models/Categoria";
-import { Box, inputBaseClasses } from '@mui/material'
+import { Box} from '@mui/material'
 import './CadastroProduto.css'
 import { toast } from 'react-toastify';
 
@@ -167,7 +167,7 @@ function CadastroProduto() {
                                     'Authorization': token
                                 }
                             })}
-                            value={produto.categoria?.id !== undefined ? produto.categoria.id : " " }
+                            value={produto.categoria?.id !== undefined ? produto.categoria.id : 0 }
                             > 
                             {categorias.map(categoria=>
                                 <MenuItem value={categoria.id}>{categoria.classeCategoria+' | '+categoria.modProdCategoria +' | '+(categoria.frescorCategoria === true && categoria.classeCategoria !== "Legumes" ? "Fresca" : "Não fresca")}</MenuItem>
