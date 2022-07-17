@@ -14,10 +14,10 @@ function SobreNos() {
                     <Box>
                         <Typography variant="h5" align="center" className="titulo2">O que nos move</Typography>
                         <Box display="flex" flexDirection="column">
-                            <Typography variant="h5" align="center">
+                            <Typography variant="h5" align="center" className="subtitulo2">
                                 Nos últimos anos, quantidades cada vez maiores de fenômenos da natureza têm ocorrido.
                             </Typography>
-                            <Typography variant="h5" align="center">
+                            <Typography variant="h5" align="center" className="subtitulo2">
                                 E também já há algum tempo, é possível observar que eles vêm se intensificando de forma acelerada.
                             </Typography>
                         </Box>
