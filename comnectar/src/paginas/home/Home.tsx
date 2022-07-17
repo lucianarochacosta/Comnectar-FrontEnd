@@ -92,7 +92,7 @@ function Home() {
                     <Box alignItems="center" justifyContent="center" display="flex">
                         <Link to='/login' className='text-decorator-none'>
                             <Button className="botaoH2" variant="outlined">
-                                Sou Produtor
+                                Sou Produtore
                             </Button>
                         </Link>
                     </Box>
