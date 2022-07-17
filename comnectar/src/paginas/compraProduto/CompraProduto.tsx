@@ -2,7 +2,6 @@ import { Button, Grid, TextField, Typography } from '@material-ui/core'
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import './CompraProduto.css';
 import { Box, Pagination } from '@mui/material';
-import CardProduto from '../../components/Cards/cardProduto/CardProduto';
 import { busca } from '../../service/Service';
 import Produto from '../../models/Produto';
 import ListaProduto from '../../components/produtos/listaProduto/ListaProduto';
@@ -56,9 +55,9 @@ function CompraProduto() {
 
   return (
     <>
-      <Grid container className="topoCompra" justifyContent='center' alignItems="center" >
+      <Grid container className="topoCompra" >
         <Grid item xs={12}>
-          <Box display="flex" flexDirection="column" gap="72px" justifyContent="center" marginTop="48px">
+          <Box className='flex-column content-center container' >
             {/* <Box display="flex" alignItems="center" flexDirection="column" justifyContent="center" className="boxTopoCompra" gap="64px">
           <Box display="flex" alignItems="center" flexDirection="column" justifyContent="center" className="blurCompra" >
             <Typography variant="h1" align="center" className="tituloCompra">
@@ -66,40 +65,40 @@ function CompraProduto() {
             </Typography>
           </Box>
         </Box>    */}
-            <Grid item xs={12} style={{ margin: "0 auto", width: "100%" }}>
-              <Box width="80%" margin="0 auto" gap="24px" display="flex" flexDirection="column">
-                <Box display="flex" flexDirection="column" className="boxBusca" gap="48px">
+            <Grid item xs={12} className="m-auto-100">
+              <Box className="m-auto-80 flex-column" >
+                <Box className="boxBusca flex-column gap-48" >
                   <Typography variant="h2" className="title">
                     Encontre o que você deseja:
                   </Typography>
-                  <Box display="flex" gap="8px">
-                    <Box display="flex" className="caixaBusca">
+                  <Box className="gap-8">
+                    <Box className="caixaBusca">
                       <TextField value={nomeProduto} label="O que você precisa?" type="search" fullWidth variant='outlined' onChange={(e: ChangeEvent<HTMLInputElement>) => updateNomeProduto(e)} />
                     </Box>
                     <Button color="primary" variant="contained" className="botaoBusca" onClick={() => getProdutosByName()}>
                       Buscar
                     </Button>
                   </Box>
-                  <Box display="flex" gap="8px" >
+                  <Box className='gap-8' >
                     <Button variant="outlined">FRUTAS</Button>
                     <Button variant="outlined">LEGUMES</Button>
                     <Button variant="outlined">VERDURAS</Button>
                   </Box>
                 </Box>
-                <Box style={{ height: "2px", background: "#D9D9D9" }}>
+                <Box className='line'>
 
                 </Box>
-                <Box display="flex" justifyContent="space-between" alignItems="center">
-                  <span style={{ fontSize: "24px", marginLeft: "8px" }}>
+                <Box className='flex-center' justifyContent="space-between">
+                  <span className='m-l ft-24'>
                     {(myProdutos.length === 1) ? listaProd.produtos.length + " de " + myProdutos.length + " resultado" : (myProdutos.length > 1 ? listaProd.produtos.length + " de " + myProdutos.length + " resultados" : "nenhum resultado")}</span>
                   <Box>
-                    <Box display="flex" gap="2px" onClick={() => { }}>
-                      <span>ordenar</span>
-                      <SwapVertIcon fontSize="medium" className="order" />
+                    <Box className='gap-2' onClick={() => { }}>
+                      <span className='cursor-p'>ordenar</span>
+                      <SwapVertIcon fontSize="medium" className="order cursor-p" />
                     </Box>
                   </Box>
                 </Box>
-                <Box display="flex" flexDirection="row" className="boxProdutos" minHeight="512px" paddingBottom="72px" marginBottom="72px" position="relative">
+                <Box  className="box-produto" >
                   <ListaProduto
                     produtos={listaProd?.produtos}
                   />
@@ -107,7 +106,7 @@ function CompraProduto() {
                     count={Number.isInteger(myProdutos.length / qntd) ? Math.floor(myProdutos.length / qntd) : Math.floor(myProdutos.length / qntd) + 1}
                     page={page} variant="outlined"
                     shape="rounded"
-                    style={{ position: "absolute", bottom: "0", right: 0 }}
+                    className='position-bt-r'
                     onChange={handleChange}
                   />
                 </Box>
