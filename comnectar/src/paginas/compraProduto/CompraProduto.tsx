@@ -1,8 +1,8 @@
-import { Button, Grid, TextField, Typography } from '@material-ui/core'
+import { Button, createStyles, FormControl, FormHelperText, Grid, InputLabel, makeStyles, NativeSelect, TextField, Theme, Typography } from '@material-ui/core'
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import './CompraProduto.css';
 import { Box, Pagination } from '@mui/material';
-import { busca } from '../../service/Service';
+import { api, busca } from '../../service/Service';
 import Produto from '../../models/Produto';
 import ListaProduto from '../../components/produtos/listaProduto/ListaProduto';
 import SwapVertIcon from '@mui/icons-material/SwapVert';
@@ -10,13 +10,26 @@ import SwapVertIcon from '@mui/icons-material/SwapVert';
 export interface ListaProd {
   produtos: Produto[];
 }
-function CompraProduto() {
 
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    formControl: {
+      minWidth: 120,
+    },
+    selectEmpty: {
+      border: 0,
+    },
+  }),
+);
+
+function CompraProduto() {
+  const classes = useStyles();
   const [myProdutos, setMyProdutos] = useState<Produto[]>([])
   const [listaProd, setListaProd] = useState<ListaProd>({ produtos: myProdutos })
   const [nomeProduto, setNomeProduto] = useState("");
   const [page, setPage] = useState(1)
   const qntd = 8; // produtos por página
+  const [order, setOrder] = useState(30);
 
   async function getProdutos() {
     await busca("/produtos", setMyProdutos, {
@@ -43,15 +56,65 @@ function CompraProduto() {
           }
         })
   }
-  useEffect(() => {
-    if (nomeProduto == "") {
-      getProdutos()
-    }
-  }, [myProdutos.length, nomeProduto])
+  // useEffect(() => {
+  //   if (nomeProduto == "") {
+  //     getProdutos()
+  //   }
+  // }, [myProdutos.length])
 
   useEffect(() => {
     setListaProd({ produtos: myProdutos.slice(page * qntd - qntd, page * qntd) })
-  }, [myProdutos.length])
+  }, [myProdutos.length,myProdutos[0],
+  order, myProdutos[myProdutos.length-1],
+  myProdutos[Math.floor((myProdutos.length-1)/2)]
+])  
+  
+  const filtrar = (e:ChangeEvent<any>)=>{
+    const event = e;
+    if(event.currentTarget.id == "Fruta"){
+      api.get("/produtos").then((resp)=>{
+        console.log(resp.data)
+      setMyProdutos(resp.data.filter((response:Produto)=>response.categoria?.classeCategoria == "Fruta"))
+       })
+      }
+       else if (event.currentTarget.id=="Verdura"){
+    api.get("/produtos").then((resp)=>{
+      console.log(resp.data)
+    setMyProdutos(resp.data.filter((response:Produto)=>response.categoria?.classeCategoria == "Verdura"))
+    })}
+    else if(event.currentTarget.id=="Legumes"){
+    api.get("/produtos").then((resp)=>{
+      console.log(resp.data)
+    setMyProdutos(resp.data.filter((response:Produto)=>response.categoria?.classeCategoria == "Legumes"))
+      })}}
+
+  useEffect(()=>{
+    if(order == 10){
+      setMyProdutos(myProdutos.sort((a,b)=> 
+         (a.precoProduto < b.precoProduto)? -1 : 1
+        ));
+    }
+    else if(order == 20){
+      setMyProdutos(myProdutos.sort((a,b)=> 
+         (a.precoProduto > b.precoProduto)? -1 : 1
+        ));
+    }
+    else if(order == 30){
+      busca('/produtos', setMyProdutos, {
+        "Authorization": ""
+      })
+    }
+    else if(order == 40){
+        setMyProdutos(myProdutos.sort((a,b)=> 
+         (a.nomeProduto < b.nomeProduto)? -1 : 1
+        ));
+    }
+    else if (order == 50){
+      setMyProdutos(myProdutos.sort((a,b)=> 
+         (a.nomeProduto > b.nomeProduto)? -1 : 1
+        ));
+    }
+  }, [order])
 
   return (
     <>
@@ -80,9 +143,9 @@ function CompraProduto() {
                     </Button>
                   </Box>
                   <Box className='gap-8' >
-                    <Button variant="outlined">FRUTAS</Button>
-                    <Button variant="outlined">LEGUMES</Button>
-                    <Button variant="outlined">VERDURAS</Button>
+                    <Button variant="outlined" id="Fruta"  onClick={(e)=>filtrar(e)}>FRUTAS</Button>
+                    <Button variant="outlined" id="Legumes" onClick={(e)=>filtrar(e)}> LEGUMES</Button>
+                    <Button variant="outlined" id="Verdura" onClick={(e)=>filtrar(e)} >VERDURAS</Button>
                   </Box>
                 </Box>
                 <Box className='line'>
@@ -93,8 +156,26 @@ function CompraProduto() {
                     {(myProdutos.length === 1) ? listaProd.produtos.length + " de " + myProdutos.length + " resultado" : (myProdutos.length > 1 ? listaProd.produtos.length + " de " + myProdutos.length + " resultados" : "nenhum resultado")}</span>
                   <Box>
                     <Box className='gap-2' onClick={() => { }}>
-                      <span className='cursor-p'>ordenar</span>
-                      <SwapVertIcon fontSize="medium" className="order cursor-p" />
+                      <span className='cursor-p'>ordenar:</span>
+                      <FormControl className={classes.formControl} >
+                         <NativeSelect
+                            className={classes.selectEmpty}
+                            defaultValue={order}
+                            value={order}
+                            inputProps={{
+                            name: 'order',
+                            id: 'uncontrolled-native',
+                          }
+                        }
+                        onChange={(e:any)=>setOrder(e.target.value)}
+                        >
+                          <option value={10}>Menor Preço</option>
+                          <option value={20}>Maior Preço</option>
+                          <option value={30}>Todos</option>
+                          <option value={40}>a-z A-Z</option>
+                          <option value={50}>z-a Z-A</option>
+                        </NativeSelect>
+                      </FormControl>
                     </Box>
                   </Box>
                 </Box>
