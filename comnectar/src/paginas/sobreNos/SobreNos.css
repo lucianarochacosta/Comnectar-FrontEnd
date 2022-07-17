@@ -99,18 +99,22 @@
    
 }
 .cardA {
-    width: 95%;
-    height: 350px;
-    background-image: url("https://i.imgur.com/sXN0b0H.png") !important;
+    width: 100%;
+    height: 350px; 
+    background: rgba(0, 0, 0, 0.6) url("https://i.imgur.com/sXN0b0H.png") !important;
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
+    background-blend-mode: darken;
 }
 .cardB {
-    width: 95%;
+    width: 100%;
     height: 350px;
-    background-image: url("https://i.imgur.com/9FzS3go.png") !important;
+    background: rgba(0, 0, 0, 0.6) url("https://i.imgur.com/9FzS3go.png") !important;
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
+    background-blend-mode: darken;
 }
 .cardC {
     width: 95%;
@@ -251,4 +255,20 @@
     margin-bottom: 40px !important;
 }
 
+.boxOqueNosMove{
+    background: rgba(0, 0, 0, 0.6) url("https://wallpaperaccess.com/full/2199232.jpg") !important;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:100%;
+    background-blend-mode: darken;
+}
 
+.boxSiberia{
+    background: rgba(0, 0, 0, 0.6) url("https://i.imgur.com/sXN0b0H.png") !important;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+}

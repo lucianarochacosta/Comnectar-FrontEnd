@@ -9,28 +9,33 @@ function SobreNos() {
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center" className="background">
                 <Grid xs={12} className="intro">
-                    <Box>
+                    <Box className="boxOqueNosMove">
+                        <Box display="flex" flexDirection="column" >
                         <Typography variant="h5" align="center" className="titulo2">O Que Nos Move</Typography>
-                        <Box display="flex" flexDirection="column">
-                            <Typography variant="h5" align="center">
+                            <Typography variant="h5" align="center" className="subtitulo2">
                                 Nos últimos anos, quantidades cada vez maiores de fenômenos extremos têm ocorrido na natureza.
                             </Typography>
-                            <Typography variant="h5" align="center">
+                            <Typography variant="h5" align="center" className="subtitulo2">
                                 Os impactos negativos dos mesmos vêm se intensificando de forma acelerada.
                             </Typography>
                         </Box>
                     </Box>
                 </Grid>
-                <Grid container direction="row" alignItems="center" className="cont-esquerda" xs={12}>
+                <Grid container direction="row" alignItems="center" xs={12}>
+                        <Box className="boxSiberia">
+                            
+                        </Box>
+                </Grid>
+                <Grid container direction="row" className="cont-direita" alignItems="center" xs={12}>
                     <Grid alignItems="center" xs={6}>
-                        <Box paddingRight={5}>
-                            <Typography variant="h6" align="left" className="subtitulo2">
+                        <Box className="cardA">
+                        <Typography variant="h6" align="left" className="subtitulo2">
                                 Grandes incêndios na Sibéria, tradicionalmente
                                 referenciada por seus recordes de baixas
                                 temperaturas no passado sinalizam a
                                 magnitude desse desequilíbrio.
                             </Typography> <br/>
-                            <Typography variant="h6" align="left" className="subtitulo2">
+                            <Typography variant="h6" className="subtitulo2">
                                 A emissão em quantidades astronômicas dos
                                 GEE’s - Gases do Efeito Estufa - tem provocado a
                                 elevação das temperaturas médias globais em
@@ -39,14 +44,7 @@ function SobreNos() {
                         </Box>
                     </Grid>
                     <Grid xs={6}>
-                        <Box paddingLeft={5}>
-                            <Card className="cardA"></Card>
-                        </Box>
-                    </Grid>
-                </Grid>
-                <Grid container direction="row" className="cont-direita" alignItems="center" xs={12}>
-                    <Grid alignItems="center" xs={6}>
-                        <Box paddingLeft={5}>
+                        <Box className="cardB">
                             <Typography variant="h6" align="right" className="subtitulo2">
                                 O conhecido Permafrost, o ‘gelo permanente’
                                 concentrado em poucas localidades do nosso
@@ -59,11 +57,6 @@ function SobreNos() {
                                 ser libertados na atmosfera, o que poderá causar
                                 impactos catastróficos para a vida no planeta.
                             </Typography>
-                        </Box>
-                    </Grid>
-                    <Grid xs={6}>
-                        <Box paddingLeft={5}>
-                            <Card className="cardB"></Card>
                         </Box>
                     </Grid>
                 </Grid>
