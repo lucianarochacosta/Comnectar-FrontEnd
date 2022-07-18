@@ -10,7 +10,7 @@ function Contato() {
             <Grid container justifyContent='center' alignItems='center' className="background">
                 <Grid alignItems="center">
                     <Box width='100%' height='100%' display={'flex'} alignItems='center' paddingLeft={'10%'} >
-                        <form action="https://formspree.io/f/xknyleeg" method="POST">
+                        <form action="https://formspree.io/f/xknyleeg" method="POST" target="_blank">
 
                             <Grid xs={12} className="intro-C">
                                 <Box>

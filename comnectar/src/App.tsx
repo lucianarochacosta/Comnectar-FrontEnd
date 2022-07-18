@@ -40,7 +40,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/sobre-nos" element={<SobreNos/>} />
+            <Route path="/sobre" element={<SobreNos/>} />
             <Route path="/produtos" element={<CompraProduto />} />
             <Route path="/cadastrousuario" element={<CadastroUsuario />} />
             <Route path="/categorias" element={<ListaCategoria />} />
