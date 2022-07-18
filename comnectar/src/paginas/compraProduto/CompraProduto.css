@@ -1,5 +1,9 @@
 .topoCompra {
     width: 100%;
+    justifyContent:'center';
+     alignItems:
+     center
+     ;
 }
 
 .boxTopoCompra {
@@ -22,9 +26,8 @@
 .caixaBusca {
     height: 53px;
     width: 624px;
-    height: 53px;
-    top: 430px !important;
     border-radius: 5px;
+    display: flex;
 }
 
 .botaoBusca {
@@ -43,3 +46,61 @@ li .MuiSvgIcon-root{
     fill: #000 !important;
 }
 
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+}
+.content-center{
+    justify-content: center
+}
+
+.container{
+    gap:72px;
+    margin-top:48px;
+}
+.m-auto-100{
+    margin: 0 auto;
+    width: 100%;
+}
+.m-auto-80{
+    margin: 0 auto;
+    width: 80%;
+    gap: 24px;
+}
+.gap-48{
+    gap: 48px;
+}
+.gap-8{
+    gap: 8px;
+    display: flex;
+}
+.gap-2{
+    gap: 2;
+    display: flex;
+}
+.line{
+    height: 2px;
+    background: #D9D9D9;
+}
+.m-l.ft-24{
+    font-size: 24px;
+    margin-left: 8px;
+}
+.box-produto{
+    min-height: 512px;
+    padding-bottom: 72px;
+    margin-bottom: 72px;
+    position: relative;
+}
+.position-bt-r{
+    position: absolute;
+    bottom: 0;
+    right: 0 ;
+}
+.cursor-p{
+    cursor: pointer;
+}

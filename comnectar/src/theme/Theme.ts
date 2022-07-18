@@ -51,9 +51,9 @@ const Theme = createTheme({
         //Cor do Label
         color:'#000000'
       }
+    },
     }
   }
-}
 );
 
 export default Theme;

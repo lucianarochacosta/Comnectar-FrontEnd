@@ -78,13 +78,12 @@
 .botoesportal{
     display: flex;
     flex-direction: row;
-    margin-left:24px;
-    margin-right:24px;
-    margin-bottom: 10px;
 }
 
 .botoesportal2{
     margin: auto;
+    display: flex;
+    
 }
 
 .textoportal{
@@ -92,23 +91,35 @@
 }
 
 .textoportal2{
-    margin: 10px !important;
     text-align: center;
 }
 
 .menuportal{
-    margin: 5px;
+    position: absolute;
+    top:56px;
+    right: -56px;
+    height: 64px;
     padding: 0;
+    width: 260px;
+    justify-content: center;
     border-radius: 10px;
-    background-color: #40352c9f;
+    background-color: #40352c;
+    display: flex;
+    align-items: center;
 }
 
 .menuportal2{
     display: flex;
-    margin: 5px;
     padding: 0;
     border-radius: 10px;
     background-color: #40352c9f;
+}
+.cursor-p{
+    cursor: pointer
+}
+
+.MuiTypography-root.color-clicked{
+    color: #96A621 !important;
 }
 
 .text-decorator-none{
@@ -118,9 +129,9 @@
 .btn-carrinho{
     background-color: #ADBF24 !important;
     color: white !important;
-    width: 64px !important;
-    height: 64px !important;
-    border-radius: 100% !important;
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50% !important;
 }
 
 .btn-carrinho:hover{
@@ -134,4 +145,8 @@
 
 .boxcarrinho{
     margin-left: 20px;
+}
+
+.position-r{
+    position: relative;
 }

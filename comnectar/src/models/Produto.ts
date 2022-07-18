@@ -13,6 +13,7 @@ interface Produto {
     shelfProduto:string;
     categoria?:Categoria | null
     usuario?:User | null
+    token?: string | null
 }
 
 export default Produto;

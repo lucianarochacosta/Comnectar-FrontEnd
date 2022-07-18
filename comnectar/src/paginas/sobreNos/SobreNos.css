@@ -6,16 +6,11 @@
     margin: 0;
     box-sizing: border-box;
 }
-.cont-esquerda{
+.cont-esquerda-sb{
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 5px;
-    margin: 5px;
-    border: 5px;
-    margin-top: 0px;
-    margin-bottom: 0px;
 }
 
 .cont-esquerda1{
@@ -23,23 +18,13 @@
     flex-direction: row-reverse;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 5px;
-    margin: 5px;
-    border: 5px;
-    margin-top: 30px;
-    margin-bottom: 30px;
 }
 
-.cont-direita{
+.cont-direita-sb{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 5px;
-    margin: 5px;
-    border: 5px;
-    margin-top: 0px;
-    margin-bottom: 0px;
 }
 
 .cont-direita1{
@@ -47,58 +32,56 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 5px;
-    margin: 5px;
-    border: 5px;
-    margin-top: 30px;
-    margin-bottom: 0px;
 }
 
 .titulo1{
-    color: #40352C !important;
     font-weight: 'bold' !important;
     font-family: 'Bebas Neue' !important;
     font-size: 75px !important;
+    color: #ffffff !important;
 }
 .titulo2{
-    color: #40352C !important;
     font-family: 'Bebas Neue' !important;
     font-size: 100px !important;
+    color: #ffffff !important;
 }
 
 .subtitulo2{
-    color: #40352C !important;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif ;
+}
+.subtitulo{
+    color: #ffffff !important;
     font-family: 'Roboto', sans-serif ;
 }
 
 .subtitulo1{
-    color: #40352C !important;
     font-family: 'Bebas Neue' !important;
     font-size: 50px !important;
-    padding-left: 0cm;
 }
 
 .boxtexto {
     width: 642px !important;
     height: 144px !important;  
+    color: black !important;
 }
 
-.background{
-    background-color: #adbf244b;
+.sobre-bg{
+    background: linear-gradient(93.59deg, rgba(0, 0, 0, 0.6) 13.61%, rgba(0, 0, 0, 0) 87.41%), url("https://img.freepik.com/free-photo/beautiful-tree-middle-field-covered-with-grass-with-tree-line-background_181624-29267.jpg?w=2000") fixed center center;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
 }
+
 .imagem1{
     width: 170px !important;
     height: 170px !important;
     border-radius: 50% !important;
    
 }
-.cardA {
-    width: 95%;
-    height: 350px;
-    background-image: url("https://i.imgur.com/sXN0b0H.png") !important;
-    background-size: cover;
-    background-position: center;
-}
+
 .cardB {
     width: 95%;
     height: 350px;
@@ -216,6 +199,7 @@
 }
 .alinhamentoBack{
     margin-top: 15px;
+    height:300px;
 }
 .front{
 	position: absolute;
@@ -224,8 +208,9 @@
     backface-visibility: hidden;
 }
 .cardEquipe {
-    margin-top: 50px !important;
-    margin-bottom: 50px !important;
+    display: flex;
+    height: 500px;
+    justify-content: space-around;
 }
 
 .iconeSocial{
@@ -238,11 +223,13 @@
     color: #3e733c72;
 }
 .intro{
-    align-items: center;
-    justify-content: center;
+    justify-content:center;
+    align-items:center;
+    display: flex;
     gap: 8px;
-    margin-top: 30px !important;
-    margin-bottom: 40px !important;
+    height: calc(100vh - 65px);
 }
-
+.section1{
+    width:100% !important;
+}
 

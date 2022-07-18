@@ -5,8 +5,10 @@ import Produto from '../../../models/Produto'
 import "./CardProduto.css"
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { Link } from 'react-router-dom'
 
 function CardProduto(props:Produto) {
+  if(props.token == ""){
   return (
     <Paper elevation={4} className="paperContainer">
       <FavoriteBorderIcon className="heart" />
@@ -34,6 +36,40 @@ function CardProduto(props:Produto) {
       </Box>
     </Paper>
   )
+}else{
+  return(
+  <Paper elevation={4} className="paperContainer">
+  <FavoriteBorderIcon className="heart" />
+  <Box className='flex-column principal-c' >
+    <Box className='image-c' style={{ backgroundImage:`url(${props.fotoProduto!==null ? props.fotoProduto : ""})`}}>
+    </Box>
+    <Box className="p-l">
+      <Typography variant='h2' className='nomeProduto'>
+        {props.nomeProduto}
+      </Typography>
+      <Typography variant="h5" className='categoria'>
+        {props.categoria?.classeCategoria+"-"+props.categoria?.modProdCategoria}
+      </Typography>
+    </Box>
+    <Box className='p-l' display="flex" >
+      <Box style={{flex: 1}} className="flex-center">
+    <Link to={`/atualizarProduto/${props.id}`} >
+      <Button  color="secondary" variant="contained" classes={{root:".MuiButton-root"}}> 
+        Atualizar
+      </Button>
+    </Link>
+      </Box>
+      <Link to={`/deletaProduto/${props.id}`} >
+      <Button  color="secondary" variant="contained" classes={{root:".MuiButton-root"}}> 
+        Deletar
+      </Button>
+      </Link>
+    </Box>
+  </Box>
+</Paper>
+
+)
+}
 }
 
 export default CardProduto
