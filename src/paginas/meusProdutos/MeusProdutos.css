@@ -1,0 +1,106 @@
+.topoCompra {
+  width: 100%;
+  justifyContent:'center';
+   alignItems:
+   center
+   ;
+}
+
+.boxTopoCompra {
+  height: 320px;
+  background: linear-gradient(93.59deg, rgba(0, 0, 0, 0.6) 13.61%, rgba(0, 0, 0, 0) 87.41%), url(https://i.imgur.com/5HQKREc.png) fixed center center;
+  background-size: cover;
+}
+
+.tituloCompra {
+  color: white;
+  font-weight: 800 !important;
+  font-size: 64px !important;
+}
+
+.boxBusca {
+  font-weight: bold;
+  gap: 24px;
+}
+
+.caixaBusca {
+  height: 53px;
+  width: 624px;
+  border-radius: 5px;
+  display: flex;
+}
+
+.botaoBusca {
+  color: white;
+  width: 120px;
+  height: 53px;
+}
+.title{
+  font-size: 42px !important;
+  font-weight: bold !important;
+}
+.order.MuiSvgIcon-root{
+  fill: #000 !important;
+}
+li .MuiSvgIcon-root{
+  fill: #000 !important;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+.flex-center{
+  display: flex;
+  align-items: center;
+}
+.content-center{
+  justify-content: center
+}
+
+.container{
+  gap:72px;
+  margin-top:48px;
+}
+.m-auto-100{
+  margin: 0 auto;
+  width: 100%;
+}
+.m-auto-80{
+  margin: 0 auto;
+  width: 80%;
+  gap: 24px;
+}
+.gap-48{
+  gap: 48px;
+}
+.gap-8{
+  gap: 8px;
+  display: flex;
+}
+.gap-2{
+  gap: 2;
+  display: flex;
+}
+.line{
+  height: 2px;
+  background: #D9D9D9;
+}
+.m-l.ft-24{
+  font-size: 24px;
+  margin-left: 8px;
+}
+.box-produto{
+  min-height: 512px;
+  padding-bottom: 72px;
+  margin-bottom: 72px;
+  position: relative;
+}
+.position-bt-r{
+  position: absolute;
+  bottom: 0;
+  right: 0 ;
+}
+.cursor-p{
+  cursor: pointer;
+}

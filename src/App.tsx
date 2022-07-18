@@ -26,6 +26,7 @@ import Contato from './paginas/contato/Contato';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ComnecteSe from './paginas/comnecte-se/Comnecte-se';
+import MeusProdutos from './paginas/meusProdutos/MeusProdutos';
 
 function App() {
   return (
