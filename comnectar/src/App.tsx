@@ -22,6 +22,7 @@ import Contato from './paginas/contato/Contato';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ComnecteSe from './paginas/comnecte-se/Comnecte-se';
+import MeusProdutos from './paginas/meusProdutos/MeusProdutos';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/meusProdutos" element={<MeusProdutos />} />
             <Route path="/sobre-nos" element={<SobreNos/>} />
             <Route path="/produtos" element={<CompraProduto />} />
             <Route path="/cadastrousuario" element={<CadastroUsuario />} />

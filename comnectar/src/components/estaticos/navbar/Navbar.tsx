@@ -177,7 +177,7 @@ const handleRedirect = ()=>{
                                 </Typography>
                             </Box>
                         </Link>
-                        <Link to='/sobre-nos' className='text-decorator-none'>
+                        <Link to='/sobre' className='text-decorator-none'>
                             <Box className="MenuPagesCenterBox">
                                 <Typography variant="h5" color="inherit" className="MenuPagesFont">
                                     Sobre
