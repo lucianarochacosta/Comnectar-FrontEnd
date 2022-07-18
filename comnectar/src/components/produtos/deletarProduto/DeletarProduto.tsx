@@ -58,10 +58,10 @@ function DeletarProduto() {
         <Card variant="outlined" >
           <CardContent>
             <Box justifyContent="center">
-              <Typography color="textSecondary" gutterBottom>
+              <Typography color="textPrimary" gutterBottom>
                 Deseja deletar o produto:
               </Typography>
-              <Typography color="textSecondary" >
+              <Typography color="textPrimary" >
                 Produto
               </Typography>
             </Box>
@@ -75,7 +75,7 @@ function DeletarProduto() {
               </Button>
               </Box>
               <Box>
-              <Button  onClick={nao} variant="contained" size='large' color="secondary">
+              <Button  onClick={nao} variant="contained" size='large' color="primary">
                 Não
               </Button>
               </Box>

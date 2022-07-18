@@ -56,11 +56,11 @@ function CompraProduto() {
           }
         })
   }
-  // useEffect(() => {
-  //   if (nomeProduto == "") {
-  //     getProdutos()
-  //   }
-  // }, [myProdutos.length])
+   useEffect(() => {
+     if (nomeProduto == "") {
+       getProdutos()
+     }
+   }, [nomeProduto])
 
   useEffect(() => {
     setListaProd({ produtos: myProdutos.slice(page * qntd - qntd, page * qntd) })
@@ -73,18 +73,15 @@ function CompraProduto() {
     const event = e;
     if(event.currentTarget.id == "Fruta"){
       api.get("/produtos").then((resp)=>{
-        console.log(resp.data)
       setMyProdutos(resp.data.filter((response:Produto)=>response.categoria?.classeCategoria == "Fruta"))
        })
       }
        else if (event.currentTarget.id=="Verdura"){
     api.get("/produtos").then((resp)=>{
-      console.log(resp.data)
     setMyProdutos(resp.data.filter((response:Produto)=>response.categoria?.classeCategoria == "Verdura"))
     })}
     else if(event.currentTarget.id=="Legumes"){
     api.get("/produtos").then((resp)=>{
-      console.log(resp.data)
     setMyProdutos(resp.data.filter((response:Produto)=>response.categoria?.classeCategoria == "Legumes"))
       })}}
 
