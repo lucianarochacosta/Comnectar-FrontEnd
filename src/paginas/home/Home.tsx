@@ -26,7 +26,7 @@ function Home() {
                 <Grid container xs={12}>
                     <Grid xs={6}>
                         <Box paddingTop={10} display="flex" alignItems="center" flexDirection="column" justifyContent="center">
-                            <img src="https://i.imgur.com/0AKEdi9.png" className="imgh2"></img>
+                            <img src="https://www.sitiopema.com.br/wp-content/uploads/2020/07/alimentos-organicos.jpg" className="imgh2"></img>
                         </Box>
                     </Grid>
                     <Grid xs={6}>
