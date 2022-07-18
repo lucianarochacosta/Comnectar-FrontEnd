@@ -68,7 +68,7 @@ function Login (){
         <Grid container direction="row" justifyContent="center" alignItems="center">
             <Grid alignItems="center" xs={12} >
                 <Box width='100%' height='100vh' className='backgroundImg' display={'flex'} alignItems='center' paddingLeft={'10%'} >
-                    <Paper style={{padding:'32px 48px', borderRadius:'16px'}} elevation={12}>
+                    <Paper style={{padding:'32px 48px', borderRadius:'16px'}} elevation={12} className="login-c">
                     <Box maxWidth={'420px'}>
                     <form onSubmit={onSubmit}>
                         <Typography variant="h3" gutterBottom color="textPrimary" align="center" component="h3" className="texto">

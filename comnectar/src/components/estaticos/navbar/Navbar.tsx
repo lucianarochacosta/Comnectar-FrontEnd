@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { AppBar, Toolbar, Typography, Grid, Button } from '@material-ui/core';
+import React, { ChangeEvent, useEffect, useState } from 'react';
+import { AppBar, Toolbar, Typography, Grid, Button, ClickAwayListener } from '@material-ui/core';
 import { Box } from '@mui/material';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
@@ -9,8 +9,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { addToken } from '../../../store/tokens/actions';
 import { toast } from 'react-toastify';
-import User from '../../../models/User';
 import useLocalStorage from 'react-use-localstorage';
+import { AnyAction } from 'redux';
 
 function Navbar() {
     const [nome, setNome] = useLocalStorage('nome');
@@ -37,7 +37,26 @@ function Navbar() {
     }
 
     var navbarComponent;
+  const [open, setOpen] = React.useState(false);
 
+  const handleClick = (e:any) => {
+    setOpen((prev) => !prev);
+    if(!open){
+        e.target.classList.add("color-clicked")
+    }
+    else{
+        e.target.classList.remove("color-clicked")
+    }
+  };
+
+  const handleClickAway = () => {
+    setOpen(false);
+    document.querySelector(".MuiTypography-root.color-clicked")?.classList.remove("color-clicked")
+  };
+const handleRedirect = ()=>{
+    setOpen(false)
+    document.querySelector(".MuiTypography-root.color-clicked")?.classList.remove("color-clicked")
+}
     if (token == "") {
         navbarComponent =
         <AppBar position="sticky" >
@@ -60,7 +79,7 @@ function Navbar() {
                                 </Typography>
                             </Box>
                         </Link>
-                        <Link to='/sobre-nos' className='text-decorator-none'>
+                        <Link to='/sobre' className='text-decorator-none'>
                             <Box className="MenuPagesCenterBox">
                                 <Typography variant="h5" color="inherit" className="MenuPagesFont">
                                     Sobre
@@ -91,27 +110,39 @@ function Navbar() {
                     </Box>
 
                     <Box display="flex" justifyContent="flex-end" alignItems="center">
-                        <Box className="menuportal">
-                            <Typography variant="h6" color="inherit" className='textoportal'>
-                                Portal do Produtor
+                    <ClickAwayListener onClickAway={handleClickAway}>
+                        <div className="position-r">
+                            <span onClick={handleClick} className="cursor-p" >
+                            <Typography variant="h5" className="MenuPagesFont">
+                                Sou um Produtor
                             </Typography>
-                            <Box className='botoesportal'>
-                                <Link to='/login' className='text-decorator-none'>
-                                    <Box className="MenuPagesEntrar">
-                                        <Button variant="contained" endIcon={<ExitToAppIcon />} className='botaoentrar'>
-                                            Entrar
-                                        </Button>
-                                    </Box>
-                                </Link>
-                                <Link to='/cadastrousuario' className='text-decorator-none'>
-                                    <Box className="MenuPagesCadastrar">
-                                        <Button variant="outlined" className='botaocadastrar'>
-                                            Cadastrar
-                                        </Button>
-                                    </Box>
-                                </Link>
-                            </Box>
-                        </Box>
+                            </span>
+                            {open ? (
+                             <Box className="menuportal">
+                              {/* <Typography variant="h6" color="inherit" className='textoportal'>
+                                 Melhore o mundo, conosco!
+                             </Typography>  */}
+                             <Box className='botoesportal'>
+                                 <Link to='/login' className='text-decorator-none' onClick={()=>handleRedirect()}>
+                                     <Box className="MenuPagesEntrar">
+                                         <Button variant="contained" endIcon={<ExitToAppIcon />} className='botaoentrar'>
+                                             Entrar
+                                         </Button>
+                                     </Box>
+                                 </Link>
+                                 <Link to='/cadastrousuario' className='text-decorator-none' onClick={()=>handleRedirect()}>
+                                     <Box className="MenuPagesCadastrar">
+                                         <Button variant="outlined" className='botaocadastrar'>
+                                             Cadastrar
+                                         </Button>
+                                     </Box>
+                                 </Link>
+                             </Box>
+                         </Box>
+                            ) : null}
+                        </div>
+                        </ClickAwayListener>
+                       
                         <Box className='boxcarrinho'>
                             <Button variant='contained' className='btn-carrinho'>
                                 <ShoppingCartRoundedIcon fontSize="large" />
