@@ -1,5 +1,6 @@
 .card-c{
   display: flex;
-  gap: 48px;
   flex-wrap: wrap;
+  gap: 48px;
+  padding-left: 12px;
   }

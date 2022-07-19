@@ -5,7 +5,7 @@ import GitHub from '@material-ui/icons/GitHub';
 import './SobreNos.css';
 
 function SobreNos() {
-    return(
+    return (
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center" className="sobre-bg" xs={12}>
 
@@ -100,11 +100,11 @@ function SobreNos() {
                                         <Typography color="textPrimary" variant="h5" align="center" className="subtitulo1">
                                             plantando!
                                         </Typography>  <br />
-                                        <Typography color="textPrimary" variant="h6"  className="subtitulo2">
+                                        <Typography color="textPrimary" variant="h6" className="subtitulo2">
                                             Entendemos que muito do que foi destruído precisa ser recuperado
                                             em se tratando de uma Ação Climática concreta.
                                         </Typography>  <br />
-                                        <Typography color="textPrimary" variant="h6"  className="subtitulo2">
+                                        <Typography color="textPrimary" variant="h6" className="subtitulo2">
                                             Dessa forma, nossa proposta é conectar
                                             consumidores que compreendem esse cenário
                                             a produtores que o combatem
@@ -119,14 +119,14 @@ function SobreNos() {
                             </Grid>
                         </Box>
                     </Box>
-                    <Grid  xs={12} style={{background:"#00000090"}}>
+                    <Grid xs={12} style={{ background: "#00000090" }}>
                         <Box >
-                            <Typography color="textPrimary" variant="h3" align="center" className="titulo1" style={{paddingTop:"64px"}}>Quem somos nós</Typography>
+                            <Typography color="textPrimary" variant="h3" align="center" className="titulo1" style={{ paddingTop: "64px" }}>Quem somos nós</Typography>
                             <Typography color="textPrimary" variant="h5" align="center" className="titulo2">Nossa equipe de desenvolvedores</Typography>
                         </Box>
                     </Grid>
 
-                    <Grid alignItems="center" item xs={12} className="cardEquipe" style={{background:"#00000090"}}>
+                    <Grid alignItems="center" item xs={12} className="cardEquipe" style={{ background: "#00000090" }}>
                         <Box display="flex" justifyContent="space-between" gap="24px">
                             <Card className="flip-container">
                                 <div className="flipper">
@@ -138,12 +138,14 @@ function SobreNos() {
                                             <Box justifyContent="center" alignItems="center" display="-moz-initial" paddingX={3} className="alinhamentoBack">
                                                 <Typography color="textPrimary" className="fonteCardBack">Andrei Lançanova</Typography>
                                                 <Typography color="textPrimary" className="fonteCardBack2">Desenvolvedor Web Java Fullstack</Typography>
-                                                <a href="https://www.linkedin.com/in/andreifl/" target="_blank" rel="noreferrer">
-                                                    <LinkedInIcon className='iconeSocial' />
-                                                </a>
-                                                <a href="https://github.com/andreiflancanova" target="_blank" rel="noreferrer">
-                                                    <GitHub className='iconeSocial' />
-                                                </a>
+                                                <Box justifyContent="space-around" alignItems="center" display="flex">
+                                                    <a href="https://www.linkedin.com/in/andreifl/" target="_blank" rel="noreferrer">
+                                                        <LinkedInIcon className='iconeSocial' />
+                                                    </a>
+                                                    <a href="https://github.com/andreiflancanova" target="_blank" rel="noreferrer">
+                                                        <GitHub className='iconeSocial2' />
+                                                    </a>
+                                                </Box>
                                             </Box>
                                         </Card>
                                     </div>
@@ -157,14 +159,16 @@ function SobreNos() {
                                     <div className="back">
                                         <Card className="backgroundBack">
                                             <Box justifyContent="center" alignItems="center" display="-moz-initial" paddingX={3} className="alinhamentoBack">
-                                                <Typography color="textPrimary" className="fonteCardBack">Isabela Piana</Typography>
+                                                <Typography color="textPrimary" className="fonteCardBack">Isabela das Neves Piana</Typography>
                                                 <Typography color="textPrimary" className="fonteCardBack2">Desenvolvedora Web Java Fullstack</Typography>
-                                                <a href="https://www.linkedin.com/in/isabela-piana/" target="_blank" rel="noreferrer">
-                                                    <LinkedInIcon className='iconeSocial' />
-                                                </a>
-                                                <a href="https://github.com/isabelapiana" target="_blank" rel="noreferrer">
-                                                    <GitHub className='iconeSocial' />
-                                                </a>
+                                                <Box justifyContent="space-around" alignItems="center" display="flex">
+                                                    <a href="https://www.linkedin.com/in/isabela-piana/" target="_blank" rel="noreferrer">
+                                                        <LinkedInIcon className='iconeSocial' />
+                                                    </a>
+                                                    <a href="https://github.com/isabelapiana" target="_blank" rel="noreferrer">
+                                                        <GitHub className='iconeSocial2' />
+                                                    </a>
+                                                </Box>
                                             </Box>
                                         </Card>
                                     </div>
@@ -180,12 +184,14 @@ function SobreNos() {
                                             <Box justifyContent="center" alignItems="center" display="-moz-initial" paddingX={3} className="alinhamentoBack">
                                                 <Typography color="textPrimary" className="fonteCardBack">Lairton da Silva</Typography>
                                                 <Typography color="textPrimary" className="fonteCardBack2">Desenvolvedor Web Java Fullstack</Typography>
-                                                <a href="https://www.linkedin.com/in/lairton-da-silva-382688224/" target="_blank" rel="noreferrer">
-                                                    <LinkedInIcon className='iconeSocial' />
-                                                </a>
-                                                <a href="https://github.com/Lairtondasilva" target="_blank" rel="noreferrer">
-                                                    <GitHub className='iconeSocial' />
-                                                </a>
+                                                <Box justifyContent="space-around" alignItems="center" display="flex">
+                                                    <a href="https://www.linkedin.com/in/lairton-da-silva-382688224/" target="_blank" rel="noreferrer">
+                                                        <LinkedInIcon className='iconeSocial' />
+                                                    </a>
+                                                    <a href="https://github.com/Lairtondasilva" target="_blank" rel="noreferrer">
+                                                        <GitHub className='iconeSocial2' />
+                                                    </a>
+                                                </Box>
                                             </Box>
                                         </Card>
                                     </div>
@@ -201,12 +207,14 @@ function SobreNos() {
                                             <Box justifyContent="center" alignItems="center" display="-moz-initial" paddingX={3} className="alinhamentoBack">
                                                 <Typography color="textPrimary" className="fonteCardBack">Luan Saramago</Typography>
                                                 <Typography color="textPrimary" className="fonteCardBack2">Desenvolvedor Web Java Fullstack</Typography>
-                                                <a href="https://www.linkedin.com/in/luan-saramago/" target="_blank" rel="noreferrer">
-                                                    <LinkedInIcon className='iconeSocial' />
-                                                </a>
-                                                <a href="https://github.com/luantss" target="_blank" rel="noreferrer">
-                                                    <GitHub className='iconeSocial' />
-                                                </a>
+                                                <Box justifyContent="space-around" alignItems="center" display="flex">
+                                                    <a href="https://www.linkedin.com/in/luan-saramago/" target="_blank" rel="noreferrer">
+                                                        <LinkedInIcon className='iconeSocial' />
+                                                    </a>
+                                                    <a href="https://github.com/luantss" target="_blank" rel="noreferrer">
+                                                        <GitHub className='iconeSocial2' />
+                                                    </a>
+                                                </Box>
                                             </Box>
                                         </Card>
                                     </div>
@@ -222,12 +230,14 @@ function SobreNos() {
                                             <Box justifyContent="center" alignItems="center" display="-moz-initial" paddingX={3} className="alinhamentoBack">
                                                 <Typography color="textPrimary" className="fonteCardBack">Luciana Rocha Costa</Typography>
                                                 <Typography color="textPrimary" className="fonteCardBack2">Desenvolvedora Web Java Fullstack</Typography>
-                                                <a href="https://www.linkedin.com/in/lucianarochacosta/" target="_blank" rel="noreferrer">
-                                                    <LinkedInIcon className='iconeSocial' />
-                                                </a>
-                                                <a href="https://github.com/lucianarochacosta" target="_blank" rel="noreferrer">
-                                                    <GitHub className='iconeSocial' />
-                                                </a>
+                                                <Box justifyContent="space-around" alignItems="center" display="flex">
+                                                    <a href="https://www.linkedin.com/in/lucianarochacosta/" target="_blank" rel="noreferrer">
+                                                        <LinkedInIcon className='iconeSocial' />
+                                                    </a>
+                                                    <a href="https://github.com/lucianarochacosta" target="_blank" rel="noreferrer">
+                                                        <GitHub className='iconeSocial2' />
+                                                    </a>
+                                                </Box>
                                             </Box>
                                         </Card>
                                     </div>
@@ -241,14 +251,16 @@ function SobreNos() {
                                     <div className="back">
                                         <Card className="backgroundBack">
                                             <Box justifyContent="center" alignItems="center" display="-moz-initial" paddingX={3} className="alinhamentoBack">
-                                                <Typography color="textPrimary" className="fonteCardBack">Tácio Ferreira</Typography>
+                                                <Typography color="textPrimary" className="fonteCardBack">Tácio da Silva Ferreira</Typography>
                                                 <Typography color="textPrimary" className="fonteCardBack2">Desenvolvedor Web Java Fullstack</Typography>
-                                                <a href="https://www.linkedin.com/in/taciosfer/" target="_blank" rel="noreferrer">
-                                                    <LinkedInIcon className='iconeSocial' />
-                                                </a>
-                                                <a href="https://github.com/taciosfer" target="_blank" rel="noreferrer">
-                                                    <GitHub className='iconeSocial' />
-                                                </a>
+                                                <Box justifyContent="space-around" alignItems="center" display="flex">
+                                                    <a href="https://www.linkedin.com/in/taciosfer/" target="_blank" rel="noreferrer">
+                                                        <LinkedInIcon className='iconeSocial' />
+                                                    </a>
+                                                    <a href="https://github.com/taciosfer" target="_blank" rel="noreferrer">
+                                                        <GitHub className='iconeSocial2' />
+                                                    </a>
+                                                </Box>
                                             </Box>
                                         </Card>
                                     </div>

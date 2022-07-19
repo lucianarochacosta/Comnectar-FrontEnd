@@ -38,7 +38,7 @@ function Home() {
                     </Grid>
                     <Grid xs={6}>
                         <Box paddingBottom={3} paddingTop={20} display="flex" alignItems="center" flexDirection="column" justifyContent="center">
-                            <Link to="/produtos" className="text-decorator-none">
+                            <Link to="/meusProdutos" className="text-decorator-none">
                                 <Button variant='contained' className="botaoh3" color='primary'>Listar Produtos</Button>
                             </Link>
                         </Box>

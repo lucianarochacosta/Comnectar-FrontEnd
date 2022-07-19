@@ -33,11 +33,12 @@
 .botaoBusca {
     color: white;
     width: 120px;
-    height: 53px;
+    height: 56px;
 }
 .title{
     font-size: 42px !important;
     font-weight: bold !important;
+    color: black !important;
 }
 .order.MuiSvgIcon-root{
     fill: #000 !important;
@@ -58,9 +59,8 @@ li .MuiSvgIcon-root{
     justify-content: center
 }
 
-.container{
+.container-c{
     gap:72px;
-    margin-top:48px;
 }
 .m-auto-100{
     margin: 0 auto;

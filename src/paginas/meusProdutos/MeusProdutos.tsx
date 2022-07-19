@@ -1,9 +1,12 @@
-import { createStyles, FormControl, makeStyles, NativeSelect, Theme, Typography } from '@material-ui/core';
+import { Button, createStyles, FormControl, makeStyles, NativeSelect, TextField, Theme, Typography } from '@material-ui/core';
 import { Box, Pagination } from '@mui/material';
 import React, { ChangeEvent, useEffect, useState } from 'react'
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import ListaProduto from '../../components/produtos/listaProduto/ListaProduto';
 import Produto from '../../models/Produto';
 import { api, busca } from '../../service/Service';
+import { TokenState } from '../../store/tokens/tokensReducer';
 import { ListaProd } from '../compraProduto/CompraProduto';
 import './MeusProdutos.css'
 
@@ -26,6 +29,10 @@ function MeusProdutos() {
   const [page, setPage] = useState(1)
   const qntd = 8; // produtos por página
   const [order, setOrder] = useState(30);
+  const navigation = useNavigate();
+  const token= useSelector<TokenState,TokenState["tokens"]>(
+    (state) => state.tokens
+    );
 
   async function getProdutos() {
     await busca("/produtos", setMyProdutos, {
@@ -34,6 +41,11 @@ function MeusProdutos() {
       }
     })
   };
+  useEffect(()=>{
+    if(token == ""){
+      navigation("/login")
+    }
+   },[token])
   
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
     setPage(value);
@@ -65,6 +77,8 @@ function MeusProdutos() {
   myProdutos[Math.floor((myProdutos.length-1)/2)]
 ])  
   
+ 
+
   const filtrar = (e:ChangeEvent<any>)=>{
     const event = e;
     if(event.currentTarget.id == "Fruta"){
@@ -111,8 +125,21 @@ function MeusProdutos() {
 
   return (
     <Box display="flex" flexDirection="column" alignItems="center" gap="24px">
-    <Typography variant="h2" component="h2" style={{textAlign:"center", marginTop:"48px"}}>Meus Produtos</Typography>
-    <Box className='flex-center' justifyContent="space-between" width="1200px" paddingRight="120px">
+    <Typography variant="h2" component="h2" style={{textAlign:"center", margin:"48px 0"}} className="title titulo2">Meus Produtos</Typography>
+    <Box className="boxBusca flex-column gap-48" >
+                  <Box className="gap-8">
+                    <Box className="caixaBusca">
+                      <TextField value={nomeProduto} label="O que você precisa?" type="search" fullWidth variant='outlined' onChange={(e: ChangeEvent<HTMLInputElement>) => updateNomeProduto(e)} />
+                    </Box>
+                    <Button color="primary" variant="contained" className="botaoBusca" onClick={() => getProdutosByName()}>
+                      Buscar
+                    </Button>
+                  </Box>
+                </Box>
+                <Box className='line'>
+
+                </Box>
+    <Box className='flex-center' justifyContent="space-between" width="1200px" paddingRight="0px" paddingLeft="64px">
                   <span className='m-l ft-24'>
                     {(myProdutos.length === 1) ? listaProd.produtos.length + " de " + myProdutos.length + " resultado" : (myProdutos.length > 1 ? listaProd.produtos.length + " de " + myProdutos.length + " resultados" : "nenhum resultado")}</span>
                   <Box>
@@ -140,8 +167,8 @@ function MeusProdutos() {
                     </Box>
                   </Box>
                 </Box>
-                <Box  className="box-produto"width="1200px" justifyContent="center">
-                  <ListaProduto
+                <Box  className="box-produto"width="1200px" justifyContent="center" style={{paddingLeft:"64px"}}>
+                  <ListaProduto 
                     produtos={listaProd?.produtos}
                   />
                   <Pagination

@@ -66,3 +66,16 @@ color:#7C6F64
   font-weight:bold !important;
   color:#5FA974;
 }
+
+.fotoProduto{
+  background-size: cover;
+}
+
+.MuiPaper-root.paperContainer2{
+  borderRadius:  8px;
+  position:  relative !important;
+}
+.btnDeletar.MuiButton-root{
+  background: #e00;
+  color: white;
+}
