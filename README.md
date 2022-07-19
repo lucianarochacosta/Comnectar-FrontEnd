@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/hJ6295X.png" height="180" />
+<img src="https://i.imgur.com/hJ6295X.png" height="170" />
 
 # Projeto Integrador
 
