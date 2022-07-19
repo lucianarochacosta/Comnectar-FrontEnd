@@ -20,7 +20,7 @@ function CardProduto(props:Produto) {
             {props.nomeProduto}
           </Typography>
           <Typography variant="h5" className='categoria'>
-            {props.categoria?.classeCategoria+"-"+props.categoria?.modProdCategoria}
+            {props.categoria?.classeCategoria+" "+props.categoria?.modProdCategoria}
           </Typography>
         </Box>
         <Box className='p-l' display="flex" >
@@ -38,36 +38,38 @@ function CardProduto(props:Produto) {
   )
 }else{
   return(
-  <Paper elevation={4} className="paperContainer">
-  <FavoriteBorderIcon className="heart" />
-  <Box className='flex-column principal-c' >
-    <Box className='image-c' style={{ backgroundImage:`url(${props.fotoProduto!==null ? props.fotoProduto : ""})`}}>
-    </Box>
-    <Box className="p-l">
-      <Typography variant='h2' className='nomeProduto'>
-        {props.nomeProduto}
-      </Typography>
-      <Typography variant="h5" className='categoria'>
-        {props.categoria?.classeCategoria+"-"+props.categoria?.modProdCategoria}
-      </Typography>
-    </Box>
-    <Box className='p-l' display="flex" >
-      <Box style={{flex: 1}} className="flex-center">
-    <Link to={`/atualizarProduto/${props.id}`} >
-      <Button  color="secondary" variant="contained" classes={{root:".MuiButton-root"}}> 
-        Atualizar
-      </Button>
-    </Link>
+    <Paper elevation={4} className="paperContainer2">
+    <FavoriteBorderIcon className="heart" />
+    <Box className='flex-column principal-c' >
+      <Box className='image-c' style={{ backgroundImage:`url(${props.fotoProduto!==null ? props.fotoProduto : ""})`}}>
       </Box>
-      <Link to={`/deletaProduto/${props.id}`} >
-      <Button  color="secondary" variant="contained" classes={{root:".MuiButton-root"}}> 
-        Deletar
-      </Button>
-      </Link>
+      <Box className="p-l">
+        <Typography variant='h2' className='nomeProduto'>
+          {props.nomeProduto}
+        </Typography>
+        <Typography variant="h5" className='categoria'>
+          {props.categoria?.classeCategoria+" "+props.categoria?.modProdCategoria}
+        </Typography>
+        <Typography variant="h5" className='preco'>
+          <span>R$ </span>{props.precoProduto.toFixed(2)}
+        </Typography>
+      </Box>
+      <Box className='p-l' display="flex" gap="12px">
+        <Box className="flex-center">
+        <Link to={`/atualizarProduto/${props.id}`} >
+          <Button  color="secondary" variant="contained"> 
+            Atualizar
+          </Button>
+        </Link>
+        </Box>
+        <Link to={`/deletaProduto/${props.id}`} >
+        <Button  variant="contained" className="btnDeletar" style={{width:"100%"}}> 
+          Deletar
+        </Button>
+        </Link>
+      </Box>
     </Box>
-  </Box>
-</Paper>
-
+  </Paper>
 )
 }
 }

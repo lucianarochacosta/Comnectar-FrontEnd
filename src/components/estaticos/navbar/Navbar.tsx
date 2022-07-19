@@ -10,7 +10,6 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
 import { addToken } from '../../../store/tokens/actions';
 import { toast } from 'react-toastify';
 import useLocalStorage from 'react-use-localstorage';
-import { AnyAction } from 'redux';
 
 function Navbar() {
     const [nome, setNome] = useLocalStorage('nome');
@@ -86,7 +85,7 @@ const handleRedirect = ()=>{
                                 </Typography>
                             </Box>
                         </Link>
-                        <Link to='/produtos' className='text-decorator-none'>
+                        <Link to={token !== "" ? "/meusProdutos": "/produtos"} className='text-decorator-none'>
                             <Box className="MenuPagesCenterBox">
                                 <Typography variant="h5" color="inherit" className="MenuPagesFont">
                                     Produtos
@@ -183,7 +182,7 @@ const handleRedirect = ()=>{
                                 </Typography>
                             </Box>
                         </Link>
-                        <Link to='/produtos' className='text-decorator-none'>
+                        <Link to='/meusProdutos' className='text-decorator-none'>
                             <Box className="MenuPagesCenterBox">
                                 <Typography variant="h5" color="inherit" className="MenuPagesFont">
                                     Produtos

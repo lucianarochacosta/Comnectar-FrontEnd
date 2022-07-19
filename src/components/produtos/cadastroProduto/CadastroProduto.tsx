@@ -174,7 +174,7 @@ function CadastroProduto() {
                                 )} 
                         </Select>
                     </FormControl>
-                    <TextField className="input-p" value={produto.shelfProduto} id="shelfProduto" label="shelf" name="shelfProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
+                    <TextField className="input-p" value={produto.shelfProduto} id="shelfProduto" label="validade" name="shelfProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
                     <TextField  className="input-p" value={produto.chegadaProduto} id="chegadaProduto" label="chegada" name="chegadaProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
                 </Box>
                     <TextField classes={{root:".MuiOutlinedInput-input"}} value={produto.infoProduto} id="infoProduto" label="descrição" name="infoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)} className="description" />
