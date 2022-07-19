@@ -11,6 +11,6 @@ Dentre os 17, optamos pela ODS 13, pela compreensão de que o Desenvolvimento Su
 
 ### Acesse o Comnectar:
 
-<a href="https://comnectar.netlify.app/home" target="blank"><img align="center"
+<a href="https://comnectar.netlify.app/home" target="_blank"><img align="center"
      src="https://i.imgur.com/dSw6Y80.png" height="30"/></a>
 
