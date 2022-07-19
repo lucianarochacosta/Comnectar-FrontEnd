@@ -12,6 +12,7 @@
     background-size: cover;
     background-position: center;
     height: 700px;
+    position:relative;
 }
 
 .caixatop2 {
@@ -19,6 +20,7 @@
     background-size: cover;
     background-position: center;
     height: 300px;
+    position:relative;
 }
 
 .caixatop3 {
@@ -26,6 +28,7 @@
     background-size: cover;
     background-position: center;
     height: 700px;
+    position:relative;
 }
 
 .tituloh {
@@ -52,7 +55,7 @@
     color: white !important;
     font-size: 25px !important;
     font-family: 'Roboto', sans-serif !important;
-    z-index: 100;
+    z-index: 1;
 }
 
 .botaoH1:hover {
@@ -70,7 +73,7 @@
     color: white !important;
     font-size: 25px !important;
     font-family: 'Roboto', sans-serif !important;
-    z-index: 100;
+    z-index: 1;
 }
 
 .botaoH2:hover {
