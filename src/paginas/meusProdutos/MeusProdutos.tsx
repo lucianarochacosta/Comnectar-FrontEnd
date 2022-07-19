@@ -139,7 +139,7 @@ function MeusProdutos() {
                 <Box className='line'>
 
                 </Box>
-    <Box className='flex-center' justifyContent="space-between" width="1200px" paddingRight="120px">
+    <Box className='flex-center' justifyContent="space-between" width="1200px" paddingRight="0px" paddingLeft="64px">
                   <span className='m-l ft-24'>
                     {(myProdutos.length === 1) ? listaProd.produtos.length + " de " + myProdutos.length + " resultado" : (myProdutos.length > 1 ? listaProd.produtos.length + " de " + myProdutos.length + " resultados" : "nenhum resultado")}</span>
                   <Box>
@@ -167,8 +167,8 @@ function MeusProdutos() {
                     </Box>
                   </Box>
                 </Box>
-                <Box  className="box-produto"width="1200px" justifyContent="center">
-                  <ListaProduto
+                <Box  className="box-produto"width="1200px" justifyContent="center" style={{paddingLeft:"64px"}}>
+                  <ListaProduto 
                     produtos={listaProd?.produtos}
                   />
                   <Pagination
