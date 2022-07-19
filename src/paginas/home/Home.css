@@ -8,26 +8,26 @@
 }
 
 .caixatop {
-    background-image: url(https://i.imgur.com/3uidJ7v.png);
-    background-size: cover;
-    background-position: center;
-    height: 700px;
+    background-image: url(https://i.imgur.com/3uidJ7v.png) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 700px !important;
     position:relative !important;
 }
 
 .caixatop2 {
-    background-image: url(https://i.imgur.com/7iAKA1A.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    position:relative;
+    background-image: url(https://i.imgur.com/7iAKA1A.jpg) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 300px !important;
+    position:relative !important;
 }
 
 .caixatop3 {
-    background-image: url(https://i.imgur.com/USjHZcC.png);
-    background-size: cover;
-    background-position: center;
-    height: 700px;
+    background-image: url(https://i.imgur.com/USjHZcC.png) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 700px !important;
     position:relative !important;
 }
 
