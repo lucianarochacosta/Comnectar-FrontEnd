@@ -97,7 +97,7 @@ function ComnecteSe() {
                     </Grid>
 
                     <Grid xs={6} className="img-produtora">
-                            <img src="https://i.imgur.com/Q5jSyXG.jpeg" className="img2"></img>
+                            <img src="https://i.imgur.com/mL4GnYS.jpeg" className="img2"></img>
                     </Grid>
 
                 </Grid>
