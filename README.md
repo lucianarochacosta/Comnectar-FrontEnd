@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/OMMzGRV.jpg" height="180" />
+<img src="https://i.imgur.com/hJ6295X.png" height="180" />
 
 # Projeto Integrador
 
@@ -12,5 +12,5 @@ Dentre os 17, optamos pela ODS 13, pela compreensão de que o Desenvolvimento Su
 ### Acesse o Comnectar:
 
 <a href="https://comnectar.netlify.app/home" target="_blank"><img align="center"
-     src="https://i.imgur.com/dSw6Y80.png" height="30"/></a>
+     src="https://i.imgur.com/hJ6295X.png" height="30"/></a>
 
