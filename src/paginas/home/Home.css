@@ -12,7 +12,7 @@
     background-size: cover;
     background-position: center;
     height: 700px;
-    position:relative;
+    position:relative !important;
 }
 
 .caixatop2 {
@@ -28,7 +28,7 @@
     background-size: cover;
     background-position: center;
     height: 700px;
-    position:relative;
+    position:relative !important;
 }
 
 .tituloh {
@@ -45,17 +45,17 @@
 }
 
 .botaoH1 {
-    position: absolute;
-    width: fit-content;
-    height: fit-content;
-    left: auto;
-    top: 300px;
+    position: absolute !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    left: 46% !important;
+    top: 300px !important;
     background-color: #40352C !important;
     opacity: 75% !important;
     color: white !important;
     font-size: 25px !important;
     font-family: 'Roboto', sans-serif !important;
-    z-index: 100;
+    z-index: 100 !important;
 }
 
 .botaoH1:hover {
@@ -63,17 +63,17 @@
 
 }
 .botaoH2 {
-    position: absolute;
-    width: fit-content;
-    height: fit-content;
-    left: auto;
-    bottom: 200px;
+    position: absolute !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    left: 45% !important;
+    bottom: 45% !important;
     background-color: #ADBF24 !important;
     opacity: 75% !important;
     color: white !important;
     font-size: 25px !important;
     font-family: 'Roboto', sans-serif !important;
-    z-index: 100;
+    z-index: 100 !important;
 }
 
 .botaoH2:hover {
