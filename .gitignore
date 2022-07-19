@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 /comnectar/node_modules
+/comnectar
+/comnectar/yarn.lock
 
 # testing
 /coverage
