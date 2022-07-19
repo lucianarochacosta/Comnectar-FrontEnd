@@ -1,15 +1,11 @@
-import { Button, createStyles, FormControl, FormHelperText, Grid, InputLabel, makeStyles, NativeSelect, TextField, Theme, Typography } from '@material-ui/core'
-import React, { ChangeEvent, useEffect, useState } from 'react'
-import './CompraProduto.css';
+import { createStyles, FormControl, makeStyles, NativeSelect, Theme, Typography } from '@material-ui/core';
 import { Box, Pagination } from '@mui/material';
-import { api, busca } from '../../service/Service';
-import Produto from '../../models/Produto';
+import React, { ChangeEvent, useEffect, useState } from 'react'
 import ListaProduto from '../../components/produtos/listaProduto/ListaProduto';
-import SwapVertIcon from '@mui/icons-material/SwapVert';
-
-export interface ListaProd {
-  produtos: Produto[];
-}
+import Produto from '../../models/Produto';
+import { api, busca } from '../../service/Service';
+import { ListaProd } from '../compraProduto/CompraProduto';
+import './MeusProdutos.css'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -22,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-function CompraProduto() {
+function MeusProdutos() {
   const classes = useStyles();
   const [myProdutos, setMyProdutos] = useState<Produto[]>([])
   const [listaProd, setListaProd] = useState<ListaProd>({ produtos: myProdutos })
@@ -114,41 +110,9 @@ function CompraProduto() {
   }, [order])
 
   return (
-    <>
-      <Grid container className="topoCompra" >
-        <Grid item xs={12}>
-          <Box className='flex-column content-center container' >
-            {/* <Box display="flex" alignItems="center" flexDirection="column" justifyContent="center" className="boxTopoCompra" gap="64px">
-          <Box display="flex" alignItems="center" flexDirection="column" justifyContent="center" className="blurCompra" >
-            <Typography variant="h1" align="center" className="tituloCompra">
-              Nossos produtos
-            </Typography>
-          </Box>
-        </Box>    */}
-            <Grid item xs={12} className="m-auto-100">
-              <Box className="m-auto-80 flex-column" >
-                <Box className="boxBusca flex-column gap-48" >
-                  <Typography variant="h2" className="title">
-                    Encontre o que você deseja:
-                  </Typography>
-                  <Box className="gap-8">
-                    <Box className="caixaBusca">
-                      <TextField value={nomeProduto} label="O que você precisa?" type="search" fullWidth variant='outlined' onChange={(e: ChangeEvent<HTMLInputElement>) => updateNomeProduto(e)} />
-                    </Box>
-                    <Button color="primary" variant="contained" className="botaoBusca" onClick={() => getProdutosByName()}>
-                      Buscar
-                    </Button>
-                  </Box>
-                  <Box className='gap-8' >
-                    <Button variant="outlined" id="Fruta"  onClick={(e)=>filtrar(e)}>FRUTAS</Button>
-                    <Button variant="outlined" id="Legumes" onClick={(e)=>filtrar(e)}> LEGUMES</Button>
-                    <Button variant="outlined" id="Verdura" onClick={(e)=>filtrar(e)} >VERDURAS</Button>
-                  </Box>
-                </Box>
-                <Box className='line'>
-
-                </Box>
-                <Box className='flex-center' justifyContent="space-between">
+    <Box display="flex" flexDirection="column" alignItems="center" gap="24px">
+    <Typography variant="h2" component="h2" style={{textAlign:"center", marginTop:"48px"}}>Meus Produtos</Typography>
+    <Box className='flex-center' justifyContent="space-between" width="1200px" paddingRight="120px">
                   <span className='m-l ft-24'>
                     {(myProdutos.length === 1) ? listaProd.produtos.length + " de " + myProdutos.length + " resultado" : (myProdutos.length > 1 ? listaProd.produtos.length + " de " + myProdutos.length + " resultados" : "nenhum resultado")}</span>
                   <Box>
@@ -176,7 +140,7 @@ function CompraProduto() {
                     </Box>
                   </Box>
                 </Box>
-                <Box  className="box-produto" >
+                <Box  className="box-produto"width="1200px" justifyContent="center">
                   <ListaProduto
                     produtos={listaProd?.produtos}
                   />
@@ -189,12 +153,7 @@ function CompraProduto() {
                   />
                 </Box>
               </Box>
-            </Grid>
-          </Box>
-        </Grid>
-      </Grid>
-    </>
   )
 }
 
-export default CompraProduto
+export default MeusProdutos
