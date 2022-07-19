@@ -82,37 +82,33 @@ function ComnecteSe() {
                     </Grid>
                 </Grid>
 
-                <Grid xs={12} container justifyContent="center" alignContent="center">
-                    <Grid xs={12}>
+                <Grid xs={12} container direction="row" justifyContent="space-between" alignContent="center" className="gridProdutor">
+                    <Grid xs={6}>
                         <Box className="introC3" flexDirection="column" justifyContent="center" alignItems="center">
-                            <Typography variant="h4" align="center" className="tituloC1">Quer vender seus produtos com a gente?</Typography>
+                            <Typography variant="h4" align="center" className="tituloC1">Quer vender seus produtos conosco?</Typography>
                         </Box>
-                    </Grid>
-
-                    <Grid xs={12} justifyContent="center" alignContent="center">
-                        <Box display="flex" alignItems="center" flexDirection="column">
-                            <img src="https://i.imgur.com/WL0MNZN.png" className="img2"></img>
-                        </Box>
-                    </Grid>
-
-                    <Grid xs={12} justifyContent="center" alignContent="center">
                         <Box display="flex" alignItems="center" flexDirection="column" className="introC2" >
                             <Box paddingBottom={3}>
-                            <Link to='/cadastrousuario' className='text-decorator-none'>
-                                <Button variant='contained' className="botaoCmnts" color='primary'>
-                                    Cadastre-se
-                                </Button>
-                            </Link>
+                                <Link to='/cadastrousuario' className='text-decorator-none'>
+                                    <Button variant='contained' className="botaoCmnts" color='primary'>
+                                        Cadastre-se
+                                    </Button>
+                                </Link>
                             </Box>
                             <Box>
-                            <Link to='/contato' className='text-decorator-none'>
-                                <Button variant='contained' className="botaoCmnts" color='primary'>
-                                    Envie a sua dúvida
-                                </Button>
-                            </Link>
+                                <Link to='/contato' className='text-decorator-none'>
+                                    <Button variant='contained' className="botaoCmnts" color='primary'>
+                                        Envie a sua dúvida
+                                    </Button>
+                                </Link>
                             </Box>
                         </Box>
                     </Grid>
+
+                    <Grid xs={6} className="img-produtora">
+                            <img src="https://i.imgur.com/Q5jSyXG.jpeg" className="img2"></img>
+                    </Grid>
+
                 </Grid>
 
             </Grid>

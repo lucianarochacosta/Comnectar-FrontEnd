@@ -161,7 +161,10 @@
     width: 188px;
     height: 253px;
     perspective: 1000px;
+    background-color: rgba(255, 255, 255, 0.096) !important;
+    box-shadow: 0px 8px 70px rgba(255, 255, 255, 0.25) !important;
 }
+
 .flipper{
     width: 100%;
     height: 100%;
@@ -191,11 +194,16 @@
     color: #3E733C;
     font-weight: bold !important;
     font-size: 20px !important;
+    text-align: center !important;
+    margin-top: 10px !important;
 }
 .fonteCardBack2{
     font-family: sans-serif !important;
     color: #3E733C;
     font-size: 16px !important;
+    text-align: center;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
 }
 .alinhamentoBack{
     margin-top: 15px;
@@ -217,11 +225,25 @@
     font-size: 60px !important;
     transition: transform 0.5s;
     color: #3E733C;
+    align-items: center;
 }
 .iconeSocial:hover{
-    transform: scale(1.4);
+    transform: scale(1.1);
     color: #3e733c72;
 }
+
+.iconeSocial2 {
+    font-size: 50px !important;
+    transition: transform 0.5s;
+    color: #3E733C;
+    align-items: center;
+}
+
+.iconeSocial2:hover{
+    transform: scale(1.1);
+    color: #3e733c72;
+}
+
 .intro{
     justify-content:center;
     align-items:center;

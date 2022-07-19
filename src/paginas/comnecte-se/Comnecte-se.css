@@ -47,14 +47,28 @@
     margin-bottom: 5px !important;
 }
 .img2{
-    width: 400px !important;
-    height: 400px !important; 
+    height: 350px !important; 
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
+
+.gridProdutor{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 70px;
+    align-items: center;
+}
+
+.img-produtora{
+    align-items: flex-end !important;
+}
+
 .tituloC1{
     color: #000000 !important;
     font-weight: 'bold' !important;
     font-family: 'Roboto', sans-serif !important;
     font-size: 40px !important;
+    margin-bottom: 50px !important;
 }
 .tituloC2{
     color: #40352C !important;
@@ -104,7 +118,7 @@
     text-decoration: none;
 }
 .background{
-    background-color: #adbf244b;
+    background-color: #ffff;
 }
 .botaoCmnts{
     width: fit-content !important;
