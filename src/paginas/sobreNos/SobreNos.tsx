@@ -1,4 +1,3 @@
-import React from "react";
 import { Grid, Typography, Card, ListItem } from "@material-ui/core";
 import { Box } from "@mui/material";
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -6,7 +5,7 @@ import GitHub from '@material-ui/icons/GitHub';
 import './SobreNos.css';
 
 function SobreNos() {
-    return (
+    return(
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center" className="sobre-bg" xs={12}>
 

@@ -1,41 +1,48 @@
 .box1 {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     background-color: #3E733C;
-    height: 125px;
-    justify-content: space-around;
-    align-items: baseline;
+    height: 96px;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
 }
 
-.box1 img{
-    height: 60px;
+.box1 img {
+    height: 50px;
 }
 
 .box2 {
+    height: 50px;
     background-color: #396A37;
-    height: 50px;    
 }
 
 .caixa1{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
-.caixa2{
+.caixa1:hover {
+    transform: scale(1.2);
+    color: #ABDF24 !important;
+    transition: transform 1s !important;
+}
+
+.caixa2 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .social {
     font-size: 50px !important;
     margin: 10px;
-    color: white;
-    transition: transform 0.5s;
+    color: #ABDF24 !important;
+    transition: transform 1s !important;
 }
 
 .social:hover {
     transform: scale(1.2);
-    color: #ABDF24;
+    color: #ABDF24 !important;
 }
 
 .textos {
@@ -44,9 +51,10 @@
 }
 
 .link-hover {
-    transition: color 0.4s;
+    transition: transform 1s;
 }
 
-.link-hover:hover{
-    color: #ABDF24;
+.link-hover:hover {
+    
+    color: #ABDF24 !important;
 }
