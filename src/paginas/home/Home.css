@@ -52,6 +52,7 @@
     color: white !important;
     font-size: 25px !important;
     font-family: 'Roboto', sans-serif !important;
+    z-index: 100;
 }
 
 .botaoH1:hover {
@@ -69,6 +70,7 @@
     color: white !important;
     font-size: 25px !important;
     font-family: 'Roboto', sans-serif !important;
+    z-index: 100;
 }
 
 .botaoH2:hover {
