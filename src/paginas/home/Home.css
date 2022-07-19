@@ -8,27 +8,29 @@
 }
 
 .caixatop {
-    background-image: url(https://i.imgur.com/3uidJ7v.png);
-    background-size: cover;
-    background-position: center;
-    height: 700px;
-    position:relative;
+    background-image: url(https://i.imgur.com/3uidJ7v.png) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 700px !important;
+    position:relative !important;
+    z-index: 1 !important;
 }
 
 .caixatop2 {
-    background-image: url(https://i.imgur.com/7iAKA1A.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    position:relative;
+    background-image: url(https://i.imgur.com/7iAKA1A.jpg) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 300px !important;
+    position:relative !important;
 }
 
 .caixatop3 {
-    background-image: url(https://i.imgur.com/USjHZcC.png);
-    background-size: cover;
-    background-position: center;
-    height: 700px;
-    position:relative;
+    background-image: url(https://i.imgur.com/USjHZcC.png) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 700px !important;
+    position:relative !important;
+    z-index: 1 !important;
 }
 
 .tituloh {
@@ -45,17 +47,17 @@
 }
 
 .botaoH1 {
-    position: absolute;
-    width: fit-content;
-    height: fit-content;
-    left: auto;
-    top: 300px;
+    position: absolute !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    left: 46% !important;
+    top: 300px !important;
     background-color: #40352C !important;
     opacity: 75% !important;
     color: white !important;
     font-size: 25px !important;
     font-family: 'Roboto', sans-serif !important;
-    z-index: 100;
+    z-index: 2 !important;
 }
 
 .botaoH1:hover {
@@ -63,17 +65,17 @@
 
 }
 .botaoH2 {
-    position: absolute;
-    width: fit-content;
-    height: fit-content;
-    left: auto;
-    bottom: 200px;
+    position: absolute !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    left: 43% !important;
+    bottom: 45% !important;
     background-color: #ADBF24 !important;
     opacity: 75% !important;
     color: white !important;
     font-size: 25px !important;
     font-family: 'Roboto', sans-serif !important;
-    z-index: 100;
+    z-index: 2 !important;
 }
 
 .botaoH2:hover {
