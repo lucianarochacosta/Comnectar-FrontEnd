@@ -53,7 +53,7 @@
     left: 46% !important;
     top: 300px !important;
     background-color: #40352C !important;
-    opacity: 75% !important;
+    opacity: 0.75!important;
     color: white !important;
     font-size: 25px !important;
     font-family: 'Roboto', sans-serif !important;
@@ -61,7 +61,7 @@
 }
 
 .botaoH1:hover {
-    opacity: 95% !important;
+    opacity: 0.95 !important;
 
 }
 .botaoH2 {
@@ -71,7 +71,7 @@
     left: 43% !important;
     bottom: 45% !important;
     background-color: #ADBF24 !important;
-    opacity: 75% !important;
+    opacity: 0.75 !important;
     color: white !important;
     font-size: 25px !important;
     font-family: 'Roboto', sans-serif !important;
@@ -79,7 +79,7 @@
 }
 
 .botaoH2:hover {
-    opacity: 95% !important;
+    opacity: 0.95 !important;
 }
 
 .beneficios {
