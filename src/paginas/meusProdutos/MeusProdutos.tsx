@@ -3,6 +3,7 @@ import { Box, Pagination } from '@mui/material';
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import ListaProduto from '../../components/produtos/listaProduto/ListaProduto';
 import Produto from '../../models/Produto';
 import { api, busca } from '../../service/Service';
@@ -43,6 +44,16 @@ function MeusProdutos() {
   };
   useEffect(()=>{
     if(token == ""){
+      toast.info('Você precisa estar logado', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+        });
       navigation("/login")
     }
    },[token])
@@ -144,7 +155,7 @@ function MeusProdutos() {
                     {(myProdutos.length === 1) ? listaProd.produtos.length + " de " + myProdutos.length + " resultado" : (myProdutos.length > 1 ? listaProd.produtos.length + " de " + myProdutos.length + " resultados" : "nenhum resultado")}</span>
                   <Box>
                     <Box className='gap-2' onClick={() => { }}>
-                      <span className='cursor-p'>ordenar:</span>
+                      <span className='cursor-p'>Ordenar:</span>
                       <FormControl className={classes.formControl} >
                          <NativeSelect
                             className={classes.selectEmpty}
