@@ -66,10 +66,14 @@ const handleRedirect = ()=>{
                             <Box className="MenuPagesComnectar">
                                 <a>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     <img src="https://i.imgur.com/P6dmYOU.png" title="Logo do Comnectar" className='imglogo' />
 =======
                                     <img src="https://i.imgur.com/OP9X8ks.png" title="Logo do Comnectar" className='imglogo' />
 >>>>>>> 7716327dbf823a304531384aded4d4e75c14fdec
+=======
+                                    <img src="https://i.imgur.com/OP9X8ks.png" title="Logo do Comnectar" className='imglogo' />
+>>>>>>> 72fb0bcf5bd56b37ce1d94f617a1090dc8e9e057
                                 </a>
                             </Box>
                         </Link>
