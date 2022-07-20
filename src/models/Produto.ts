@@ -7,10 +7,10 @@ interface Produto {
     fotoProduto?:string | null;
     infoProduto?:string | null;
     precoProduto:number;
-    unidadeProduto:string;
-    estoqueProduto:number;
-    chegadaProduto:string;
-    shelfProduto:string;
+    unidadeProduto?:string | null;
+    estoqueProduto?:number;
+    chegadaProduto?:string;
+    shelfProduto?:string;
     categoria?:Categoria | null
     usuario?:User | null
     token?: string | null

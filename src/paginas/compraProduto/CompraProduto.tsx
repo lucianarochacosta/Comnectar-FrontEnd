@@ -33,11 +33,10 @@ function CompraProduto() {
   const [btnFiltro, setBtnFiltro] = useState(false);
   const [btnFiltro1, setBtnFiltro1] = useState(false);
   const [btnFiltro2, setBtnFiltro2] = useState(false);
-  const [favorito, setFavorito] = useState(false)
 
   async function getProdutos() {
     if (filtro == false) {
-      await busca("/produtos", setMyProdutos,{
+      await busca("/produtos", setMyProdutos, {
         headers: {
           'Authorization': ""
         }
@@ -95,7 +94,7 @@ function CompraProduto() {
       setFiltro(!filtro)
       setBtnFiltro2(!btnFiltro2)
       api.get("/produtos").then((resp) => {
-        setMyProdutos(resp.data.filter((response: Produto) => response.categoria?.classeCategoria == "Legumes"))
+        setMyProdutos(resp.data.filter((response: Produto) => response.categoria?.classeCategoria == "Legume"))
       })
     }
   }
@@ -134,12 +133,12 @@ function CompraProduto() {
         <Grid item xs={12}>
           <Box className='flex-column content-center container-c' >
             <Box display="flex" alignItems="center" flexDirection="column" justifyContent="center" className="boxTopoCompra" gap="64px">
-          {/* <Box display="flex" alignItems="center" flexDirection="column" justifyContent="center" className="blurCompra" >
+              {/* <Box display="flex" alignItems="center" flexDirection="column" justifyContent="center" className="blurCompra" >
             <Typography variant="h1" align="center" className="tituloCompra">
               Nossos produtos
             </Typography>
           </Box> */}
-        </Box>   
+            </Box>
             <Grid item xs={12} className="m-auto-100">
               <Box className="m-auto-80 flex-column" >
                 <Box className="boxBusca flex-column gap-48" alignItems="center" >
@@ -155,9 +154,9 @@ function CompraProduto() {
                     </Button>
                   </Box>
                   <Box justifyContent="center" gap="24px" display="flex" width="100%" >
-                    <Button className="btn-filtro" color={btnFiltro == true? "secondary" : "primary"} variant={btnFiltro == false? "outlined" : "contained"} id="Fruta" onClick={(e) => filtrar(e)}>FRUTAS</Button>
-                    <Button className="btn-filtro" color={btnFiltro2 == true? "secondary" : "primary"} variant={btnFiltro2 == false? "outlined" : "contained"} id="Legumes" onClick={(e) => filtrar(e)}> LEGUMES</Button>
-                    <Button className="btn-filtro" color={btnFiltro1 == true? "secondary" : "primary"} variant={btnFiltro1 == false? "outlined" : "contained"} id="Verdura" onClick={(e) => filtrar(e)} >VERDURAS</Button>
+                    <Button className="btn-filtro" color={btnFiltro == true ? "secondary" : "primary"} variant={btnFiltro == false ? "outlined" : "contained"} id="Fruta" onClick={(e) => filtrar(e)} disabled={(btnFiltro1 || btnFiltro2? true: false)}>FRUTAS</Button>
+                    <Button className="btn-filtro" color={btnFiltro2 == true ? "secondary" : "primary"} variant={btnFiltro2 == false ? "outlined" : "contained"} id="Legumes" onClick={(e) => filtrar(e)} disabled={(btnFiltro || btnFiltro1? true: false)}> LEGUMES</Button>
+                    <Button className="btn-filtro" color={btnFiltro1 == true ? "secondary" : "primary"} variant={btnFiltro1 == false ? "outlined" : "contained"} id="Verdura" onClick={(e) => filtrar(e)} disabled={(btnFiltro || btnFiltro2? true: false)}>VERDURAS</Button>
                   </Box>
                 </Box>
                 <Box className='line'>
@@ -195,7 +194,7 @@ function CompraProduto() {
                   <ListaProduto
                     produtos={listaProd?.produtos}
                   />
-                  <Pagination style={{marginBottom:"12px"}}
+                  <Pagination style={{ marginBottom: "12px" }}
                     count={Number.isInteger(myProdutos.length / qntd) ? Math.floor(myProdutos.length / qntd) : Math.floor(myProdutos.length / qntd) + 1}
                     page={page} variant="outlined"
                     shape="rounded"

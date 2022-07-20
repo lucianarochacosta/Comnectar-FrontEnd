@@ -46,6 +46,7 @@ function App() {
             <Route path="/categorias" element={<ListaCategoria />} />
             <Route path="/deletarcategoria/:id" element={<DeletaCategoria />} />
             <Route path="/cadastrocategoria" element={<CadastroCategoria />} />
+            <Route path="/cadastrocategoria/:id" element={<CadastroCategoria />} />
             <Route path="/registroProduto" element={<RegistroProduto />} />
             <Route path="/atualizarProduto/:id" element={<CadastroProduto />} />
             <Route path="/deletaproduto/:id" element={<DeletarProduto />} />

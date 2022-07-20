@@ -52,8 +52,16 @@ const Theme = createTheme({
         color:'#000000'
       }
     },
-    }
+    MuiInputAdornment:{
+      filled:{
+        color: "#000000"  
+      },
+      root:{
+        color:"#000000",
+    },
+    },
   }
+}
 );
 
 export default Theme;
