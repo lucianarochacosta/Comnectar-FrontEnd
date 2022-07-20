@@ -22,7 +22,7 @@ function Navbar() {
 
     function goLogout() {
         dispatch(addToken(''));
-        toast.info('Você saiu.', {
+        toast.info('Obrigado por usar o Comnectar.', {
             position: "bottom-right",
             autoClose: 2000,
             hideProgressBar: true,

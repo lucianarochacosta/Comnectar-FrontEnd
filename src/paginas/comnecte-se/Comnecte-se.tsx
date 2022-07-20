@@ -29,7 +29,7 @@ function ComnecteSe() {
                     <Box display="flex" gap="24px" flexDirection="row">
                         <Box flexDirection="column" paddingLeft={10}>
                             <Typography variant="h4" align="justify" className="subtituloC1">Orgânica</Typography>
-                            <Typography variant="h6" align="justify" className="subtituloC2">Consiste na não-utilização de insumos sintéticos como sementes, fertilizantes, agrotóxicos, catalisadores, reguladores entre outros. Os processos mecanizados são reduzidos - ou inexistentes -, e a produção apresenta teor nutricional mais elevado que o convencional bem como sabor e frescor diferenciados. Grau de Regeneratividade 1 na Comnectar.</Typography>
+                            <Typography variant="h6" align="justify" className="subtituloC2">Consiste na não-utilização de insumos sintéticos como sementes, fertilizantes, agrotóxicos, catalisadores, reguladores entre outros. Os processos mecanizados são reduzidos - ou inexistentes -, e a produção apresenta teor nutricional mais elevado que o convencional bem como sabor e frescor diferenciados. Grau de Regeneratividade 1 no Comnectar.</Typography>
                         </Box>
                         <Box paddingRight={10}>
                             <Card className="cardCo1"></Card>
@@ -41,7 +41,7 @@ function ComnecteSe() {
                     <Box display="flex" gap="24px" flexDirection="row-reverse">
                         <Box flexDirection="column" paddingRight={10}>
                             <Typography variant="h4" align="justify" className="subtituloC1">Familiar</Typography>
-                            <Typography variant="h6" align="justify" className="subtituloC2">Estima-se que 80% de toda a comida produzida no planeta seja oriunda dessa modalidade de cultivo. Segue todos os pressupostos da Orgânica, com o diferencial do uso/armazenamento de sementes Crioulas - sementes tradicionais com características únicas e altamente regionais. Baixo custo e alto impacto social. Grau de Regeneratividade 2 na Comnectar.</Typography>
+                            <Typography variant="h6" align="justify" className="subtituloC2">Estima-se que 80% de toda a comida produzida no planeta seja oriunda dessa modalidade de cultivo. Segue todos os pressupostos da Orgânica, com o diferencial do uso/armazenamento de sementes Crioulas - sementes tradicionais com características únicas e altamente regionais. Baixo custo e alto impacto social. Grau de Regeneratividade 2 no Comnectar.</Typography>
                         </Box>
                         <Box paddingLeft={10}>
                             <Card className="cardC2"></Card>
@@ -53,7 +53,7 @@ function ComnecteSe() {
                     <Box display="flex" gap="24px" flexDirection="row">
                         <Box flexDirection="column" paddingLeft={10}>
                             <Typography variant="h4" align="justify" className="subtituloC1">Agroecológica</Typography>
-                            <Typography variant="h6" align="justify" className="subtituloC2">Também segue os pressupostos da Orgânica, difundindo e estimulando o uso de sementes locais e tradicionais, assim como a Familiar. Entretanto, além de um viés político, os cultivos são planejados de forma a maximizar a produção, otimizando o espaço disponível, enriquecendo o solo e assegurando a soberania alimentar ao longo de todo o ano. As variedades de alimentos acompanham as estações do ano. Grau de Regeneratividade 3 na Comnectar.</Typography>
+                            <Typography variant="h6" align="justify" className="subtituloC2">Também segue os pressupostos da Orgânica, difundindo e estimulando o uso de sementes locais e tradicionais, assim como a Familiar. Entretanto, além de um viés político, os cultivos são planejados de forma a maximizar a produção, otimizando o espaço disponível, enriquecendo o solo e assegurando a soberania alimentar ao longo de todo o ano. As variedades de alimentos acompanham as estações do ano. Grau de Regeneratividade 3 no Comnectar.</Typography>
                         </Box>
                         <Box paddingRight={10}>
                             <Card className="cardC3"></Card>
@@ -65,7 +65,7 @@ function ComnecteSe() {
                     <Box display="flex" gap="24px" flexDirection="row-reverse">
                         <Box flexDirection="column" paddingRight={10}>
                         <Typography variant="h4" align="justify" className="subtituloC1">Sintrópica</Typography>
-                            <Typography variant="h6" align="justify" className="subtituloC2">Mescla conhecimentos da Orgânica, Familiar e da Agroecológica. Visa replicar processos naturais que levam ao estabelecimento de florestas virgens mediante observação empírica da dinâmica da própria floresta. Conhecida pela capacidade de 'reviver nascentes e reestabelecer cursos d'água'. Produtos de qualidade inigualável. Fiel observância aos princípios propostos pela Genética. Sistemática para criação, desenvolvimento, manutenção e alcance de sistemas produtivos caracterizados pela abundância. Grau de Regeneratividade 4 na Comnectar.</Typography>
+                            <Typography variant="h6" align="justify" className="subtituloC2">Mescla conhecimentos da Orgânica, Familiar e da Agroecológica. Visa replicar processos naturais que levam ao estabelecimento de florestas virgens mediante observação empírica da dinâmica da própria floresta. Conhecida pela capacidade de 'reviver nascentes e reestabelecer cursos d'água'. Produtos de qualidade inigualável. Fiel observância aos princípios propostos pela Genética. Sistemática para criação, desenvolvimento, manutenção e alcance de sistemas produtivos caracterizados pela abundância. Grau de Regeneratividade 4 no Comnectar.</Typography>
                         </Box>
                         <Box paddingLeft={10}>
                             <Card className="cardC4"></Card>
