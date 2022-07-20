@@ -45,7 +45,7 @@ function CardProduto(props:Produto) {
 }else{
   return(
     <Paper elevation={4} className="paperContainer2">
-    <FavoriteBorderIcon className="heart" />
+    {!favorite? <FavoriteBorderIcon className="heart" onClick={()=>favoritar()} /> : <FavoriteOutlinedIcon className="heart2" onClick={()=>favoritar()}/>}
     <Box className='flex-column principal-c' >
       <Box className='image-c' style={{ backgroundImage:`url(${props.fotoProduto!==null ? props.fotoProduto : ""})`}}>
       </Box>
