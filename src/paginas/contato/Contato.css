@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.background{
+    background-color: #adbf244b;
+}
+.tituloC{
+    color: #40352C !important;
+    font-weight: 'bold' !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 64px !important;
+}
+.tituloC2{
+    color: #96A621 !important;
+    font-family: 'Roboto', sans-serif  !important;
+    font-size: 40px !important;
+}
+.intro-C{
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 50px !important;
+    margin-bottom: 30px !important;
+}
+.cardCont {
+    width: 400px;
+    height: 200px;
+    background-image: url("https://i.imgur.com/KXU1EAS.jpg") !important;
+    background-size: cover;
+    background-position: center;
+    margin-top: 30px;
+}
+.botaoCntt{
+    width: fit-content !important;
+    height: fit-content !important;
+    font-size: 20px !important;
+}

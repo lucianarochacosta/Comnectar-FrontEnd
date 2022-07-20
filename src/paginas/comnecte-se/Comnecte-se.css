@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.margem{
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+.img1 {
+    height: 320px;
+    background: linear-gradient(93.59deg, rgba(0, 0, 0, 0.6) 13.61%, rgba(0, 0, 0, 0) 87.41%), url(https://i.imgur.com/2Ul6HOS.jpg) fixed center center;
+    background-size: cover;
+}
+.tituloCnts {
+    color: white;
+    font-weight: 800 !important;
+    font-size: 64px !important;
+}
+.introC1{
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+.introC2{
+    margin-bottom: 50px !important;
+}
+.introC3{
+    margin-top: 50px !important;
+    margin-bottom: 5px !important;
+}
+.img2{
+    height: 350px !important; 
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.gridProdutor{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 70px;
+    align-items: center;
+}
+
+.img-produtora{
+    align-items: flex-end !important;
+}
+
+.tituloC1{
+    color: #000000 !important;
+    font-weight: 'bold' !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 40px !important;
+    margin-bottom: 50px !important;
+}
+.tituloC2{
+    color: #40352C !important;
+    font-family: 'Roboto', sans-serif  !important;
+    font-size: 30px !important;
+}
+
+.subtituloC2{
+    color: #40352C !important;
+    font-family: 'Roboto', sans-serif ;
+}
+
+.subtituloC1{
+    color: #000000 !important;
+    font-family: 'Roboto', sans-serif  !important;
+    padding-left: 1cm;
+}
+.cardCo1 {
+    width: 400px;
+    height: 250px;
+    background-image: url("https://i.imgur.com/xQ8D0T3.jpg") !important;
+    background-size: cover;
+    background-position: center;
+}
+.cardC2 {
+    width: 400px;
+    height: 250px;
+    background-image: url("https://i.imgur.com/ggnKmnF.jpg") !important;
+    background-size: cover;
+    background-position: center;
+}
+.cardC3 {
+    width: 400px;
+    height: 250px;
+    background-image: url("https://i.imgur.com/rolebVM.jpg") !important;
+    background-size: cover;
+    background-position: center;
+}
+.cardC4 {
+    width: 400px;
+    height: 250px;
+    background-image: url("https://i.imgur.com/hREl5nt.png") !important;
+    background-size: cover;
+    background-position: center;
+}
+.text-decorator-none{
+    text-decoration: none;
+}
+.background{
+    background-color: #ffff;
+}
+.botaoCmnts{
+    width: fit-content !important;
+    height: fit-content !important;
+    font-size: 20px !important;
+}

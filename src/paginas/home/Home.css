@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.boxfoto {
+    height: 450px;
+    margin-bottom: 50px !important;
+    padding-bottom: 50px !important;
+    gap: 8px;
+}
+
+.caixatop {
+    background-image: url(https://i.imgur.com/3uidJ7v.png) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 700px !important;
+    position:relative !important;
+    z-index: 1 !important;
+}
+
+.caixatop2 {
+    background-image: url(https://i.imgur.com/7iAKA1A.jpg) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 300px !important;
+    position:relative !important;
+}
+
+.caixatop3 {
+    background-image: url(https://i.imgur.com/USjHZcC.png) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 700px !important;
+    position:relative !important;
+    z-index: 1 !important;
+}
+
+.tituloh {
+    font-family: 'Bebas Neue' !important;
+    color: #40352C;
+    mix-blend-mode: color-burn !important;
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 150px;
+}
+.tituloh1 {
+    margin-top: 550px;
+}
+
+.botaoH1 {
+    position: absolute !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    left: 46% !important;
+    top: 300px !important;
+    background-color: #40352C !important;
+    opacity: 0.75!important;
+    color: white !important;
+    font-size: 25px !important;
+    font-family: 'Roboto', sans-serif !important;
+    z-index: 2 !important;
+}
+
+.botaoH1:hover {
+    opacity: 0.95 !important;
+
+}
+.botaoH2 {
+    position: absolute !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    left: 43% !important;
+    bottom: 45% !important;
+    background-color: #ADBF24 !important;
+    opacity: 0.75 !important;
+    color: white !important;
+    font-size: 25px !important;
+    font-family: 'Roboto', sans-serif !important;
+    z-index: 2 !important;
+}
+
+.botaoH2:hover {
+    opacity: 0.95 !important;
+}
+
+.beneficios {
+    margin-top: 40px;
+    height: 20px;
+}
+
+.caixacard {
+    margin-top: 100px !important;
+    margin-bottom: 200px !important;
+}
+
+.card1 {
+    width: 350px;
+    height: 200px;
+    background-color: #3E733C !important;
+}
+
+.card2 {
+    width: 350px;
+    height: 200px;
+    background-color: #ADBF24 !important;
+}
+
+.card3 {
+    width: 350px;
+    height: 200px;
+    background-color: #d3d3d3 !important;
+}
+
+.tituloh2 {
+    color: white;
+    font-weight: 800 !important;
+    font-size: 64px !important;
+}
+
+.imgh1 {
+    height: 320px;
+    background: linear-gradient(93.59deg, rgba(0, 0, 0, 0.6) 13.61%, rgba(0, 0, 0, 0) 87.41%), url(https://images.pexels.com/photos/5529606/pexels-photo-5529606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) fixed center center;
+    background-size: cover;
+}
+
+.background {
+    background-color: #adbf244b;
+}
+
+.botaoh3 {
+    width: fit-content !important;
+    height: fit-content !important;
+    font-size: 20px !important;
+}
