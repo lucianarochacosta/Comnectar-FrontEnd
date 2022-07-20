@@ -26,8 +26,7 @@
 }
 
 .imglogo {
-    width: 220px;
-    margin-left: 10px;
+    width: 218px;
 }
 
 .MenuPagesCenterBox{
@@ -130,9 +129,10 @@
 .btn-carrinho{
     background-color: #ADBF24 !important;
     color: white !important;
-    width: 48px !important;
-    height: 48px !important;
+    width: 52px !important;
+    height: 52px !important;
     border-radius: 50% !important;
+    min-width: 0px !important;
 }
 
 .btn-carrinho:hover{
