@@ -33,7 +33,7 @@ function ListaCategoria() {
 
     return (
       <>
-        <Box display = "flex" gap="48px">
+        <Box display = "flex" flexWrap="wrap" gap="48px">
         {categorias.map(categoria =>{
             return ( <CardCategoria key={categoria.id}
               id={categoria.id}
