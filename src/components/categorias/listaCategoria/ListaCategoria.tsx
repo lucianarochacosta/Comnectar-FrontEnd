@@ -19,6 +19,22 @@ function ListaCategoria() {
     (state) => state.tokens
   )
 
+  useEffect(() => {
+    if (token == "") {
+      toast.info('Para listar as categorias, é preciso estar logado!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+      });
+      navigate("/login")
+    }
+  }, [token])
+
   async function getCategorias() {
     await busca(`/categorias`, setCategorias, {
       headers: {
@@ -31,20 +47,20 @@ function ListaCategoria() {
     getCategorias()
   }, [categorias.length])
 
-    return (
-      <>
-        <Box display = "flex" gap="48px">
-        {categorias.map(categoria =>{
-            return ( <CardCategoria key={categoria.id}
-              id={categoria.id}
-              classeCategoria={categoria.classeCategoria}
-              modProdCategoria={categoria.modProdCategoria}
-              frescorCategoria={categoria.frescorCategoria}
-            />)
-          })}
-          </Box>
-      </>
-    )
+  return (
+    <>
+      <Box display="flex" gap="48px">
+        {categorias.map(categoria => {
+          return (<CardCategoria key={categoria.id}
+            id={categoria.id}
+            classeCategoria={categoria.classeCategoria}
+            modProdCategoria={categoria.modProdCategoria}
+            frescorCategoria={categoria.frescorCategoria}
+          />)
+        })}
+      </Box>
+    </>
+  )
 
 }
 
