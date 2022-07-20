@@ -19,6 +19,22 @@ function ListaCategoria() {
     (state) => state.tokens
   )
 
+  useEffect(() => {
+    if (token == "") {
+      toast.info('Para listar as categorias, é preciso estar logado!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+      });
+      navigate("/login")
+    }
+  }, [token])
+
   async function getCategorias() {
     await busca(`/categorias`, setCategorias, {
       headers: {
