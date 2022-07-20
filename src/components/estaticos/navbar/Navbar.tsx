@@ -65,7 +65,11 @@ const handleRedirect = ()=>{
                         <Link to='/home' className='text-decorator-none'>
                             <Box className="MenuPagesComnectar">
                                 <a>
+<<<<<<< HEAD
                                     <img src="https://i.imgur.com/P6dmYOU.png" title="Logo do Comnectar" className='imglogo' />
+=======
+                                    <img src="https://i.imgur.com/OP9X8ks.png" title="Logo do Comnectar" className='imglogo' />
+>>>>>>> 7716327dbf823a304531384aded4d4e75c14fdec
                                 </a>
                             </Box>
                         </Link>
