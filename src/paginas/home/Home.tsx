@@ -70,6 +70,9 @@ function Home() {
                     </Box>
                 </Grid>
                 <Grid xs={12} justifyContent="center" alignItems="center" className="caixatop2">
+                    <Box alignItems="center" justifyContent="center" display="flex">
+                        <img className="imgLogoH" src="https://i.imgur.com/gDNJDRe.png"></img>
+                    </Box>
                 </Grid>
                 <Grid xs={12} justifyContent="center" alignItems="center" className="caixatop3">
                     <Box textAlign="unset" className="boxfoto">
@@ -88,7 +91,7 @@ function Home() {
             </Grid>
     }
 
-    return(
+    return (
         <>
             {homeComponent}
         </>
