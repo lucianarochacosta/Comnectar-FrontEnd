@@ -74,8 +74,8 @@ function Login (){
                         <Typography variant="h3" gutterBottom color="textPrimary" align="center" component="h3" className="texto">
                             Entrar
                         </Typography>
-                        <TextField  value={userLogin.loginUsuario} onChange={(e:ChangeEvent<HTMLInputElement>)=> updatedModel(e)} id="usuario" label="Usuario" variant="outlined" name="loginUsuario" margin="normal" fullWidth />
-                        <TextField  value={userLogin.senhaUsuario} onChange={(e:ChangeEvent<HTMLInputElement>)=> updatedModel(e)} id="senha" label="Senha" variant="outlined" name="senhaUsuario" margin="normal" type="password" fullWidth/>
+                        <TextField  value={userLogin.loginUsuario} onChange={(e:ChangeEvent<HTMLInputElement>)=> updatedModel(e)} id="usuario" label="Usuario" variant="outlined" name="loginUsuario" margin="normal" fullWidth required />
+                        <TextField  value={userLogin.senhaUsuario} onChange={(e:ChangeEvent<HTMLInputElement>)=> updatedModel(e)} id="senha" label="Senha" variant="outlined" name="senhaUsuario" margin="normal" type="password" fullWidth required/>
                         <Box marginTop={2} textAlign="center">
                                 <Button type='submit' className="botao">
                                     Logar
