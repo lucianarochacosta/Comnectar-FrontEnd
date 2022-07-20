@@ -186,7 +186,6 @@ function CompraProduto() {
                           <option value={30}>Todos</option>
                           <option value={40}>a-z A-Z</option>
                           <option value={50}>z-a Z-A</option>
-                          <option value={60}>favoritos</option>
                         </NativeSelect>
                       </FormControl>
                     </Box>
