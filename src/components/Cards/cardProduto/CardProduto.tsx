@@ -1,17 +1,23 @@
 import { Button, Typography } from '@material-ui/core'
 import { Box, Paper } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 import Produto from '../../../models/Produto'
 import "./CardProduto.css"
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import { Link } from 'react-router-dom'
 
 function CardProduto(props:Produto) {
+  const [favorite, setFavorite] = useState(false)
+  const favoritar = ()=>{
+    setFavorite(!favorite)
+  }
   if(props.token == ""){
   return (
     <Paper elevation={4} className="paperContainer">
-      <FavoriteBorderIcon className="heart" />
+      {!favorite? <FavoriteBorderIcon className="heart" onClick={()=>favoritar()} /> : <FavoriteOutlinedIcon className="heart2" onClick={()=>favoritar()}/>}
+      
       <Box className='flex-column principal-c' >
         <Box className='image-c' style={{ backgroundImage:`url(${props.fotoProduto!==null ? props.fotoProduto : ""})`}}>
         </Box>

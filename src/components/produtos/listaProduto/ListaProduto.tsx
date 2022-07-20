@@ -11,7 +11,6 @@ import { ListaProd } from "../../../paginas/compraProduto/CompraProduto";
 import './ListaProduto.css';
 
 function ListaProduto({produtos}:ListaProd){
-
     const token= useSelector<TokenState,TokenState["tokens"]>(
       (state) => state.tokens
       );
