@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
-import { Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText, Paper, Grid, Icon } from "@material-ui/core"
+import { Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText, Paper, Grid, Icon, InputAdornment } from "@material-ui/core"
 import { useNavigate, useParams } from 'react-router-dom';
 import { busca, buscaId, post, put } from '../../../service/Service';
 import { useSelector } from 'react-redux';
@@ -90,6 +90,9 @@ function CadastroProduto() {
     }
 
     function updatedProduto(e: ChangeEvent<HTMLInputElement>) {
+        if(e.target.value.startsWith("R$ "))
+            e.target.value = e.target.value.substring(3)
+            console.log(e.target.value)
         setProduto({
             ...produto,
             [e.target.name]: e.target.value,
@@ -138,28 +141,38 @@ function CadastroProduto() {
     }
 
     function back() {
-        navigation('/home')
+        navigation('/meusProdutos')
     }
   return (
-    <Grid container >
-        <Box style={{width:"1018px",margin:"64px auto"}}>
-        <Paper elevation={24}>
-        <Box display="flex" style={{margin:"0 auto", padding:"70px 130px"}}>
-            <form onSubmit={onSubmit} style={{display:'flex', flexDirection:"column", gap:"8px"}}>
-                <Typography variant="h3" color="textPrimary" component="h2" align="center" style={{marginBottom:"24px"}} >Cadastre seu produto</Typography>
-                <Box display='flex' className='gap-1' >
-                    <TextField value={produto.nomeProduto} id="nomeProduto" label="Nome" variant="outlined" name="nomeProduto" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)} className='input-m' />
-                    <TextField  value={produto.fotoProduto} id="fotoProduto" label="foto" name="fotoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)} className='input-g'/>
+    <Grid container style={{background:`url(https://i.imgur.com/qWBJAyE.png)`, backgroundSize:"cover", height:"100vh"}}>
+        <Box style={{width:"600px",margin:"64px auto"}}>
+        <Paper elevation={24} style={{borderRadius:"16px"}}>
+        <Box display="flex" style={{margin:"0 auto", padding:"24px 64px"}}>
+            <form onSubmit={onSubmit} style={{display:'flex', flexDirection:"column", gap:"12px"}}>
+                <Typography variant="h3" color="textPrimary" component="h2" align="center" style={{marginBottom:"12px", fontWeight:"bold"}} >Cadastre seu produto</Typography>
+                <Box display='flex' className='gap-1' flexWrap="wrap" >
+                    <TextField value={produto.nomeProduto} id="nomeProduto" label="Nome do Produto" variant="outlined" name="nomeProduto" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)} className='input-m' />
+                    <TextField  value={produto.fotoProduto} id="fotoProduto" label="Foto do Produto" name="fotoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)} className='input-g'/>
                 </Box>
                 <Box display='flex' className='gap-2'>
-                    <TextField className="input-m" type='number' value={produto.precoProduto} id="precoProduto" label="preço" name="precoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
-                    <TextField className="input-p" value={produto.unidadeProduto} id="unidadeProduto" label="unidade" name="unidadeProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
-                    <TextField className="input-p" type='number'  value={produto.estoqueProduto} id="estoqueProduto" label="estoque" name="estoqueProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
+                    <TextField style={{flex: 1}}
+                     value={produto.precoProduto} 
+                     id="precoProduto" label="Preço do Produto"  
+                     name="precoProduto" 
+                     variant="outlined" 
+                     margin="normal" 
+                     fullWidth 
+                     onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}
+                     InputProps={{startAdornment: <InputAdornment position="start" className='cifrao' >R$</InputAdornment>,
+          }}/>
+                    {/* <TextField style={{flex: 1}} value={produto.unidadeProduto} id="unidadeProduto" label="unidade" name="unidadeProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
+                    <TextField  style={{flex: 1}} type='number'  value={produto.estoqueProduto} id="estoqueProduto" label="estoque" name="estoqueProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/> */}
                 </Box>
-                <Box display='flex' className='gap-2'>
-                    <FormControl className='input-m' variant='filled'>
-                        <InputLabel id="demo-simple-select-helper-label">categoria </InputLabel>
+                <Box display='flex' className='gap-2' flexWrap="wrap">
+                    <FormControl style={{flex:"1 1 100%", borderRadius:"8px"}} variant='filled'>
+                        <InputLabel id="demo-simple-select-helper-label">Categoria do Produto </InputLabel>
                         <Select
+                            style={{borderRadius:"8px"}}
                             labelId="demo-simple-select-helper-label"
                             id="demo-simple-select-helper"
                             onChange={(e:any)=>buscaId(`/categorias/${e.target.value}`, setCategoria, {
@@ -174,10 +187,10 @@ function CadastroProduto() {
                                 )} 
                         </Select>
                     </FormControl>
-                    <TextField className="input-p" value={produto.shelfProduto} id="shelfProduto" label="validade" name="shelfProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
-                    <TextField  className="input-p" value={produto.chegadaProduto} id="chegadaProduto" label="chegada" name="chegadaProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
+                    {/* <TextField style={{flex:"0.5"}} value={produto.shelfProduto} id="shelfProduto" label="validade" name="shelfProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
+                    <TextField  style={{flex:"0.5"}} value={produto.chegadaProduto} id="chegadaProduto" label="chegada" name="chegadaProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/> */}
                 </Box>
-                    <TextField classes={{root:".MuiOutlinedInput-input"}} value={produto.infoProduto} id="infoProduto" label="descrição" name="infoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)} className="description" />
+                    {/* <TextField classes={{root:".MuiOutlinedInput-input"}} value={produto.infoProduto} id="infoProduto" label="descrição" name="infoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)} className="description" /> */}
                         <Button type="submit" variant="contained" color="primary">
                              Finalizar
                         </Button>

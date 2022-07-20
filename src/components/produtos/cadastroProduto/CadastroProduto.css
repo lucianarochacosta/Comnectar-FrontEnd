@@ -1,19 +1,9 @@
-.input-g{
-  width: 400px !important;
-}
-.input-m{
-  width: 300px !important;
-}
-.input-p{
-  width: 200px !important;
-}
-.gap-1{
-  gap:50px
-}
 .gap-2{
-  gap:25px
+  gap:24px;
 }
-
-.description .MuiOutlinedInput-input {
-  height: 128px !important;
+.description .MuiOutlinedInput-input{
+  height: 64px;
+}
+.cifrao .MuiTypography-root{
+  color: #000;
 }

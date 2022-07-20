@@ -14,13 +14,19 @@ function DeletarProduto() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
       (state) => state.tokens
     );
-    const [post, setProduto] = useState<Produto>()
+    const [produto, setProduto] = useState<Produto>()
 
     useEffect(() =>{
         if(id !== undefined){
             findById(id)
         }
     }, [id])
+
+    useEffect(()=>{
+      if(token == ""){
+        navigate("/login")
+      }
+    },[token])
 
     async function findById(id: string) {
         buscaId(`/produtos/${id}`, setProduto, {
@@ -62,7 +68,7 @@ function DeletarProduto() {
                 Deseja deletar o produto:
               </Typography>
               <Typography color="textPrimary" >
-                Produto
+                {produto?.nomeProduto}
               </Typography>
             </Box>
 
