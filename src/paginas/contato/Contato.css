@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -9,13 +11,13 @@
 .tituloC{
     color: #40352C !important;
     font-weight: 'bold' !important;
-    font-family: 'Roboto', sans-serif !important;
-    font-size: 64px !important;
+    font-family: 'Bebas Neue' !important;
+    font-size: 75px !important;
 }
-.tituloC2{
+.tituloC3{
     color: #96A621 !important;
-    font-family: 'Roboto', sans-serif  !important;
-    font-size: 40px !important;
+    font-family: 'Roboto' !important;
+    font-size: 30px !important;
 }
 .intro-C{
     align-items: center;
