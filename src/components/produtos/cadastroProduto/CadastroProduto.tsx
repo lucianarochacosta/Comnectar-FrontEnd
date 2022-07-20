@@ -148,8 +148,8 @@ function CadastroProduto() {
             <form onSubmit={onSubmit} style={{display:'flex', flexDirection:"column", gap:"8px"}}>
                 <Typography variant="h3" color="textPrimary" component="h2" align="center" style={{marginBottom:"24px"}} >{id ? "Atualizar Produto" : "Cadastrar Produto"}</Typography>
                 <Box display='flex' className='gap-1' >
-                    <TextField value={produto.nomeProduto} id="nomeProduto" label="Nome" variant="outlined" name="nomeProduto" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)} className='input-m' />
-                    <TextField  value={produto.fotoProduto} id="fotoProduto" label="foto" name="fotoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)} className='input-g'/>
+                    <TextField value={produto.nomeProduto} id="nomeProduto" label="Nome do Produto" variant="outlined" name="nomeProduto" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)} className='input-m' />
+                    <TextField  value={produto.fotoProduto} id="fotoProduto" label="Foto do Produto" name="fotoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)} className='input-g'/>
                 </Box>
                 <Box display='flex' className='gap-2'>
                     <TextField className="input-m" type='number' value={produto.precoProduto} id="precoProduto" label="preço" name="precoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)}/>
