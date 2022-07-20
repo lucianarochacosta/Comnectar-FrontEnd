@@ -15,7 +15,7 @@ function Contato() {
                             <Grid xs={12} className="intro-C">
                                 <Box>
                                     <Typography variant="h3" align="center" className="tituloC">Entre em contato</Typography>
-                                    <Typography variant="h5" align="center" className="tituloC2">Preencha os campos abaixo:</Typography>
+                                    <Typography variant="h5" align="center" className="tituloC3">Preencha os campos abaixo:</Typography>
                                     <Box marginTop={3} paddingX={10}><ListItem divider></ListItem></Box>
                                 </Box>
                             </Grid>
