@@ -20,7 +20,7 @@ function ComnecteSe() {
                 </Grid>
 
                 <Grid xs={12} container justifyContent="center" alignContent="center">
-                    <Box paddingLeft={10} className="introC1">
+                    <Box paddingLeft={0} className="introC1">
                         <Typography variant="h4" align="center" className="tituloC1">Tipos de Agricultura</Typography>
                     </Box>
                 </Grid>

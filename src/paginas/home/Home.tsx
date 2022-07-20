@@ -13,7 +13,7 @@ function Home() {
     );
     if (token !== "") {
         homeComponent =
-            <Grid container justifyContent="center" alignItems="center" className="background">
+            <Grid container justifyContent="center" alignItems="center">
                 <Grid xs={12}>
                     <Box display="flex" alignItems="center" flexDirection="column" justifyContent="center" className="imgh1" gap="64px">
                         <Box display="flex" alignItems="center" flexDirection="column" justifyContent="center" >
@@ -70,6 +70,9 @@ function Home() {
                     </Box>
                 </Grid>
                 <Grid xs={12} justifyContent="center" alignItems="center" className="caixatop2">
+                    <Box alignItems="center" justifyContent="center" display="flex">
+                        <img className="imgLogoH" src="https://i.imgur.com/gDNJDRe.png"></img>
+                    </Box>
                 </Grid>
                 <Grid xs={12} justifyContent="center" alignItems="center" className="caixatop3">
                     <Box textAlign="unset" className="boxfoto">
@@ -88,7 +91,7 @@ function Home() {
             </Grid>
     }
 
-    return(
+    return (
         <>
             {homeComponent}
         </>

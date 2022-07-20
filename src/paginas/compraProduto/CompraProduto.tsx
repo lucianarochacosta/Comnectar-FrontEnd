@@ -33,10 +33,11 @@ function CompraProduto() {
   const [btnFiltro, setBtnFiltro] = useState(false);
   const [btnFiltro1, setBtnFiltro1] = useState(false);
   const [btnFiltro2, setBtnFiltro2] = useState(false);
+  const [favorito, setFavorito] = useState(false)
 
   async function getProdutos() {
     if (filtro == false) {
-      await busca("/produtos", setMyProdutos, {
+      await busca("/produtos", setMyProdutos,{
         headers: {
           'Authorization': ""
         }
@@ -167,7 +168,7 @@ function CompraProduto() {
                     {(myProdutos.length === 1) ? listaProd.produtos.length + " de " + myProdutos.length + " resultado" : (myProdutos.length > 1 ? listaProd.produtos.length + " de " + myProdutos.length + " resultados" : "nenhum resultado")}</span>
                   <Box>
                     <Box className='gap-2' onClick={() => { }}>
-                      <span className='cursor-p'>ordenar:</span>
+                      <span className='cursor-p'>Ordenar:</span>
                       <FormControl className={classes.formControl} >
                         <NativeSelect
                           className={classes.selectEmpty}
