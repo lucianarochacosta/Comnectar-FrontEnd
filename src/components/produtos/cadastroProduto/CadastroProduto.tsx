@@ -146,7 +146,7 @@ function CadastroProduto() {
         <Paper elevation={24}>
         <Box display="flex" style={{margin:"0 auto", padding:"70px 130px"}}>
             <form onSubmit={onSubmit} style={{display:'flex', flexDirection:"column", gap:"8px"}}>
-                <Typography variant="h3" color="textPrimary" component="h2" align="center" style={{marginBottom:"24px"}} >Cadastre seu produto</Typography>
+                <Typography variant="h3" color="textPrimary" component="h2" align="center" style={{marginBottom:"24px"}} >{id ? "Atualizar Produto" : "Cadastrar Produto"}</Typography>
                 <Box display='flex' className='gap-1' >
                     <TextField value={produto.nomeProduto} id="nomeProduto" label="Nome" variant="outlined" name="nomeProduto" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)} className='input-m' />
                     <TextField  value={produto.fotoProduto} id="fotoProduto" label="foto" name="fotoProduto" variant="outlined" margin="normal" fullWidth onChange={(e:ChangeEvent<HTMLInputElement>)=>updatedProduto(e)} className='input-g'/>
