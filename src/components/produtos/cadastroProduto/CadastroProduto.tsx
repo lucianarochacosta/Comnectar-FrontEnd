@@ -147,7 +147,7 @@ function CadastroProduto() {
     <Grid container style={{background:`url(https://i.imgur.com/qWBJAyE.png)`, backgroundSize:"cover", height:"100vh"}}>
         <Box style={{width:"600px",margin:"64px auto"}}>
         <Paper elevation={24} style={{borderRadius:"16px"}}>
-        <Box display="flex" style={{margin:"0 auto", padding:"24px 64px"}}>
+        <Box display="flex" justifyContent="center" style={{margin:"0 auto", padding:"24px 64px"}}>
             <form onSubmit={onSubmit} style={{display:'flex', flexDirection:"column", gap:"12px"}}>
                 <Typography variant="h3" color="textPrimary" component="h2" align="center" style={{marginBottom:"12px", fontWeight:"bold"}} >{id !== undefined ? "Atualizar produto" : "Cadastrar produto"}</Typography>
                 <Box display='flex' className='gap-1' flexWrap="wrap" >

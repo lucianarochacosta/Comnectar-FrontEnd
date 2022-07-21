@@ -104,6 +104,7 @@ function CadastroCategoria() {
 
     return(
         <Container maxWidth="sm" className="topo">
+            <Typography variant="h3" style={{textAlign:"center", marginTop:"48px"}}>Cadastre uma Categoria</Typography>
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center">Cadastrar Classe</Typography>
                 <TextField value={categorias.classeCategoria} onChange={(e: ChangeEvent<HTMLInputElement>) => atualizaCategoria(e)} id="classeCategoria" label="Classe" variant="outlined" name="classeCategoria" margin="normal" fullWidth/>

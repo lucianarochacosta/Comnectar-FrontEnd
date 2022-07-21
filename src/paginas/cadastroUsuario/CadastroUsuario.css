@@ -23,7 +23,8 @@
 
 .paperCadastro{
     border-radius: 16px !important;
-    width: 70vw;
+    margin-right: 64px;
+    width: 560px;
     animation: surgir 1s forwards; 
 }
 
@@ -37,6 +38,7 @@
     background: #ADBF24 !important;
     border-color: #3E733C !important;
     font-weight: bold !important;
+    
 }
 
 .btnCadastrar:hover {
