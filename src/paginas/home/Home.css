@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .boxfoto {
     height: 450px;
@@ -117,16 +118,34 @@
     color: white;
     font-size: 90px !important;
     font-family: 'Bebas Neue' !important;
+    margin-top: 48px !important;
 }
 
 .imgh1 {
-    height: 320px;
-    background: linear-gradient(93.59deg, rgba(0, 0, 0, 0.6) 13.61%, rgba(0, 0, 0, 0) 87.41%), url(https://images.pexels.com/photos/5529606/pexels-photo-5529606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) fixed center center;
+    height: 100vh;
+    background: linear-gradient(93.59deg, rgba(0, 0, 0, 0.6) 13.61%, rgba(0, 0, 0, 0) 87.41%), url(https://images.pexels.com/photos/5529606/pexels-photo-5529606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) center;
     background-size: cover;
 }
 
 .botaoh3 {
-    width: fit-content !important;
+    width: 270px !important;
     height: fit-content !important;
     font-size: 20px !important;
+}
+
+.paperHomeLogada{
+    width:450px;
+    margin-bottom: 64px !important;
+    padding: 40px 5px 20px 5px;
+}
+
+.LandingText1{
+    font-size: 40px !important;
+    font-weight: bold !important;
+    font-family: 'Roboto', sans-serif
+}
+
+.LandingText2{
+    font-size: 30px !important;
+    font-family: 'Roboto', sans-serif;
 }

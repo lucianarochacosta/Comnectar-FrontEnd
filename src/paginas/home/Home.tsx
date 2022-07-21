@@ -1,5 +1,5 @@
 import { Button, Card, CardContent, Grid, Typography } from "@material-ui/core";
-import { Box } from "@mui/material";
+import { Box, Paper } from "@mui/material";
 import './Home.css';
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from 'react-redux';
@@ -14,41 +14,46 @@ function Home() {
     if (token !== "") {
         homeComponent =
             <Grid container justifyContent="center" alignItems="center">
-                <Grid xs={12}>
-                    <Box display="flex" alignItems="center" flexDirection="column" justifyContent="center" className="imgh1" gap="64px">
-                        <Box display="flex" alignItems="center" flexDirection="column" justifyContent="center" >
+                <Grid xs={12} justifyContent="center" className="imgh1">
+                    <Box display="flex" alignItems="center" flexDirection="column" justifyContent="center" height="100vh">
+                        <Box display="flex" alignItems="center" flexDirection="column" justifyContent="center" marginBottom={6}>
                             <Typography variant="h1" align="center" className="tituloh2">
-                                Portal do Vendedor
+                                Portal do Produtor
                             </Typography>
                         </Box>
+
+                        <Paper className="paperHomeLogada">
+                            <Typography variant="h2" align="center" color="primary" className="LandingText1">
+                                Seja bem-vindo
+                            </Typography>
+                            <Typography variant="h3" align="center" color="textPrimary" className="LandingText2">
+                                O que deseja fazer?
+                            </Typography>
+                            <Box paddingBottom={3} paddingTop={3} display="flex" alignItems="center" flexDirection="column" justifyContent="center">
+                                <Link to="/meusProdutos" className="text-decorator-none">
+                                    <Button variant='contained' className="botaoh3" color='primary'>Listar Produtos</Button>
+                                </Link>
+                            </Box>
+                            <Box paddingBottom={3} display="flex" alignItems="center" flexDirection="column" justifyContent="center">
+                                <Link to="/categorias" className="text-decorator-none">
+                                    <Button variant='contained' className="botaoh3" color='primary'>Listar Categorias</Button>
+                                </Link>
+                            </Box>
+                            <Box paddingBottom={3} display="flex" alignItems="center" flexDirection="column" justifyContent="center">
+                                <Link to="/registroProduto" className="text-decorator-none">
+                                    <Button variant='contained' className="botaoh3" color='primary'>Cadastrar Produtos</Button>
+                                </Link>
+                            </Box>
+                            <Box paddingBottom={3} display="flex" alignItems="center" flexDirection="column" justifyContent="center">
+                                <Link to="/cadastrocategoria" className="text-decorator-none">
+                                    <Button variant='contained' className="botaoh3" color='primary'>Cadastrar Categorias</Button>
+                                </Link>
+                            </Box>
+                        </Paper>
                     </Box>
+
                 </Grid>
-                <Grid container xs={12}>
-                    <Grid xs={6}>
-                        <Box paddingBottom={3} paddingTop={20} display="flex" alignItems="center" flexDirection="column" justifyContent="center">
-                            <Link to="/registroProduto" className="text-decorator-none">
-                                <Button variant='contained' className="botaoh3" color='primary'>Cadastrar Produtos</Button>
-                            </Link>
-                        </Box>
-                        <Box paddingBottom={20} display="flex" alignItems="center" flexDirection="column" justifyContent="center">
-                            <Link to="/cadastrocategoria" className="text-decorator-none">
-                                <Button variant='contained' className="botaoh3" color='primary'>Cadastrar Categorias</Button>
-                            </Link>
-                        </Box>
-                    </Grid>
-                    <Grid xs={6}>
-                        <Box paddingBottom={3} paddingTop={20} display="flex" alignItems="center" flexDirection="column" justifyContent="center">
-                            <Link to="/meusProdutos" className="text-decorator-none">
-                                <Button variant='contained' className="botaoh3" color='primary'>Listar Produtos</Button>
-                            </Link>
-                        </Box>
-                        <Box paddingBottom={20} display="flex" alignItems="center" flexDirection="column" justifyContent="center">
-                            <Link to="/categorias" className="text-decorator-none">
-                                <Button variant='contained' className="botaoh3" color='primary'>Listar Categorias</Button>
-                            </Link>
-                        </Box>
-                    </Grid>
-                </Grid>
+
             </Grid>
     }
 
