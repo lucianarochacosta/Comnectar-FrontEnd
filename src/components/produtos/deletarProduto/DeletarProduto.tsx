@@ -7,14 +7,18 @@ import { toast } from "react-toastify";
 import Produto from "../../../models/Produto";
 import { buscaId, deleteId } from "../../../service/Service";
 import { TokenState } from "../../../store/tokens/tokensReducer";
+import CardDeletar from "../../cardDeletar/CardDeletar";
+import CardProduto from "../../Cards/cardProduto/CardProduto";
+import { ID } from "../../modalDeletar/ModalDeletar";
 
-function DeletarProduto() {
+function DeletarProduto(props:ID) {
     let navigate = useNavigate();
-    const { id } = useParams<{id: string}>();
+    // const { id } = useParams<{id: string}>();
     const token = useSelector<TokenState, TokenState["tokens"]>(
       (state) => state.tokens
     );
     const [produto, setProduto] = useState<Produto>()
+    const id = props.id
 
     useEffect(() =>{
         if(id !== undefined){
@@ -64,12 +68,16 @@ function DeletarProduto() {
         <Card variant="outlined" >
           <CardContent>
             <Box justifyContent="center">
-              <Typography color="textPrimary" gutterBottom>
+              <Typography variant="h6"  style={{fontWeight:"bold"}} color="textPrimary" gutterBottom>
                 Deseja deletar o produto:
               </Typography>
-              <Typography color="textPrimary" >
-                {produto?.nomeProduto}
-              </Typography>
+              <CardDeletar
+              id={produto?.id ? produto.id : 0}
+              nomeProduto={produto?.nomeProduto ?produto.nomeProduto : ""}
+              fotoProduto={produto?.fotoProduto}
+              precoProduto={produto?.precoProduto ?produto.precoProduto: 0}
+              categoria= {produto?.categoria}
+              />
             </Box>
 
           </CardContent>
