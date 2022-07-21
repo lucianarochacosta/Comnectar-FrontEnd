@@ -7,6 +7,7 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import { Link } from 'react-router-dom'
+import ModalDeletar from '../../modalDeletar/ModalDeletar'
 
 function CardProduto(props:Produto) {
   const [favorite, setFavorite] = useState(false)
@@ -68,11 +69,9 @@ function CardProduto(props:Produto) {
           </Button>
         </Link>
         </Box>
-        <Link to={`/deletaProduto/${props.id}`} >
-        <Button  variant="contained" className="btnDeletar" style={{width:"100%"}}> 
-          Deletar
-        </Button>
-        </Link>
+        {/* <Link to={`/deletaProduto/${props.id}`} >
+        </Link> */}
+          <ModalDeletar id={props.id.toString()} />
       </Box>
     </Box>
   </Paper>

@@ -9,7 +9,7 @@ import CadastroProduto from '../cadastroProduto/CadastroProduto';
 
 
 function getModalStyle() {
-  const top = 50 ;
+  const top = 50;
   const left = 50;
 
   return {
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: theme.palette.background.paper,
       border: '2px solid #000',
       boxShadow: theme.shadows[5],
-      padding: theme.spacing(2, 4, 3),
+     padding: theme.spacing(1, 3, 2),
     },
   }),
 );
