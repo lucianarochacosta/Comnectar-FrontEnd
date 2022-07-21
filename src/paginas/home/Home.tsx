@@ -18,7 +18,7 @@ function Home() {
                     <Box display="flex" alignItems="center" flexDirection="column" justifyContent="center" className="imgh1" gap="64px">
                         <Box display="flex" alignItems="center" flexDirection="column" justifyContent="center" >
                             <Typography variant="h1" align="center" className="tituloh2">
-                                Portal do Vendedor
+                                Portal do Produtor
                             </Typography>
                         </Box>
                     </Box>
