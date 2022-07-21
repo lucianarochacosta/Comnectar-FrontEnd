@@ -164,7 +164,7 @@ function CompraProduto() {
                 </Box>
                 <Box className='flex-center' justifyContent="space-between">
                   <span className='m-l ft-24'>
-                    {(myProdutos.length === 1) ? listaProd.produtos.length + " de " + myProdutos.length + " resultado" : (myProdutos.length > 1 ? listaProd.produtos.length + " de " + myProdutos.length + " resultados" : "nenhum resultado")}</span>
+                    {(myProdutos.length === 1) ? listaProd.produtos.length + " de " + myProdutos.length + " resultado" : (myProdutos.length > 1 ? listaProd.produtos.length + " de " + myProdutos.length + " resultados" : "Nenhum resultado")}</span>
                   <Box>
                     <Box className='gap-2' onClick={() => { }}>
                       <span className='cursor-p'>Ordenar:</span>

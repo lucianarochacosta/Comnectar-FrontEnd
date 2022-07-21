@@ -24,7 +24,7 @@ function SobreNos() {
                 </Grid>
                 <Box >
                     <Box display="flex" flexDirection="column" width="100%" alignItems="center" className="cont-esquerda-sb">
-                        <Box className="section1" style={{ background: "white", padding: "64px 24px" }}>
+                        <Box className="section1" style={{ background: "white", padding: "0 px 24px" }}>
                             <Typography variant="h2" component="h2" style={{ textAlign: "center", marginBottom: "64px" }}>Queimada na Sibéria</Typography>
                             <Box display="flex" width="100%" gap="48px" alignItems="center">
                                 <img src="https://i.imgur.com/sXN0b0H.png" alt="queimada na Síbéria" />
@@ -94,6 +94,7 @@ function SobreNos() {
                             <Grid container direction="row" className="cont-direita1" xs={12} alignItems="center">
                                 <Grid alignItems="center" xs={6}>
                                     <Box paddingLeft={5}>
+                                    <Typography color="textPrimary" variant="h5" align="center" className="titulo3">Como vamos fazer?</Typography>
                                         <Typography color="textPrimary" variant="h5" align="center" className="subtitulo1">
                                             A resposta é simples:
                                         </Typography>
